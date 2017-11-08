@@ -1,0 +1,2784 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- mobile mode if small screen device -->
+    
+    <title>Ardumoto Kit Hookup Guide - learn.sparkfun.com</title>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/theme.css" type="text/css" media="screen">    <link rel="alternate" type="application/atom+xml" title="Education Blog" href="https://learn.sparkfun.com/feeds/blog">
+    <link rel="alternate" type="application/atom+xml" title="Tutorials" href="https://learn.sparkfun.com/feeds/tutorials">
+    <link rel="alternate" type="application/atom+xml" title="Education Blog Comments" href="https://learn.sparkfun.com/feeds/blog_comments">
+    <link rel="alternate" type="application/atom+xml" title="Tutorial Comments" href="https://learn.sparkfun.com/feeds/tutorial_comments">
+
+    <script src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/leadflows.js" type="text/javascript" id="LeadFlows-2224003" crossorigin="anonymous" data-leadin-portal-id="2224003" data-leadin-env="prod" data-loader="hs-scriptloader" data-hsjs-portal="2224003" data-hsjs-env="prod"></script><script src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/2224003.js" type="text/javascript" id="hs-script-loader"></script><script src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/4761.js" async="" type="text/javascript"></script><script id="hs-analytics" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/2224003_002.js"></script><script async="" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/loader.js"></script><script src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/988931021243392.js" async=""></script><script async="" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/fbevents.js"></script><script async="" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/analytics.js"></script><script type="text/javascript">
+      var SFECONFIG = {
+        dnt: false,
+        http_server: 'http://learn.sparkfun.com',
+        https_server: 'https://learn.sparkfun.com',
+        http_static: 'https://cdn.sparkfun.com',
+        learn_server: 'https://learn.sparkfun.com',
+        commerce_server: 'https://www.sparkfun.com',
+        base_url: '/',
+        url: '/',
+        controller: 'tutorials',
+        action: 'view',
+        entity_id: '',
+        auth: false,
+        sparkrev: '1510093660',
+        search_key: 'xY6qr5Ui3V2UMA762D9Z'      };
+      var require = {
+        paths: {
+          'jqueryui': 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min'
+        },
+        baseUrl: '/js/',
+        urlArgs: "sparkrev=" + SFECONFIG.sparkrev,
+        deps: ['jqueryui'],
+        callback: function() {
+          $('#learn').learn();
+          $('#learn').sfeutil();
+          $.shared('domready');
+        }
+      };
+    </script>
+    <script src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/learn-built.js"></script>
+          <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-3404365-1', 'auto', {'allowLinker': true});
+      ga('require', 'linker');
+      ga('linker:autoLink', ['www.sparkfun.com', 'avc.sparkfun.com'] );
+      ga('require', 'displayfeatures');
+            ga('set', 'dimension1', 'Guest');
+      ga('send', 'pageview');
+
+      </script>
+        <script type="text/javascript">
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js'); 
+    fbq('init', '988931021243392');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1"src="https://www.facebook.com/tr?id=988931021243392&ev=PageView&noscript=1"/>
+  </noscript>
+      <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jqueryui" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/jquery-ui.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="tutorial" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/tutorial.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery.imagesloaded" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/jquery.js"></script><style type="text/css">.pika-single{z-index:9999;display:block;position:relative;color:#333;background:#fff;border:1px solid #ccc;border-bottom-color:#bbb;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.pika-single.is-hidden{display:none}.pika-single.is-bound{position:absolute;box-shadow:0 5px 15px -5px rgba(0,0,0,0.5)}.pika-single{*zoom:1}.pika-single:before,.pika-single:after{content:" ";display:table}.pika-single:after{clear:both}.pika-lendar{float:left;width:240px;margin:8px}.pika-title{position:relative;text-align:center}.pika-title select{cursor:pointer;position:absolute;z-index:9998;margin:0;left:0;top:5px;filter:alpha(opacity=0);opacity:0}.pika-label{display:inline-block;*display:inline;position:relative;z-index:9999;overflow:hidden;margin:0;padding:5px 3px;font-size:14px;line-height:20px;font-weight:bold;background-color:#fff}.pika-prev,.pika-next{display:block;cursor:pointer;position:relative;outline:none;border:0;padding:0;width:20px;height:30px;text-indent:20px;white-space:nowrap;overflow:hidden;background-color:transparent;background-position:center center;background-repeat:no-repeat;background-size:75% 75%;opacity:0.5;*position:absolute;*top:0}.pika-prev:hover,.pika-next:hover{opacity:1}.pika-prev.is-disabled,.pika-next.is-disabled{cursor:default;opacity:0.2}.pika-prev,.is-rtl .pika-next{float:left;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==");*left:0}.pika-next,.is-rtl .pika-prev{float:right;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=");*right:0}.pika-select{display:inline-block;*display:inline}.pika-table{width:100%;border-collapse:collapse;border-spacing:0;border:0}.pika-table th,.pika-table td{width:14.28571%;padding:0}.pika-table th{color:#999;font-size:12px;line-height:25px;font-weight:bold;text-align:center}.pika-table abbr{border-bottom:none;cursor:help}.pika-button{cursor:pointer;display:block;-moz-box-sizing:border-box;box-sizing:border-box;outline:none;border:0;margin:0;width:100%;padding:5px;color:#666;font-size:12px;line-height:15px;text-align:right;background:#f5f5f5}.is-today .pika-button{color:#3af;font-weight:bold}.is-selected .pika-button{color:#fff;font-weight:bold;background:#3af;box-shadow:inset 0 1px 3px #178fe5;border-radius:3px}.is-disabled .pika-button{pointer-events:none;cursor:default;color:#999;opacity:0.3}.pika-button:hover{color:#fff !important;background:#ff8000 !important;box-shadow:none !important;border-radius:3px !important}.pika-week{font-size:11px;color:#999}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_5f40b086-2022-41a8-a911-6efab207058f fieldset{border:0;padding:0;margin:0;max-width:500px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_5f40b086-2022-41a8-a911-6efab207058f fieldset.form-columns-1 .hs-input{width:95%}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_5f40b086-2022-41a8-a911-6efab207058f fieldset.form-columns-1 .input{margin-right:8px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_5f40b086-2022-41a8-a911-6efab207058f fieldset.form-columns-1 input[type="checkbox"],.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_5f40b086-2022-41a8-a911-6efab207058f fieldset.form-columns-1 input[type="radio"]{width:auto}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_5f40b086-2022-41a8-a911-6efab207058f fieldset.form-columns-2 .hs-form-field{width:50%;float:left}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_5f40b086-2022-41a8-a911-6efab207058f fieldset.form-columns-2 .input{margin-right:8px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_5f40b086-2022-41a8-a911-6efab207058f fieldset.form-columns-3 .hs-form-field{width:32.7%;float:left}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_5f40b086-2022-41a8-a911-6efab207058f fieldset.form-columns-3 .input{margin-right:8px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_5f40b086-2022-41a8-a911-6efab207058f label.hs-hidden{visibility:hidden}.hsformerror{margin:0 0 2px;padding:2px 6px;height:auto;background-color:#fdd2d0;font-size:11px;border:1px solid #fcb3af;padding:4px 16px 4px 10px;color:#000;display:none;background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fefefe), color-stop(100%, #fdd2d0));background-image:-webkit-linear-gradient(#fefefe, #fdd2d0);background-image:-moz-linear-gradient(#fefefe, #fdd2d0);background-image:-o-linear-gradient(#fefefe, #fdd2d0);background-image:linear-gradient(#fefefe,#fdd2d0);-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;-webkit-box-shadow:0 0 6px #ddd;-moz-box-shadow:0 0 6px #ddd;box-shadow:0 0 6px #ddd;z-index:99999}.hsformerror em{border:10px solid;border-color:#fdd2d0 transparent transparent;bottom:-17px;display:block;height:0;left:60px;position:absolute;width:0}.hsformerror p{font-family:Lucida Grande,Lucida Sans Unicode,bitstream vera sans,trebuchet ms,verdana,sans-serif;margin:0;float:left;margin-right:8px}.hsformerror:hover{cursor:default}.hsformerror .close-form-error{float:right;display:inline;top:3px;position:absolute;font-family:Verdana !important;color:#b17c79 !important;cursor:pointer !important;font-size:11px !important;font-weight:normal !important}.hsformerror .close-form-error:hover{color:#cc8884}@media (max-width: 400px), (min-device-width: 320px) and (max-device-width: 480px){form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_5f40b086-2022-41a8-a911-6efab207058f .form-columns-2 .hs-form-field,form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_5f40b086-2022-41a8-a911-6efab207058f .form-columns-3 .hs-form-field{float:none;width:100%}form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_5f40b086-2022-41a8-a911-6efab207058f .form-columns-2 .hs-form-field .hs-input,form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_5f40b086-2022-41a8-a911-6efab207058f .form-columns-3 .hs-form-field .hs-input{width:95%}}</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="rainbow" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/rainbow.js"></script><style data-olark="true" type="text/css">.olark-key,#hbl_code,#olark-data{display: none !important;}</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="generic" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/generic.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="c" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/c.js"></script><style data-olark="true" type="text/css">@media print {#habla_beta_container_do_not_rely_on_div_classes_or_names {display: none !important}}</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="clipboard.min" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/clipboard.js"></script><link data-olark="true" rel="stylesheet" href="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/theme_002.css" type="text/css"></head>
+
+  <body id="learn" class="layout-default no-type tutorials-view no-touch" ontouchstart="" waid71fa0d88-5390-4b5b-a2f4-e45fa93d85e2="SA password protect entry checker">
+            <!--
+    Start of DoubleClick Floodlight Tag: Please do not remove
+    Activity name of this tag: Universal
+    URL of the webpage where the tag is expected to be placed: http://sparkfun.com
+    This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+    Creation Date: 07/18/2016
+  -->
+  <script type="text/javascript">
+    var axel = Math.random() + "";
+    var a = axel * 10000000000000;
+    document.write('<iframe src="https://5626816.fls.doubleclick.net/activityi;src=5626816;type=count0;cat=unive0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+  </script><iframe src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/activityi.html" style="display:none" height="1" frameborder="0" width="1"></iframe>
+  <noscript>
+    <iframe src="https://5626816.fls.doubleclick.net/activityi;src=5626816;type=count0;cat=unive0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+  </noscript>
+  <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+    
+    <div class="wrapper" itemscope="" itemtype="http://schema.org/WebSite">
+      <meta itemprop="url" content="https://learn.sparkfun.com/">
+      <div class="wrapper-inner">
+
+    
+<div class="header">
+  <div class="container">
+
+    <!-- Mobile Nav Button -->
+    <div class="mobile-menu-container left">
+      <a id="nav_toggle" class="mobile-menu-button nav_toggle" href="#" aria-expanded="false"><span class="sfe-icon-hamburger"></span></a>
+              <a id="search_toggle" class="mobile-menu-button" href="#"><span class="glyphicon glyphicon-search"></span></a>
+          </div>
+
+    <nav class="top-links">
+      <ul>
+        <li>
+          <a href="https://www.sparkfun.com/distributors">Find a Retailer</a>        </li>
+                  <li>
+            <div class="dropdown">
+              <a href="#" id="phone_hours" type="button" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                Need Help?
+                <span class="caret"></span>
+              </a>
+              <div class="dropdown-menu pull-right need-help" role="menu" aria-labelledby="phone_hours">
+                <h4>Customer Service</h4>
+                <p><a href="https://www.sparkfun.com/orders/"><span class="glyphicon glyphicon-dashboard"></span> Track My Order</a></p>
+                <p><a href="https://www.sparkfun.com/support"><span class="glyphicon glyphicon-question-sign"></span> Frequently Asked Questions</a></p>
+                <p><a href="https://www.sparkfun.com/support#InternationalShipping"><span class="glyphicon glyphicon-globe"></span> International Shipping Info</a></p>
+                <p><a href="mailto:cservice@sparkfun.com"><span class="glyphicon glyphicon-envelope"></span> Send Email</a></p>
+                <p class="small text-muted">
+                  Mon-Fri, 9am to 12pm and<br>
+                  1pm to 5pm U.S. Mountain Time:
+                </p>
+                <p><span class="glyphicon glyphicon-earphone"></span> (303) 284-0979</p>
+                                  <p><a data-toggle="chatpopup" href="https://www.sparkfun.com/chat/popup"><span class="glyphicon glyphicon-comment"></span> Chat With Us</a></p>
+                              </div>
+            </div>
+          </li>
+              </ul>
+    </nav>
+
+    <!-- Logo -->
+    <div class="logo-container">
+      <a class="logo" href="https://www.sparkfun.com/">
+        <span class="sfe-icon-flame"></span>
+        <span class="sfe-icon-sparkfun" data-icon="🔥">
+          <span class="visuallyhidden">sparkfun.com</span>
+        </span>
+      </a>
+    </div>
+
+    <!-- Tabs -->
+    <!-- also edit mobile tabs in .tabs-container-mobile -->
+    <nav class="tabs-container hidden-xs">
+      <ul>
+        <li class="shop "><a href="https://www.sparkfun.com/categories">Shop</a></li>
+        <li class="learn active"><a href="https://learn.sparkfun.com/">Learn</a></li>
+        <li class="blog "><a href="https://www.sparkfun.com/news">Blog</a></li>
+        <li class="support "><a href="https://www.sparkfun.com/support">Support</a></li>
+      </ul>
+    </nav>
+
+    <!-- Cart & User -->
+    <div class="user-container mobile-menu-container right">
+
+      <a id="account_toggle" class="mobile-menu-button" href="#"><span class="glyphicon glyphicon-user"></span></a>
+
+              <div class="cart mobile-menu-button">
+          <a href="https://www.sparkfun.com/cart">
+            <span id="cart_status" class="sfe-icon-carticon cart-empty">
+              <span class="visuallyhidden">Shopping Cart</span>
+            </span>
+            <span class="cart_count">
+              <span id="items_in_cart">0</span>
+              <span id="cart_noun" class="visuallyhidden">items</span>
+            </span>
+          </a>
+        </div>
+      
+              <div class="user">
+          <!-- login modal trigger -->
+          <a class="btn btn-default" href="https://www.sparkfun.com/account/login?redirect=%2Flearn%2Ftutorials%2Fardumoto-kit-hookup-guide" data-toggle="modal" data-target="#login_modal" data-remote="false">log in</a>
+          <a class="btn btn-default" href="https://www.sparkfun.com/account/make">register</a>        </div>
+      
+    </div>
+
+    <nav class="tabs-container-mobile visible-xs col-xs-12">
+      <ul>
+        <li class="shop "><a href="https://www.sparkfun.com/categories">Shop</a></li>
+        <li class="learn active"><a href="https://learn.sparkfun.com/">Learn</a></li>
+        <li class="blog "><a href="https://www.sparkfun.com/news">Blog</a></li>
+        <li class="support "><a href="https://www.sparkfun.com/support">Support</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <!-- Navigation / Search -->
+  <div class="main-nav-container">
+
+    <div class="container">
+
+      <nav class="product-nav">
+        <button type="button" class="product-menu" aria-expanded="false">
+          <span class="menu-icon sfe-icon-hamburger"></span>
+          <span class="product-menu-name">Product Menu</span>
+        </button>
+
+                  <form id="search_form" class="search" action="https://www.sparkfun.com/search/results" method="get" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+            <meta itemprop="target" content="https://www.sparkfun.com/search/results?term={term}">
+            <div class="ui-widget">
+              <input name="term" id="global-search" class="form-control ui-autocomplete-input" placeholder="find products, tutorials, etc..." itemprop="query-input" autocomplete="off" type="text">
+              <button type="submit" class="glyphicon glyphicon-search global-search-icon" aria-label="Search"></button>
+            </div>
+          </form>
+              </nav>
+
+      <nav class="sub-nav">
+        <ul>
+          <li>
+            <a href="http://www.sparkfuneducation.com/?__hstc=108804957.fe6fac4dce0ff625ea5def270a6d757a.1510137442876.1510137442876.1510137442876.1&amp;__hssc=108804957.7.1510137442876&amp;__hsfp=3232039793" target="_blank">Education</a>
+          </li>
+          <li>
+            <a href="https://avc.sparkfun.com/"><span class="sfe-icon-avc"></span></a>          </li>
+          <li>
+            <a href="https://forum.sparkfun.com/" target="_blank">Forum</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="product-menu-container" tabindex="-1" aria-hidden="true">
+      <div class="container">
+
+        <div class="fixed-product-menu-container col-lg-2 col-sm-3 col-xs-12">
+          <div class="sub-nav-mobile product-menu-group">
+            <a class="product-menu-heading desktop-toggle" href="https://www.sparkfun.com/account/mobile_toggle?redirect=%2Flearn%2Ftutorials%2Fardumoto-kit-hookup-guide">Desktop Site</a>            <a class="product-menu-heading" href="http://www.sparkfuneducation.com/?__hstc=108804957.fe6fac4dce0ff625ea5def270a6d757a.1510137442876.1510137442876.1510137442876.1&amp;__hssc=108804957.7.1510137442876&amp;__hsfp=3232039793" target="_blank">Education</a>
+            <a class="product-menu-heading" href="https://avc.sparkfun.com/"><span class="sfe-icon-avc"></span></a>            <ul class="list-unstyled">
+            </ul>
+          </div>
+          <div class="product-menu-group">
+            <a class="product-menu-heading" href="https://www.sparkfun.com/categories">All Categories</a>            <ul class="list-unstyled">
+            </ul>
+          </div>
+          <div class="product-menu-group">
+            <a class="product-menu-heading" href="https://www.sparkfun.com/categories/featured">Featured <span class="visible-xs pull-right glyphicon glyphicon-plus"></span></a>            <ul class="list-unstyled">
+              <li><a class="product-menu-item" href="https://www.sparkfun.com/categories/new_products">New Products</a></li>
+              <li><a class="product-menu-item" href="https://www.sparkfun.com/categories/top"><span class="sfe-icon-flame"></span> Top Sellers</a></li>
+                              <li>
+                  <a href="https://www.sparkfun.com/spectacle" class="product-menu-item"><span class="sfe-icon-spectacle-glasses" style="color:#000000"></span> Spectacle</a>
+                </li>
+                            <li><a class="product-menu-item" href="https://www.sparkfun.com/categories/283">SparkX</a></li>
+              <li><a class="product-menu-item" href="https://www.sparkfun.com/categories/sale">Sale</a></li>
+              <li><a class="product-menu-item" href="https://www.sparkfun.com/gift_certificates">Gift Certificates</a></li>
+            </ul>
+          </div>
+                      <a href="https://www.sparkfun.com/lilypad_sewable_electronics" class="hidden-xs">
+              <img class="img-responsive img-rounded center-block" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/lilypad-menu-image.jpg" alt="LilyPad Ecosystem">
+            </a>
+                  </div>
+
+                              <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/287" class="product-menu-heading">
+                 Brands                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/featured" class="product-menu-item">
+                                              <span class="product-menu-item-icon sfe-icon-flame" style="color:#ee2e22"></span> SparkFun                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/103" class="product-menu-item">
+                                              <span class="product-menu-item-icon sfe-icon-arduino" style="color:#00878f"></span> Arduino                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/233" class="product-menu-item">
+                                              <span class="product-menu-item-icon sfe-icon-rpi-multi-color" style="color:#ffffff"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> Raspberry Pi                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/284" class="product-menu-item">
+                                               micro:bit                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/279" class="product-menu-item">
+                                               Espressif (ESP)                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/287" class="product-menu-item">
+                                               <small>all brands</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/2" class="product-menu-heading">
+                 Development                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/299" class="product-menu-item">
+                                               Single Board Comp.                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/300" class="product-menu-item">
+                                               Microcontrollers                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/136" class="product-menu-item">
+                                               FPGA                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/149" class="product-menu-item">
+                                               Prototyping Boards                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/1" class="product-menu-item">
+                                               Programmers                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/2" class="product-menu-item">
+                                               <small>all development</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/23" class="product-menu-heading">
+                 Sensors                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/304" class="product-menu-item">
+                                               Movement                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/146" class="product-menu-item">
+                                               Biometrics                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/102" class="product-menu-item">
+                                               Imaging                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/305" class="product-menu-item">
+                                               Environment                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/117" class="product-menu-item">
+                                               Capacitive                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/23" class="product-menu-item">
+                                               <small>all sensors</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/46" class="product-menu-heading">
+                 Tools                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/271" class="product-menu-item">
+                                               3D Printing                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/280" class="product-menu-item">
+                                               CNC                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/49" class="product-menu-item">
+                                               Soldering                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/47" class="product-menu-item">
+                                               Hand Tools                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/177" class="product-menu-item">
+                                               Instruments                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/46" class="product-menu-item">
+                                               <small>all tools</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/310" class="product-menu-heading">
+                 Miscellaneous                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/157" class="product-menu-item">
+                                               All Kits                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/176" class="product-menu-item">
+                                               Books                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/311" class="product-menu-item">
+                                               Arts/Crafts Supplies                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/351" class="product-menu-item">
+                                               SD Cards                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/130" class="product-menu-item">
+                                               Swag                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/310" class="product-menu-item">
+                                               <small>all misc</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/51" class="product-menu-heading">
+                 Components                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/89" class="product-menu-item">
+                                               LED &amp; Illumination                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/145" class="product-menu-item">
+                                               Buttons &amp; Switches                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/28" class="product-menu-item">
+                                               Power                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/76" class="product-menu-item">
+                                               LCDs                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/70" class="product-menu-item">
+                                               Cables                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/51" class="product-menu-item">
+                                               <small>all components</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/204" class="product-menu-heading">
+                 E-Textiles                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/327" class="product-menu-item">
+                                               LilyPad                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/328" class="product-menu-item">
+                                               Sewable Electronics                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/206" class="product-menu-item">
+                                               Materials                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/268" class="product-menu-item">
+                                               E-Textile Power                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/329" class="product-menu-item">
+                                               E-Textile Kits                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/204" class="product-menu-item">
+                                               <small>all e-textiles</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/31" class="product-menu-heading">
+                 Robotics                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/pages/Actobotics" class="product-menu-item">
+                                               Actobotics                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/178" class="product-menu-item">
+                                               Motors &amp; Drivers                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/330" class="product-menu-item">
+                                               Parts                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/155" class="product-menu-item">
+                                               Hardware                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/181" class="product-menu-item">
+                                               Robotics Kits                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/31" class="product-menu-item">
+                                               <small>all robotics</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/16" class="product-menu-heading">
+                 Wireless &amp; IoT                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/115" class="product-menu-item">
+                                               Bluetooth                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/112" class="product-menu-item">
+                                               WiFi                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/338" class="product-menu-item">
+                                               Satellite                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/4" class="product-menu-item">
+                                               GPS                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/339" class="product-menu-item">
+                                               Wireless Kits                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/16" class="product-menu-item">
+                                               <small>all wireless/IoT</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/273" class="product-menu-heading">
+                 Audio                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/343" class="product-menu-item">
+                                               Audio Boards                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/342" class="product-menu-item">
+                                               Audio Cables                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/344" class="product-menu-item">
+                                               Speakers                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/345" class="product-menu-item">
+                                               Audio Chips                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/273" class="product-menu-item">
+                                               <small>all audio</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                  
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    
+    <div class="content">
+      <div class="container" id="airlock">
+
+        
+        <div class="main-title">
+  <ul class="breadcrumb">
+    <li><a href="https://learn.sparkfun.com/">Home</a></li>
+    <li><a href="https://learn.sparkfun.com/tutorials">Tutorials</a></li>
+    <li>Ardumoto Kit Hookup Guide</li>
+      </ul>
+
+  <h1>
+    Ardumoto Kit Hookup Guide  </h1>
+
+</div>
+
+
+<a id="nav_toggle_pages" class="nav_toggle nav-toggle-trigger" href="#"><span>≡</span> Pages</a>
+
+<div id="tutorial" class="row">
+
+  <div class="col-sm-8" id="sections">
+
+    <div class="contributors">
+                      Contributors:
+                <a href="https://www.sparkfun.com/users/69916"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/f4c7d38e015f5dc7ca404c23b30305f4.jpg"> Jimb0</a>, <a href="https://www.sparkfun.com/users/649604"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/468388471d460cfeca6be21e3ab0defa.jpg"> MTaylor</a>          </div>
+
+    <span class="fave_widget verbose">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="630">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">3</span>
+</span>    <div class="share-link-inline">
+
+  <a class="share-link-toggle" href="#">
+    <span class="share-title">
+      <span class="sfe-icon-share"></span>
+      Share    </span>
+  </a>
+
+  <div class="share-link-inner dialog">
+    Use this URL to share:<br>
+    <input class="form-control input-sm" value="http://sfe.io/t630" onclick="$(this).select();" type="text">
+
+    <div class="share-social">
+
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','googleplus');" href="https://plus.google.com/share?url=http%3A%2F%2Fsfe.io%2Ft630" title="Share on Google+"><span class="sfe-icon-google-plus hidetext"><span>Share on Google+</span></span></a>
+
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','tumblr');" href="https://www.tumblr.com/share/link?url=http%3A%2F%2Fsfe.io%2Ft630&amp;name=Ardumoto+Kit+Hookup+Guide" title="Share on Tumblr"><span class="sfe-icon-tumblr hidetext"><span>Share on Tumblr</span></span></a>
+
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','reddit');" href="https://www.reddit.com/submit?url=http%3A%2F%2Fsfe.io%2Ft630" title="Submit to reddit"><span class="sfe-icon-reddit hidetext"><span>Submit to reddi</span></span></a>
+
+    </div>
+
+    </div>
+  
+  <div class="share-social">
+
+    <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','twitter');" href="https://twitter.com/intent/tweet?text=Ardumoto+Kit+Hookup+Guide&amp;url=http%3A%2F%2Fsfe.io%2Ft630&amp;via=sparkfun" title="Share on Twitter"><span class="sfe-icon-twitter hidetext"><span>Share on Twitter</span></span></a>
+
+    <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','facebook');" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fsfe.io%2Ft630&amp;t=Ardumoto+Kit+Hookup+Guide" title="Share on Facebook"><span class="sfe-icon-facebook-nobox hidetext"><span>Share on Facebook</span></span></a>
+
+          <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','pinterest');" href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fsfe.io%2Ft630&amp;media=https%3A%2F%2Fcdn.sparkfun.com%2F%2Fr%2F500-1000%2Fassets%2Flearn_tutorials%2F6%2F3%2F0%2FMarshall-06.jpg&amp;description=Ardumoto+Kit+Hookup+Guide" title="Pin It"><span class="sfe-icon-pinterest hidetext"><span>Pin It</span></span></a>
+    
+  </div>
+
+  
+</div>
+
+          <div class="section tutorial-page">
+        <h2 id="introduction">Introduction</h2>
+        <p>The <a href="https://www.sparkfun.com/products/14129">Ardumoto Shield</a>
+ is a dual-motor controller for Arduino. Combined with an Arduino, the 
+Ardumoto makes a fantastic controller platform for RC vehicles or even 
+small autonomous robots.  It’s now easier to use, featuring control 
+signal LEDs, while also being much more flexible for advanced users.</p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/Marshall-06.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/Marshall-06.jpg" alt="alt text"></a></p>
+
+<p style="text-align:center;"> <em>Ardumoto Shield assembled and situated on a <a href="https://www.sparkfun.com/products/12757">RedBoard</a>.</em></p>
+
+<p>We sell the Ardumoto Shield either alone or with a set of motors and wheels in our <a href="https://www.sparkfun.com/products/14180">Ardumoto Shield Kit</a>. This kit includes the shield as well as pairs of <a href="https://www.sparkfun.com/products/13259">tires</a>, <a href="https://www.sparkfun.com/products/13302">motors</a> and connectors. And, of course, it’s all stuffed in a classic SparkFun red box (which may come in handy as a robot chassis).</p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/Marshall-01.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/Marshall-01.jpg" alt="alt text"></a></p>
+
+<p style="text-align:center;"> <em>Contents of the <a href="https://www.sparkfun.com/products/14180">Ardumoto Shield Kit</a>.</em></p>
+
+<h3>Covered in This Tutorial</h3>
+
+<p>This tutorial covers assembly and use of both the Ardumoto Shield and
+ the Ardumoto Shield Kit. Digging deeper, we’ll get into some assembly 
+tips and an example Arduino sketch. We will also present some additional
+ resources that can help you get the most out of your board.</p>
+
+<p>This guide assumes you are familiar with the Arduino platform and can
+ successfully compile and load a program to an ATmega328P based board, 
+such as blink.ino.</p>
+
+<h3>Required Tools &amp; Materials</h3>
+
+<p>To follow along with this tutorial, you’ll need an <a href="https://www.sparkfun.com/products/14129">Ardumoto Shield</a> or the <a href="https://www.sparkfun.com/products/14180">Ardumoto Shield Kit</a>, and an <a href="https://www.sparkfun.com/products/13975">Arduino</a> or <a href="https://learn.sparkfun.com/tutorials/arduino-comparison-guide">Arduino-compatible development board</a>.</p>
+
+
+
+<div class="tile-wrap">
+<div class="tile product-tile has_addl_actions  grid " data-id="11021" itemscope="" itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="SparkFun">
+  <meta itemprop="mpn" content="DEV11021">
+    <meta itemprop="sku" content="DEV-11021">
+
+  <div class="actions-wrap">
+
+    <a class="thumb" href="https://www.sparkfun.com/products/11021">
+      <img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/11021-01.jpg" alt="Arduino Uno - R3" itemprop="image" height="140">
+    </a>
+
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="confirm_backorder" method="post">
+          <input name="id" value="11021" type="hidden">
+          <input name="qty" value="1" type="hidden">
+          <input name="csrf_token" value="f4ffaf6de6f11c2a235e557034b87668ba6a79d39d26e87cfdfcf246417c3b2bbc6ba0ab829995458e1e85036481cf29649d52538d1be45eda6b2312d4b8f636" type="hidden">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" name="qty" id="add_qty_11021" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1" type="text">
+          </div>
+                      <input class="btn btn-cart btn-default" value="Backorder" type="submit">
+                  </form>
+      </div>
+      <div class="added_to_cart_11021 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_11021"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+  
+    <h3 class="title">
+      <a href="https://www.sparkfun.com/products/11021" itemprop="url">
+        <span itemprop="name">Arduino Uno - R3</span>
+      </a>
+    </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="out of stock"><span class="sfe-icon-stock-out"><span class="visuallyhidden">Out of stock</span></span></a>
+    </span>
+
+    <span class="sku" itemprop="sku">
+      DEV-11021    </span>
+
+          <p class="description" style="display:none" itemprop="description">
+        This is the new Arduino Uno R3. In addition to all the features 
+of the previous board, the Uno now uses an ATmega16U2 instead…      </p>
+    
+  </div>
+
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated" itemprop="price" content="24.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="24.95">24.95</span></span>
+        </span>
+      </div>
+              <link itemprop="availability" href="http://schema.org/OutOfStock">
+          </div>
+  
+  
+  <span class="star_rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+        
+<span class="product-rating" title="4.5 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-full" data-star-index="3"></span>
+          <span class="sfe-icon-star-half" data-star-index="4"></span>
+  </span>
+<meta itemprop="ratingValue" content="4.5">
+<meta itemprop="bestRating" content="5">
+<meta itemprop="worstRating" content="1">
+    <span class="count" itemprop="reviewCount">102</span>
+  </span>
+
+  
+  <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="11021">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">86</span>
+</span>    <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="11021" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+  </div>
+
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="13975" itemscope="" itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="SparkFun">
+  <meta itemprop="mpn" content="DEV13975">
+    <meta itemprop="sku" content="DEV-13975">
+
+  <div class="actions-wrap">
+
+    <a class="thumb" href="https://www.sparkfun.com/products/13975">
+      <img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/13975-01.jpg" alt="SparkFun RedBoard - Programmed with Arduino" itemprop="image" height="140">
+    </a>
+
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input name="id" value="13975" type="hidden">
+          <input name="qty" value="1" type="hidden">
+          <input name="csrf_token" value="f4ffaf6de6f11c2a235e557034b87668ba6a79d39d26e87cfdfcf246417c3b2bbc6ba0ab829995458e1e85036481cf29649d52538d1be45eda6b2312d4b8f636" type="hidden">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" name="qty" id="add_qty_13975" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1" type="text">
+          </div>
+                      <input class="btn btn-cart btn-action" value="Add to Cart" type="submit">
+                  </form>
+      </div>
+      <div class="added_to_cart_13975 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_13975"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+  
+    <h3 class="title">
+      <a href="https://www.sparkfun.com/products/13975" itemprop="url">
+        <span itemprop="name">SparkFun RedBoard - Programmed with Arduino</span>
+      </a>
+    </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku" itemprop="sku">
+      DEV-13975    </span>
+
+          <p class="description" style="display:none" itemprop="description">
+        At SparkFun we use many Arduinos and we're always looking for 
+the simplest, most stable one. Each board is a bit different an…      </p>
+    
+  </div>
+
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated" itemprop="price" content="19.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="19.95">19.95</span></span>
+        </span>
+      </div>
+              <link itemprop="availability" href="http://schema.org/InStock">
+          </div>
+  
+  
+  <span class="star_rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+        
+<span class="product-rating" title="4.7 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-full" data-star-index="3"></span>
+          <span class="sfe-icon-star-half" data-star-index="4"></span>
+  </span>
+<meta itemprop="ratingValue" content="4.7">
+<meta itemprop="bestRating" content="5">
+<meta itemprop="worstRating" content="1">
+    <span class="count" itemprop="reviewCount">11</span>
+  </span>
+
+  
+  <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="13975">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">16</span>
+</span>    <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="13975" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+  </div>
+
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="14129" itemscope="" itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="SparkFun">
+  <meta itemprop="mpn" content="DEV14129">
+      <meta itemprop="gtin13" content="0845156007776">
+    <meta itemprop="sku" content="DEV-14129">
+
+  <div class="actions-wrap">
+
+    <a class="thumb" href="https://www.sparkfun.com/products/14129">
+      <img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/14129-01.jpg" alt="SparkFun Ardumoto - Motor Driver Shield" itemprop="image" height="140">
+    </a>
+
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input name="id" value="14129" type="hidden">
+          <input name="qty" value="1" type="hidden">
+          <input name="csrf_token" value="f4ffaf6de6f11c2a235e557034b87668ba6a79d39d26e87cfdfcf246417c3b2bbc6ba0ab829995458e1e85036481cf29649d52538d1be45eda6b2312d4b8f636" type="hidden">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" name="qty" id="add_qty_14129" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1" type="text">
+          </div>
+                      <input class="btn btn-cart btn-action" value="Add to Cart" type="submit">
+                  </form>
+      </div>
+      <div class="added_to_cart_14129 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_14129"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+  
+    <h3 class="title">
+      <a href="https://www.sparkfun.com/products/14129" itemprop="url">
+        <span itemprop="name">SparkFun Ardumoto - Motor Driver Shield</span>
+      </a>
+    </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku" itemprop="sku">
+      DEV-14129    </span>
+
+          <p class="description" style="display:none" itemprop="description">
+        The Ardumoto Shield is a dual-motor controller for Arduino. 
+Based on the L298 H-bridge, the SparkFun Ardumoto can drive two D…      </p>
+    
+  </div>
+
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated" itemprop="price" content="19.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="19.95">19.95</span></span>
+        </span>
+      </div>
+              <link itemprop="availability" href="http://schema.org/InStock">
+          </div>
+  
+  
+
+  
+  <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="14129">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">1</span>
+</span>    <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="14129" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+  </div>
+
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="14180" itemscope="" itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="SparkFun">
+  <meta itemprop="mpn" content="KIT14180">
+      <meta itemprop="gtin13" content="0845156007868">
+    <meta itemprop="sku" content="KIT-14180">
+
+  <div class="actions-wrap">
+
+    <a class="thumb" href="https://www.sparkfun.com/products/14180">
+      <img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/14180_Kit.jpg" alt="SparkFun Ardumoto Shield Kit" itemprop="image" height="140">
+    </a>
+
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input name="id" value="14180" type="hidden">
+          <input name="qty" value="1" type="hidden">
+          <input name="csrf_token" value="f4ffaf6de6f11c2a235e557034b87668ba6a79d39d26e87cfdfcf246417c3b2bbc6ba0ab829995458e1e85036481cf29649d52538d1be45eda6b2312d4b8f636" type="hidden">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" name="qty" id="add_qty_14180" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1" type="text">
+          </div>
+                      <input class="btn btn-cart btn-action" value="Add to Cart" type="submit">
+                  </form>
+      </div>
+      <div class="added_to_cart_14180 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_14180"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+  
+    <h3 class="title">
+      <a href="https://www.sparkfun.com/products/14180" itemprop="url">
+        <span itemprop="name">SparkFun Ardumoto Shield Kit</span>
+      </a>
+    </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku" itemprop="sku">
+      KIT-14180    </span>
+
+          <p class="description" style="display:none" itemprop="description">
+        Robots are fun, and Arduinos are easy. So wouldn't it be nice if
+ there were a kit that included everything you need to get yo…      </p>
+    
+  </div>
+
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated" itemprop="price" content="24.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="24.95">24.95</span></span>
+        </span>
+      </div>
+              <link itemprop="availability" href="http://schema.org/InStock">
+          </div>
+  
+  
+  <span class="star_rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+        
+<span class="product-rating" title="4.7 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-full" data-star-index="3"></span>
+          <span class="sfe-icon-star-half" data-star-index="4"></span>
+  </span>
+<meta itemprop="ratingValue" content="4.7">
+<meta itemprop="bestRating" content="5">
+<meta itemprop="worstRating" content="1">
+    <span class="count" itemprop="reviewCount">3</span>
+  </span>
+
+  
+  <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="14180">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">4</span>
+</span>    <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="14180" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+  </div>
+
+</div>
+</div>
+
+  <div class="clearfix"></div>
+
+
+
+
+<h4>Equipping the Ardumoto Shield (Non-Kit Version)</h4>
+
+<p>If all you have is the shield, you will also probably want a couple of <strong>DC motors</strong> to drive. The Ardumoto can control most small DC motors, like any of those in our <a href="https://www.sparkfun.com/categories/247">DC motor category</a>.</p>
+
+<p>You’ll also need a handful of connectors to get everything wired up together. We recommend <a href="https://www.sparkfun.com/products/10007">Stackable Headers</a> to connect your Ardumoto to your Arduino, and two or three <a href="http://www.sparkfun.com/products/8084">3.5mm Screw Terminals</a> to help connect motors to your Ardumoto.</p>
+
+<p>To upgrade an Ardumoto Shield to a kit, add the following components:</p>
+
+<link rel="stylesheet" type="text/css" href="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/wish_list.css"><div><div id="wish-list-137340" class="sfe-wish-list"><div class="sfe-title"><a href="https://www.sparkfun.com/wish_lists/137340"><strong>Ardumoto V2.0 Wishlist</strong> <span class="sfewl">SparkFun Wish List</span></a><form action="https://www.sparkfun.com/wish_lists/137340/dump" method="post"><input value="Add all to cart" class="btn btn-default" type="submit"></form></div><div class="sfe-inner"><div class="sfe-row"><a href="https://www.sparkfun.com/products/13302"><img class="sfe-thumbnail" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/13302-01b.jpg" height="58" width="58"><span class="sfe-text"><span class="sfe-item-title">Hobby Gearmotor - 200 RPM (Pair) <span class="sfe-sku"><span class="sfe-stock sfe-stock-in" title="in stock"></span> ROB-13302</span></span><span class="sfe-description">These
+ are a pair of hobby gearmotors from DAGU. These gearmotors are the same
+ ones recommended for use in the Shadow Chassis and offer a cheap and 
+eas…</span></span></a></div><div class="sfe-row"><a href="https://www.sparkfun.com/products/8084"><img class="sfe-thumbnail" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/08084-01.jpg" height="58" width="58"><span class="sfe-text"><span class="sfe-item-title">(3) Screw Terminals 3.5mm Pitch (2-Pin) <span class="sfe-sku"><span class="sfe-stock sfe-stock-in" title="in stock"></span> PRT-08084</span></span><span class="sfe-description">Screw
+ Terminals with 3.5mm pitch pins. Comes in 2 or 3 positions and have the
+ really cool feature of slide-locking together to form any size you need
+ …</span></span></a></div><div class="sfe-row"><a href="https://www.sparkfun.com/products/13259"><img class="sfe-thumbnail" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/13259-03.jpg" height="58" width="58"><span class="sfe-text"><span class="sfe-item-title">Wheel - 65mm (Rubber Tire, Pair) <span class="sfe-sku"><span class="sfe-stock sfe-stock-in" title="in stock"></span> ROB-13259</span></span><span class="sfe-description">These
+ are a pair of basic, 65mm wheels with black rubber tires. These wheels 
+are the same ones designed to fit onto DAGUs right angle gear motors 
+util…</span></span></a></div><div class="sfe-row"><a href="https://www.sparkfun.com/products/10007"><img class="sfe-thumbnail" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/10007-01.jpg" height="58" width="58"><span class="sfe-text"><span class="sfe-item-title">Arduino Stackable Header Kit <span class="sfe-sku"><span class="sfe-stock sfe-stock-in" title="in stock"></span> PRT-10007</span></span><span class="sfe-description">These
+ headers are made to work with the Arduino Main Board, Arduino Pro, and 
+the Arduino Mega. They are the perfect height for clearing the USB-B 
+conn…</span></span></a></div><div class="sfe-row"><a href="https://www.sparkfun.com/products/9518"><img class="sfe-thumbnail" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/09518-01.jpg" height="58" width="58"><span class="sfe-text"><span class="sfe-item-title">9V to Barrel Jack Adapter <span class="sfe-sku"><span class="sfe-stock sfe-stock-in" title="in stock"></span> PRT-09518</span></span><span class="sfe-description">This
+ simple cable has so many uses! Plug the 9 volt battery clip onto a 
+standard 9V battery and connect the other end to anything with a 
+5.5x2.1mm, ce…</span></span></a></div><div class="sfe-footer"><a class="button" href="https://www.sparkfun.com/wish_lists/137340">View <strong>Ardumoto V2.0 Wishlist</strong> on SparkFun.com</a></div></div></div></div><script src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/137340.js"></script>
+
+
+<h4>Powering the Shield</h4>
+
+<p>Both the shield and the kit will require a <strong>power source</strong>. Batteries are usually your best bet — we recommend a <a href="https://www.sparkfun.com/products/10218">9V alkaline battery</a>, which will work perfectly with the included 9V-to-Barrel Jack Adapter.</p>
+
+<h4>Required Tools</h4>
+
+<p>Finally, you’ll also need a few tools, including a soldering iron, solder, wire strippers and a screwdriver:</p>
+
+
+
+<div class="tile-wrap">
+<div class="tile product-tile has_addl_actions  grid " data-id="9507" itemscope="" itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="SparkFun">
+  <meta itemprop="mpn" content="TOL09507">
+    <meta itemprop="sku" content="TOL-09507">
+
+  <div class="actions-wrap">
+
+    <a class="thumb" href="https://www.sparkfun.com/products/9507">
+      <img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/09507-01.jpg" alt="Soldering Iron - 30W (US, 110V)" itemprop="image" height="140">
+    </a>
+
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input name="id" value="9507" type="hidden">
+          <input name="qty" value="1" type="hidden">
+          <input name="csrf_token" value="f4ffaf6de6f11c2a235e557034b87668ba6a79d39d26e87cfdfcf246417c3b2bbc6ba0ab829995458e1e85036481cf29649d52538d1be45eda6b2312d4b8f636" type="hidden">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" name="qty" id="add_qty_9507" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1" type="text">
+          </div>
+                      <input class="btn btn-cart btn-action" value="Add to Cart" type="submit">
+                  </form>
+      </div>
+      <div class="added_to_cart_9507 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_9507"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+  
+    <h3 class="title">
+      <a href="https://www.sparkfun.com/products/9507" itemprop="url">
+        <span itemprop="name">Soldering Iron - 30W (US, 110V)</span>
+      </a>
+    </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku" itemprop="sku">
+      TOL-09507    </span>
+
+          <p class="description" style="display:none" itemprop="description">
+        This is a very simple fixed temp, quick heating, 30W 110/120 VAC
+ soldering iron. We really enjoy using the more expensive iro…      </p>
+    
+  </div>
+
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated" itemprop="price" content="9.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="9.95">9.95</span></span>
+        </span>
+      </div>
+              <link itemprop="availability" href="http://schema.org/InStock">
+          </div>
+  
+  
+  <span class="star_rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+        
+<span class="product-rating" title="3.7 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-half" data-star-index="3"></span>
+          <span class="sfe-icon-star-empty" data-star-index="4"></span>
+  </span>
+<meta itemprop="ratingValue" content="3.7">
+<meta itemprop="bestRating" content="5">
+<meta itemprop="worstRating" content="1">
+    <span class="count" itemprop="reviewCount">6</span>
+  </span>
+
+  
+  <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="9507">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">15</span>
+</span>    <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="9507" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+  </div>
+
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="9163" itemscope="" itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="SparkFun">
+  <meta itemprop="mpn" content="TOL09163">
+    <meta itemprop="sku" content="TOL-09163">
+
+  <div class="actions-wrap">
+
+    <a class="thumb" href="https://www.sparkfun.com/products/9163">
+      <img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/09162-02-L.jpg" alt="Solder Lead Free - 15-gram Tube" itemprop="image" height="140">
+    </a>
+
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input name="id" value="9163" type="hidden">
+          <input name="qty" value="1" type="hidden">
+          <input name="csrf_token" value="f4ffaf6de6f11c2a235e557034b87668ba6a79d39d26e87cfdfcf246417c3b2bbc6ba0ab829995458e1e85036481cf29649d52538d1be45eda6b2312d4b8f636" type="hidden">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" name="qty" id="add_qty_9163" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1" type="text">
+          </div>
+                      <input class="btn btn-cart btn-action" value="Add to Cart" type="submit">
+                  </form>
+      </div>
+      <div class="added_to_cart_9163 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_9163"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+  
+    <h3 class="title">
+      <a href="https://www.sparkfun.com/products/9163" itemprop="url">
+        <span itemprop="name">Solder Lead Free - 15-gram Tube</span>
+      </a>
+    </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku" itemprop="sku">
+      TOL-09163    </span>
+
+          <p class="description" style="display:none" itemprop="description">
+        This is your basic tube of unleaded (Pb-free) solder with a 
+60/40 no clean, water soluble resin core. 0.031" gauge and 15 gra…      </p>
+    
+  </div>
+
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated" itemprop="price" content="3.5"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="3.50">3.50</span></span>
+        </span>
+      </div>
+              <link itemprop="availability" href="http://schema.org/InStock">
+          </div>
+  
+  
+  <span class="star_rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+        
+<span class="product-rating" title="4 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-full" data-star-index="3"></span>
+          <span class="sfe-icon-star-empty" data-star-index="4"></span>
+  </span>
+<meta itemprop="ratingValue" content="4">
+<meta itemprop="bestRating" content="5">
+<meta itemprop="worstRating" content="1">
+    <span class="count" itemprop="reviewCount">2</span>
+  </span>
+
+  
+  <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="9163">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">4</span>
+</span>    <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="9163" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+  </div>
+
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="12891" itemscope="" itemtype="http://schema.org/Product">
+  <meta itemprop="brand" content="SparkFun">
+  <meta itemprop="mpn" content="TOL12891">
+    <meta itemprop="sku" content="TOL-12891">
+
+  <div class="actions-wrap">
+
+    <a class="thumb" href="https://www.sparkfun.com/products/12891">
+      <img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/12891-01.jpg" alt="Pocket Screwdriver Set" itemprop="image" height="140">
+    </a>
+
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input name="id" value="12891" type="hidden">
+          <input name="qty" value="1" type="hidden">
+          <input name="csrf_token" value="f4ffaf6de6f11c2a235e557034b87668ba6a79d39d26e87cfdfcf246417c3b2bbc6ba0ab829995458e1e85036481cf29649d52538d1be45eda6b2312d4b8f636" type="hidden">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" name="qty" id="add_qty_12891" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1" type="text">
+          </div>
+                      <input class="btn btn-cart btn-action" value="Add to Cart" type="submit">
+                  </form>
+      </div>
+      <div class="added_to_cart_12891 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_12891"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+  
+    <h3 class="title">
+      <a href="https://www.sparkfun.com/products/12891" itemprop="url">
+        <span itemprop="name">Pocket Screwdriver Set</span>
+      </a>
+    </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku" itemprop="sku">
+      TOL-12891    </span>
+
+          <p class="description" style="display:none" itemprop="description">
+        What should every hacker have available to them? That's right, a
+ screwdriver (you have to get into those cases somehow). What…      </p>
+    
+  </div>
+
+      <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated" itemprop="price" content="3.95"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="3.95">3.95</span></span>
+        </span>
+      </div>
+              <link itemprop="availability" href="http://schema.org/InStock">
+          </div>
+  
+  
+  <span class="star_rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+        
+<span class="product-rating" title="3 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-empty" data-star-index="3"></span>
+          <span class="sfe-icon-star-empty" data-star-index="4"></span>
+  </span>
+<meta itemprop="ratingValue" content="3">
+<meta itemprop="bestRating" content="5">
+<meta itemprop="worstRating" content="1">
+    <span class="count" itemprop="reviewCount">3</span>
+  </span>
+
+  
+  <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="12891">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">5</span>
+</span>    <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="12891" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+  </div>
+
+</div>
+</div>
+
+  <div class="clearfix"></div>
+
+
+
+
+<h3>Suggested Reading</h3>
+
+<p>The Ardumoto is a great platform for first-time motor users (and 
+experienced ones too!). There are, however, a few concepts you should be
+ familiar with before clicking over to the next few pages. Here are some
+ tutorials we recommend reading first:</p>
+
+<ul>
+<li><a href="https://learn.sparkfun.com/tutorials/motors-and-selecting-the-right-one">Motors and Selecting the Right One</a> — Learn all about motors before learning how to control them.</li>
+<li><a href="https://learn.sparkfun.com/tutorials/arduino-shields">Arduino Shields</a>
+ — This tutorial provides an overview of shields in general. It also 
+contains an assembly guide for attaching headers to your shield.</li>
+<li><a href="https://learn.sparkfun.com/tutorials/pulse-width-modulation">Pulse Width Modulation (PWM)</a> — PWM is used to control the speed of our motors.</li>
+<li><a href="https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering">How to Solder: Through Hole</a> — To electrically secure the connectors and headers, you’ll need to solder them to your shield.</li>
+<li><a href="https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law">Voltage, Current, Resistance and Ohm’s Law</a> — When we dive into the L298, it’ll be good to know the basics of voltage and current.</li>
+</ul>
+      </div>
+          <div class="section tutorial-page">
+        <h2 id="meet-the-l298">Meet the L298</h2>
+        <p>At the heart of the Ardumoto — the big, black chip right in the middle — is an <a href="https://www.sparkfun.com/products/9479">L298</a>,
+ one of our favorite dual-channel motor drivers around. On this page, 
+we’ll give you some background information on the chip we’ll be 
+depending on to drive our motors.</p>
+
+<h3>But First…Why a Motor Driver?</h3>
+
+<p>DC motors are the easiest motors to use. They’re dumb (they don’t 
+provide feedback), but they’re good at spinning in one direction or the 
+other when we tell them to. Unlike servos or steppers, DC motors don’t 
+require any special signals — just a straight DC voltage. So why can’t 
+we just connect them directly to the Arduino?</p>
+
+<p>Well, motors tend to <strong>draw a lot of current</strong>, and 
+trying to drive a motor straight from your Arduino output pins will make
+ your Arduino quite cross with you. Wiring an Arduino straight to the 
+motors will damage the microcontroller’s I/O pins due to the absolute 
+maximum ratings. The Ardumoto lets you control a whole bunch of current 
+(good for motors) safely with an itty-bitty signal (good for Arduinos). 
+Everyone’s happy!</p>
+
+<hr>
+
+<p>Here are some of the important features and specifications of the 
+L298. These extend out to be the specifications of the Ardumoto as well:</p>
+
+<h3>Two Channels @ 2A Each</h3>
+
+<p>The L298 is a two-channel motor driver. That means it can individually <strong>drive up to two motors</strong>. So it’s perfect for a two-wheel-drive vehicle. But if you have a special <a href="https://www.sparkfun.com/products/12089">four-wheel-drive platform</a>, you might need something else (or just two L298s).</p>
+
+<p>Each channel on the L298 can deliver <strong>up to 2A</strong> to the
+ motor to which it’s connected. Keep in mind, though, that the amount of
+ current available to your motor also depends on your system’s power 
+source. <strong>Batteries</strong> are great power sources because 
+they’re mobile and can discharge a lot of current. However, high current
+ draw also means they’ll drain faster.</p>
+
+<h3>The Control Signals</h3>
+
+<p>Controlling the L298 is very easy. If you’ve ever blinked or dimmed 
+an LED, you already have all the tools necessary to control the L298.</p>
+
+<ul>
+<li><p>All of the control signals are limited to a maximum of 7V, which 
+is great because our Arduino is only going to supply a maximum of 5V.</p></li>
+<li><p>For each of the L298’s channels, there are two types of input we 
+need to send to drive a motor: direction and enable. Each of these 
+inputs are Boolean — either high or low.</p></li>
+<li><p>Using the <strong>direction</strong> inputs, we can control 
+whether the motor spins clockwise or counterclockwise. The L298 actually
+ has two direction inputs for each channel. However, we’ve merged those 
+two inputs into one on the Ardumoto, as we’ll show in the next section.</p></li>
+<li><p>The <strong>enable</strong> input can be driven either high or low to make the motor spin or stop. But, with <a href="https://learn.sparkfun.com/tutorials/pulse-width-modulation">Pulse Width Modulation (PWM)</a>, we can actually use this input to control the <strong>speed</strong> of our motor. Just as it can be used to dim LEDs, PWM is perfect for controlling how fast our DC motor spins.</p></li>
+</ul>
+
+
+<hr>
+
+<p>That covers the basics of the L298. If you’re curious, or want to know more about the chip, checking out the <a href="https://www.sparkfun.com/datasheets/Components/General/L298N.pdf">datasheet</a> is a good place to start.</p>      </div>
+          <div class="section tutorial-page">
+        <h2 id="ardumoto-overview">Ardumoto Overview</h2>
+        <p>Before you get your soldering iron out, or start attaching 
+motors, it’d be best if we briefly covered the basics of the Ardumoto 
+Shield. On this page, we’ll highlight the important inputs and outputs 
+of the shield, so you can get a better idea of how you want to assemble 
+it later.</p>
+
+<h3>Pins and Connectors</h3>
+
+<p>Here’s an annotated view of the shield, highlighting the important pins and components:</p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/top_basic.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/top_basic.jpg" alt="alt text"></a></p>
+
+<p style="text-align:center;"> <em>The top side of the Ardumoto</em></p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/bottom_basic.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/bottom_basic.jpg" alt="alt text"></a></p>
+
+<p style="text-align:center;"> <em>The bottom side of the Ardumoto and jumpers</em></p>
+
+<p>Each motor uses two pins: the digital output for <strong>direction</strong> and the PWM for <strong>speed</strong>.
+  The factory configuration uses Arduino pins 2, 3, 4 and 11.  The 
+alternate configuration uses pins 7, 8, 9 and 10.  If the alternate pins
+ are needed, you’ll have to cut the copper links on the bottom and apply
+ solder to bridge to the other selection where necessary.  For this 
+guide, just leave everything in the default positions.</p>
+
+<p>If the shield is used on a 3.3V Arduino (such as the <a href="https://www.sparkfun.com/products/10914">Arduino Pro 328 - 3.3V/8MHz</a>),
+ chances are there’s no 5V supply, so you’ll have to move the VCCIO 
+jumper to the 3.3V side.  This jumper selects the voltage for the L298’s
+ logic.  If you’re using an Uno, or 5V 328p of another variety, leave 
+this in the default position.</p>
+
+<p>This table describes the pin function for each configuration.</p>
+
+<table class="table table-striped table-bordered">
+  <tbody><tr>
+    <th>Default Pin<br></th>
+    <th>Alternate Pin<br></th>
+    <th>Ardumoto Shield Pin Label</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>8</td>
+    <td>DIR A</td>
+    <td>A digital signal to control the rotation direction of motor A (e.g., HIGH drives current from output 4 to 3).</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>9</td>
+    <td>PWM A<br></td>
+    <td>A PWM signal to control the speed of motor B. 0=off, 255=max speed.</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>7</td>
+    <td>DIR B<br></td>
+    <td>A digital signal to control the rotation direction of motor A (e.g., HIGH drives current from output 2 to 1).</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>10</td>
+    <td>PWM B<br></td>
+    <td>A PWM signal to control the speed of motor B. 0=off, 255=max speed.</td>
+  </tr>
+</tbody></table>
+
+
+<br>
+
+
+<p>While the Ardumoto Shield is attached to an Arduino, the used pins <strong>shouldn’t be connected to anything else</strong>.</p>
+
+<h3>Motor Outputs</h3>
+
+<p>Both of the L298’s motor driver outputs are broken out to the edge of
+ the shield. These 2-pin outputs are broken out to two footprints: a <a href="https://www.sparkfun.com/products/8084">3.5mm-pitch screw terminal</a> and a <strong>0.1"-pitch header</strong>.
+ You can use either to wire up your motor, but screw terminals make life
+ much easier if you need to disconnect your motor. The L298 is perfect 
+for building simple two-wheel-drive robot platforms — connect one motor 
+to port A and the other motor to port B.</p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/Ardumoto_1.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/Ardumoto_1.jpg" alt="alt text"></a></p>
+
+<p>Technically, there is no right or wrong way to connect your motor’s 
+wires to the two output pins, but to help keep things straight, we 
+suggest connecting the red / black wire for each motor to pins 1 / 2 on 
+port A and pins 3 / 4 on port B, respectively.</p>
+
+<p>The right and left motors of a robot spin different directions with 
+the same polarity drive because of the orientation.  If you want to keep
+ DIR consistently moving that side of the bot “forward,” you may end up 
+swapping either the motor leads of one side or the logic in the code, 
+but not both.  Play around with the leads of the motors on their 
+respective sides and watch the indicator LEDs to see the effect.</p>
+
+<h4>LED Indicators</h4>
+
+<p>Next to each of the motor outputs is a pair of blue and yellow LEDs, which <strong>indicate the direction</strong>
+ your motor is spinning. These are great once you get to debugging your 
+project. They’re also useful if you want to test your sketch without 
+wiring up any motors.</p>
+
+<p>There are also four red LEDs (PWMA, DIRA, PWMB, DIRB) that are wired 
+to the control lines directly, showing what your code is doing and also 
+if the pins are configured correctly.</p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/Marshall-14.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/Marshall-14.jpg" alt="alt text"></a></p>
+
+<p style="text-align:center;"> <em>The control signals are connected to 
+LEDs on this revision so you can see what your program is doing!  In 
+this photo, DIRA is illuminated (meaning the direction is reversed), and
+ PWMA is half-illuminated, indicating that the signal is being pulse 
+width modulated.</em></p>
+
+<p>When the DIR LED of a side is illuminated, the driver will allow 
+current from pin 2 to 1, and the blue LED will be lit.  Alternately, the
+ yellow LEDs will be lit.  With a motor connected, the inductive effects
+ can cause the opposite drive LED to illuminate slightly; this is OK.  
+The <strong>blue and yellow</strong> LEDs are there to help show what the actual outputs of the driver are doing.  Use the <strong>red</strong> LEDs to debug your code.</p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/LED_ops.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/LED_ops.jpg" alt="alt text"></a></p>
+
+<p style="text-align:center;"> LEDs in operation</p>
+
+<h3>Supply Voltage</h3>
+
+<p>The Ardumoto Shield should be powered through one of two power supply inputs. Pick <strong>one or the other</strong>:</p>
+
+<ol>
+<li>The <strong>barrel jack</strong> input on the Arduino.</li>
+<li>The <strong>V<sub>IN</sub> input</strong> on the shield</li>
+</ol>
+
+
+<p>If you don’t want to use the Arduino’s barrel jack input, you can use the <strong>V<sub>IN</sub> input on the shield</strong> instead. This voltage input will supply <strong>both the shield and the Arduino</strong>. Like the motor outputs, this connection is broken out to both a 3.5mm screw terminal and a 0.1"-pitch header.</p>
+
+<p>Do not supply power to <em>both</em> the Arduino barrel jack input and V<sub>IN</sub> on the shield!  Doing this will cause current to flow from one power supply to the other if the voltages are not identical.</p>
+
+<h4>Spec'ing a Power Supply</h4>
+
+<p>Because V<sub>IN</sub> powers both your Arduino and your motors, you 
+need to take extra care in deciding what you’ll use to power your 
+Arduino/Ardumoto combo. Not only does V<sub>IN</sub> have to fall within
+ the acceptable range of your Arduino (usually 6–15V), but it also has 
+to meet the specifications of your motor.</p>
+
+<p>Check the <strong>voltage and current requirements of your motor</strong> before deciding how to power your Ardumoto project. These specifications vary. The <a href="https://www.sparkfun.com/products/13258">65 RPM Hobby Gearmotors</a>, for example, have a recommended range of 3–6V, but can be safely powered at up to 9V.</p>
+
+<p>We recommend <a href="https://www.sparkfun.com/products/10218">9V alkaline batteries</a> as an easy, if not very sustainable, option. <a href="https://www.sparkfun.com/products/11855">Dual-cell LiPo battery packs</a> (7.4V nominal, 1,000mAh capacity) are also a good option if you’re looking for something mobile. A <a href="http://www.sparkfun.com/commerce/product_info.php?products_id=298">9V wall wart</a> can work if your project is stationary. For more help picking a power supply, check out our <a href="https://learn.sparkfun.com/tutorials/how-to-power-a-project">How to Power a Project tutorial</a>.</p>      </div>
+          <div class="section tutorial-page">
+        <h2 id="ardumoto-shield-assembly-tips">Ardumoto Shield Assembly Tips</h2>
+        <p>Before you can start using the Ardumoto Shield, you have to 
+do a little assembly. Embrace your inner electronics technician and whip
+ out that <a href="https://www.sparkfun.com/products/9507">soldering iron</a>! Time to turn a mish-mash of parts into a fully functional ‘duino shield!</p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/Marshall-03.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/Marshall-03.jpg" alt="alt text"></a></p>
+
+<p style="text-align:center;"> <em>Parts laid out, ready to assemble</em></p>
+
+<p>On this page we’ll go over some assembly tips. You don’t have to 
+follow these steps exactly (assemble the shield as best fits your 
+project’s needs), but this is good for general use of the shield.</p>
+
+<h3>Add Screw Terminals (Optional)</h3>
+
+<p>If you please, you can add <a href="http://www.sparkfun.com/products/8084">screw terminals</a> to both of the <strong>motor outputs</strong> and/or the <strong>V<sub>IN</sub></strong> input.</p>
+
+<p>If you’re adding screw terminals to the motor outputs, slide them together first:</p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/Marshall-02.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/Marshall-02.jpg" alt="alt text"></a></p>
+
+<p>Then insert them into the shield and solder.</p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/Marshall-05.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/Marshall-05.jpg" alt="alt text"></a></p>
+
+<p style="text-align:center;"> <em>Soldering in the screw terminals</em></p>
+
+<h3>Solder the Arduino Headers</h3>
+
+<p>To interface the shield with your Arduino, soldering male connectors 
+to the 28 header pins is a must. Soldering ensures a reliable physical 
+and electrical connection. If you’ve never soldered before, check out 
+our <a href="https://learn.sparkfun.com/tutorials/how-to-solder-through-hole-soldering">through-hole soldering tutorial</a>.</p>
+
+<p>There are usually two options for connectors when you’re assembling a shield: <a href="https://www.sparkfun.com/products/10007">stackable</a> or <a href="https://www.sparkfun.com/products/116">straight</a>. We recommend stackable headers because they allow you to stack other shields or <a href="https://www.sparkfun.com/products/11026">jumper wires</a> on top. The smaller male headers are a good option if you’re looking for lower-profile installation.</p>
+
+<p>If this is your first shield assembly, we recommend reading through our <a href="https://learn.sparkfun.com/tutorials/arduino-shields/installing-headers-preparation">shield assembly guide</a>. There are all sorts of tricks to installing shield headers, and making them look as good and straight as possible!</p>
+
+<div class="alert alert-warning"><b>There are too many holes!</b> The 
+stackable header kit includes two 6-position, and two 8-position 
+headers.  These go in the rows of pins toward the outside edge of the 
+board.  Also, both 6-positions go on the same side, and the 8-positions 
+go on the other.  There will be two extra unused pins on each side, 
+toward the motor connection.</div>
+
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/Marshall-04.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/Marshall-04.jpg" alt="alt text"></a></p>
+
+<p style="text-align:center;"> <em>In the process of soldering stackable headers. Still a lot of pins to go!</em></p>
+
+<p>Once you’re done soldering the headers, plug the shield in to make sure everything fits nice and cozy.</p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/Marshall-06.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/Marshall-06.jpg" alt="alt text"></a></p>
+
+<p style="text-align:center;"> <em>Assembled shield on a RedBoard/Arduino</em></p>
+
+<h3>Prototyping Area</h3>
+
+<p>Let’s address the elephant in the room. There’s almost half a shield 
+that we’ve failed to talk about thus far: the prototyping area! These 
+rows and columns of 0.1"-spaced plated through-holes can be used to 
+solder in all sorts of fun components.</p>
+
+<p>Near the proto area is a set of six pins.  With the isolation jumpers
+ opened underneath, these allow you to interface directly to the inputs 
+of the L298.</p>
+
+<p>The six pins of the ISP connector are outlined within the proto area.
+  These are just plated through holes, and are labeled to warn you that 
+the pins underneath come up really close.  If you absolutely need these,
+ you may end up removing the ISP header from the attached Arduino.</p>
+
+<p>Here are some ideas of what to do with it:</p>
+
+<ul>
+<li>Leave it alone! — If you’re happy with just driving motors, you’re good to go.</li>
+<li>Add an <a href="https://www.sparkfun.com/categories/80">accelerometer</a> to enable bump detection in your robot.</li>
+<li>Fill it with <a href="https://www.sparkfun.com/categories/89">LEDs</a> to make your project as blinky as possible.</li>
+<li>Add current sense resistors, an op-amp, and measure the current of the motors being driven.</li>
+<li>Disconnect all the jumpers and wire up the L298 in any way you please.</li>
+</ul>
+
+
+<p>Unlike other prototyping areas you may have encountered in the past, these holes are <strong>not wired together</strong>. You don’t need to do any trace-slicing, but you will need to do some soldering and wire routing.</p>      </div>
+          <div class="section tutorial-page">
+        <h2 id="motor-and-wheel-assembly">Motor and Wheel Assembly</h2>
+        <p>This is where the shield assembly gets very project-specific.
+ Have you picked out which motors you’ll be driving with the shield? Do 
+you know how long the wires need to be trimmed? There’s a lot to be 
+answered here before continuing on…</p>
+
+<h3>Motor Wiring</h3>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/Marshall-07.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/Marshall-07.jpg" alt="alt text"></a></p>
+
+<p>If you have the kit, the motors come with wires attached, but take 
+the time to notice how they are wired.  They are a left-right pair, 
+which can be seen by holding the motors in the same orientation and 
+looking at how the red and black wires are attached.  When they are 
+installed with the wire-side facing each other, a positive polarity 
+drives either motor “forward,” even though one is spinning clockwise 
+while the other spins counterclockwise.</p>
+
+<h3>Connecting Motors</h3>
+
+<p>If you added screw terminals in the last step, break out your <a href="https://www.sparkfun.com/products/12891">screwdriver</a>, slide the wires in, and tighten the terminals down.</p>
+
+<p>In lieu of screw terminals, you can solder the motor wires into either the 0.1" header or the screw terminal header.</p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/Ardumoto_2.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/Ardumoto_2.jpg" alt="alt text"></a></p>
+
+<p style="text-align:center;"> <em>The basic orientation of the motors, 
+wires and connections to build a robot.  In this configuration, the 
+drive LEDs will make sense, and operations on the control signals will 
+generate similar movement from side to side.</em></p>
+
+<p>If you’ve got the kit, install one motor’s red to output ‘1’, and 
+black to output ‘2’.  Install the other motor’s red to output ‘3’, and 
+black to output ‘4’.</p>
+
+<h3>Upcycling the SparkFun Box</h3>
+
+<p>If you have the Ardumoto Shield Kit, you probably also have a robust,
+ resplendently red SparkFun box. These SparkFun boxes come in handy for 
+all sorts of projects — including robot chassis!</p>
+
+<p>With some measured <a href="https://www.sparkfun.com/products/9200">hobby knife</a> incisions, you can cut out some mounts for the motors and tie your Arduino/shield combo down as well:</p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/Marshall-10.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/Marshall-10.jpg" alt="alt text"></a></p>
+
+<p>This shape of robot relies mostly on balance, and slides across the 
+floor.  If driving on carpet, slick clear tape can be added to the 
+corners to prevent catching.</p>      </div>
+          <div class="section tutorial-page">
+        <h2 id="example-code">Example Code</h2>
+        <p>Controlling the Ardumoto Shield is super easy. If you can 
+blink LEDs, you can make the Ardumoto Shield spin its motors. Here, 
+we’ll provide a simple, expandable example sketch to show how to drive 
+the pair of motors on the Ardumoto.</p>
+
+<div class="alert alert-info"><p><b>Note:</b> This example assumes you 
+are using the latest version of the Arduino IDE on your desktop. If this
+ is your first time using Arduino, please read our tutorial on <a href="https://learn.sparkfun.com/tutorials/installing-arduino-ide">installing Arduino IDE.</a> If you have not previously installed an Arduino library, please check out our <a href="https://learn.sparkfun.com/tutorials/installing-an-arduino-library">installation guide.</a></p></div>
+
+
+<h3>The Example Sketch</h3>
+
+<p>Download the example sketch and upload it to your board.</p>
+
+<p style="text-align:center;"><a href="https://raw.githubusercontent.com/sparkfun/Ardumoto-Motor_Driver_Shield/revision/Firmware/hw20ExampleCode/hw20ExampleCode.ino" class="btn btn-default">Ardumoto Shield Example Direct Link</a></p>
+
+<pre data-language="language:c
+,c
+"><button class="btn btn-default btn-sm copy-code" data-clipboard-text="    /* Ardumoto Example Sketch
+  by: Jim Lindblom
+  date: November 8, 2013
+  license: Public domain. Please use, reuse, and modify this 
+  sketch!
+
+  Adapted to v20 hardware by: Marshall Taylor
+  date: March 31, 2017
+
+  Three useful functions are defined:
+    setupArdumoto() -- Setup the Ardumoto Shield pins
+    driveArdumoto([motor], [direction], [speed]) -- Drive [motor] 
+      (0 for A, 1 for B) in [direction] (0 or 1) at a [speed]
+      between 0 and 255. It will spin until told to stop.
+    stopArdumoto([motor]) -- Stop driving [motor] (0 or 1).
+
+  setupArdumoto() is called in the setup().
+  The loop() demonstrates use of the motor driving functions.
+*/
+
+// Clockwise and counter-clockwise definitions.
+// Depending on how you wired your motors, you may need to swap.
+#define FORWARD  0
+#define REVERSE 1
+
+// Motor definitions to make life easier:
+#define MOTOR_A 0
+#define MOTOR_B 1
+
+// Pin Assignments //
+//Default pins:
+#define DIRA 2 // Direction control for motor A
+#define PWMA 3  // PWM control (speed) for motor A
+#define DIRB 4 // Direction control for motor B
+#define PWMB 11 // PWM control (speed) for motor B
+
+////Alternate pins:
+//#define DIRA 8 // Direction control for motor A
+//#define PWMA 9 // PWM control (speed) for motor A
+//#define DIRB 7 // Direction control for motor B
+//#define PWMB 10 // PWM control (speed) for motor B
+
+
+void setup()
+{
+  setupArdumoto(); // Set all pins as outputs
+}
+
+void loop()
+{
+  // Drive motor A (and only motor A) at various speeds, then stop.
+  driveArdumoto(MOTOR_A, REVERSE, 255); // Set motor A to REVERSE at max
+  delay(1000);  // Motor A will spin as set for 1 second
+  driveArdumoto(MOTOR_A, FORWARD, 127);  // Set motor A to FORWARD at half
+  delay(1000);  // Motor A will keep trucking for 1 second 
+  stopArdumoto(MOTOR_A);  // STOP motor A 
+
+  // Drive motor B (and only motor B) at various speeds, then stop.
+  driveArdumoto(MOTOR_B, REVERSE, 255); // Set motor B to REVERSE at max
+  delay(1000);  // Motor B will spin as set for 1 second
+  driveArdumoto(MOTOR_B, FORWARD, 127);  // Set motor B to FORWARD at half
+  delay(1000);  // Motor B will keep trucking for 1 second
+  stopArdumoto(MOTOR_B);  // STOP motor B 
+
+  // Drive both
+  driveArdumoto(MOTOR_A, FORWARD, 255);  // Motor A at max speed.
+  driveArdumoto(MOTOR_B, FORWARD, 255);  // Motor B at max speed.
+  delay(1000);  // Drive forward for a second
+  // Now go backwards at half that speed:
+  driveArdumoto(MOTOR_A, REVERSE, 127);  // Motor A at max speed.
+  driveArdumoto(MOTOR_B, REVERSE, 127);  // Motor B at max speed.
+  delay(1000);  // Drive forward for a second
+
+  // Now spin in place!
+  driveArdumoto(MOTOR_A, FORWARD, 255);  // Motor A at max speed.
+  driveArdumoto(MOTOR_B, REVERSE, 255);  // Motor B at max speed.
+  delay(2000);  // Drive forward for a second
+  stopArdumoto(MOTOR_A);  // STOP motor A 
+  stopArdumoto(MOTOR_B);  // STOP motor B 
+
+}
+
+// driveArdumoto drives 'motor' in 'dir' direction at 'spd' speed
+void driveArdumoto(byte motor, byte dir, byte spd)
+{
+  if (motor == MOTOR_A)
+  {
+    digitalWrite(DIRA, dir);
+    analogWrite(PWMA, spd);
+  }
+  else if (motor == MOTOR_B)
+  {
+    digitalWrite(DIRB, dir);
+    analogWrite(PWMB, spd);
+  }  
+}
+
+// stopArdumoto makes a motor stop
+void stopArdumoto(byte motor)
+{
+  driveArdumoto(motor, 0, 0);
+}
+
+// setupArdumoto initialize all pins
+void setupArdumoto()
+{
+  // All pins should be setup as outputs:
+  pinMode(PWMA, OUTPUT);
+  pinMode(PWMB, OUTPUT);
+  pinMode(DIRA, OUTPUT);
+  pinMode(DIRB, OUTPUT);
+
+  // Initialize all pins as low:
+  digitalWrite(PWMA, LOW);
+  digitalWrite(PWMB, LOW);
+  digitalWrite(DIRA, LOW);
+  digitalWrite(DIRB, LOW);
+}
+">Copy Code</button><code class="rainbow">    <span class="comment">/* Ardumoto Example Sketch
+  by: Jim Lindblom
+  date: November 8, 2013
+  license: Public domain. Please use, reuse, and modify this 
+  sketch!
+
+  Adapted to v20 hardware by: Marshall Taylor
+  date: March 31, 2017
+
+  Three useful functions are defined:
+    setupArdumoto() -- Setup the Ardumoto Shield pins
+    driveArdumoto([motor], [direction], [speed]) -- Drive [motor] 
+      (0 for A, 1 for B) in [direction] (0 or 1) at a [speed]
+      between 0 and 255. It will spin until told to stop.
+    stopArdumoto([motor]) -- Stop driving [motor] (0 or 1).
+
+  setupArdumoto() is called in the setup().
+  The loop() demonstrates use of the motor driving functions.
+*/</span>
+
+<span class="comment">// Clockwise and counter-clockwise definitions.</span>
+<span class="comment">// Depending on how you wired your motors, you may need to swap.</span>
+<span class="comment">#define FORWARD  0</span>
+<span class="comment">#define REVERSE 1</span>
+
+<span class="comment">// Motor definitions to make life easier:</span>
+<span class="comment">#define MOTOR_A 0</span>
+<span class="comment">#define MOTOR_B 1</span>
+
+<span class="comment">// Pin Assignments //</span>
+<span class="comment">//Default pins:</span>
+<span class="comment">#define DIRA 2 // Direction control for motor A</span>
+<span class="comment">#define PWMA 3  // PWM control (speed) for motor A</span>
+<span class="comment">#define DIRB 4 // Direction control for motor B</span>
+<span class="comment">#define PWMB 11 // PWM control (speed) for motor B</span>
+
+<span class="comment">////Alternate pins:</span>
+<span class="comment">//#define DIRA 8 // Direction control for motor A</span>
+<span class="comment">//#define PWMA 9 // PWM control (speed) for motor A</span>
+<span class="comment">//#define DIRB 7 // Direction control for motor B</span>
+<span class="comment">//#define PWMB 10 // PWM control (speed) for motor B</span>
+
+
+<span class="keyword">void</span> <span class="function call">setup</span>()
+{
+  <span class="function call">setupArdumoto</span>(); <span class="comment">// Set all pins as outputs</span>
+}
+
+<span class="keyword">void</span> <span class="function call">loop</span>()
+{
+  <span class="comment">// Drive motor A (and only motor A) at various speeds, then stop.</span>
+  <span class="function call">driveArdumoto</span>(MOTOR_A, REVERSE, <span class="constant numeric">255</span>); <span class="comment">// Set motor A to REVERSE at max</span>
+  <span class="function call">delay</span>(<span class="constant numeric">1000</span>);  <span class="comment">// Motor A will spin as set for 1 second</span>
+  <span class="function call">driveArdumoto</span>(MOTOR_A, FORWARD, <span class="constant numeric">127</span>);  <span class="comment">// Set motor A to FORWARD at half</span>
+  <span class="function call">delay</span>(<span class="constant numeric">1000</span>);  <span class="comment">// Motor A will keep trucking for 1 second </span>
+  <span class="function call">stopArdumoto</span>(MOTOR_A);  <span class="comment">// STOP motor A </span>
+
+  <span class="comment">// Drive motor B (and only motor B) at various speeds, then stop.</span>
+  <span class="function call">driveArdumoto</span>(MOTOR_B, REVERSE, <span class="constant numeric">255</span>); <span class="comment">// Set motor B to REVERSE at max</span>
+  <span class="function call">delay</span>(<span class="constant numeric">1000</span>);  <span class="comment">// Motor B will spin as set for 1 second</span>
+  <span class="function call">driveArdumoto</span>(MOTOR_B, FORWARD, <span class="constant numeric">127</span>);  <span class="comment">// Set motor B to FORWARD at half</span>
+  <span class="function call">delay</span>(<span class="constant numeric">1000</span>);  <span class="comment">// Motor B will keep trucking for 1 second</span>
+  <span class="function call">stopArdumoto</span>(MOTOR_B);  <span class="comment">// STOP motor B </span>
+
+  <span class="comment">// Drive both</span>
+  <span class="function call">driveArdumoto</span>(MOTOR_A, FORWARD, <span class="constant numeric">255</span>);  <span class="comment">// Motor A at max speed.</span>
+  <span class="function call">driveArdumoto</span>(MOTOR_B, FORWARD, <span class="constant numeric">255</span>);  <span class="comment">// Motor B at max speed.</span>
+  <span class="function call">delay</span>(<span class="constant numeric">1000</span>);  <span class="comment">// Drive forward for a second</span>
+  <span class="comment">// Now go backwards at half that speed:</span>
+  <span class="function call">driveArdumoto</span>(MOTOR_A, REVERSE, <span class="constant numeric">127</span>);  <span class="comment">// Motor A at max speed.</span>
+  <span class="function call">driveArdumoto</span>(MOTOR_B, REVERSE, <span class="constant numeric">127</span>);  <span class="comment">// Motor B at max speed.</span>
+  <span class="function call">delay</span>(<span class="constant numeric">1000</span>);  <span class="comment">// Drive forward for a second</span>
+
+  <span class="comment">// Now spin in place!</span>
+  <span class="function call">driveArdumoto</span>(MOTOR_A, FORWARD, <span class="constant numeric">255</span>);  <span class="comment">// Motor A at max speed.</span>
+  <span class="function call">driveArdumoto</span>(MOTOR_B, REVERSE, <span class="constant numeric">255</span>);  <span class="comment">// Motor B at max speed.</span>
+  <span class="function call">delay</span>(<span class="constant numeric">2000</span>);  <span class="comment">// Drive forward for a second</span>
+  <span class="function call">stopArdumoto</span>(MOTOR_A);  <span class="comment">// STOP motor A </span>
+  <span class="function call">stopArdumoto</span>(MOTOR_B);  <span class="comment">// STOP motor B </span>
+
+}
+
+<span class="comment">// driveArdumoto drives 'motor' in 'dir' direction at 'spd' speed</span>
+<span class="keyword">void</span> <span class="function call">driveArdumoto</span>(byte motor, byte dir, byte spd)
+{
+  <span class="keyword">if</span> (motor <span class="keyword operator">=</span><span class="keyword operator">=</span> MOTOR_A)
+  {
+    <span class="function call">digitalWrite</span>(DIRA, dir);
+    <span class="function call">analogWrite</span>(PWMA, spd);
+  }
+  <span class="keyword">else</span> <span class="keyword">if</span> (motor <span class="keyword operator">=</span><span class="keyword operator">=</span> MOTOR_B)
+  {
+    <span class="function call">digitalWrite</span>(DIRB, dir);
+    <span class="function call">analogWrite</span>(PWMB, spd);
+  }  
+}
+
+<span class="comment">// stopArdumoto makes a motor stop</span>
+<span class="keyword">void</span> <span class="function call">stopArdumoto</span>(byte motor)
+{
+  <span class="function call">driveArdumoto</span>(motor, <span class="constant numeric">0</span>, <span class="constant numeric">0</span>);
+}
+
+<span class="comment">// setupArdumoto initialize all pins</span>
+<span class="keyword">void</span> <span class="function call">setupArdumoto</span>()
+{
+  <span class="comment">// All pins should be setup as outputs:</span>
+  <span class="function call">pinMode</span>(PWMA, OUTPUT);
+  <span class="function call">pinMode</span>(PWMB, OUTPUT);
+  <span class="function call">pinMode</span>(DIRA, OUTPUT);
+  <span class="function call">pinMode</span>(DIRB, OUTPUT);
+
+  <span class="comment">// Initialize all pins as low:</span>
+  <span class="function call">digitalWrite</span>(PWMA, LOW);
+  <span class="function call">digitalWrite</span>(PWMB, LOW);
+  <span class="function call">digitalWrite</span>(DIRA, LOW);
+  <span class="function call">digitalWrite</span>(DIRB, LOW);
+}
+</code></pre>
+
+<p>Then upload to your Arduino and watch your motors spin! If you want to dig really deep into the sketch, check out the comments.</p>
+
+<h3>Explaining the Sketch</h3>
+
+<p>For each motor there are two mechanisms we can control — the <strong>direction</strong> of rotation and the <strong>speed</strong>. Each of those mechanisms is controlled by one pin on the Arduino.</p>
+
+<h4>Controlling Rotation Direction</h4>
+
+<p>We can only spin the motor in two directions — clockwise or 
+counterclockwise — so we only need two values — 0 or 1 — to control that
+ from the Arduino. We can simply <code>digitalWrite</code> either of the direction pins (pin 12 for motor A, pin 13 for motor B) <code>HIGH</code> or <code>LOW</code> to go forward or backward.</p>
+
+<p>For example, if you want motor A to spin clockwise, you simply need to <code>digitalWrite</code> pin 12 <code>LOW</code>:</p>
+
+<pre data-language="language:c
+,c
+"><button class="btn btn-default btn-sm copy-code" data-clipboard-text="digitalWrite(12, LOW);  // Motor A will spin clockwise
+">Copy Code</button><code class="rainbow"><span class="function call">digitalWrite</span>(<span class="constant numeric">12</span>, LOW);  <span class="comment">// Motor A will spin clockwise</span>
+</code></pre>
+
+<p>To make it spin the other way, write the pin <code>HIGH</code>.</p>
+
+<pre data-language="language:c
+,c
+"><button class="btn btn-default btn-sm copy-code" data-clipboard-text="digitalWrite(12, HIGH);  // Motor A will spin counter-clockwise
+">Copy Code</button><code class="rainbow"><span class="function call">digitalWrite</span>(<span class="constant numeric">12</span>, HIGH);  <span class="comment">// Motor A will spin counter-clockwise</span>
+</code></pre>
+
+<p>(<strong>Note:</strong> The rotation direction depends on how you 
+wired the motor to your shield. If you swapped the red and black wires, 
+the motor will spin opposite of how we’ve described it here.)</p>
+
+<h4>Speeding</h4>
+
+<p>To control the speed of a motor we need to <code>analogWrite</code> to the PWM pins (pin 3 for motor A, pin 11 for motor B). A higher <code>analogWrite</code> value means a faster spin. Writing the pin <code>LOW</code> (or 0) will stop the motor.</p>
+
+<table class="table table-striped table-bordered" style="width:75%;" align="center">
+<tbody><tr align="center"><th>PWM Value</th><th>Motor Spin Speed</th></tr>
+<tr align="center"><td>0</td><td>Off (Stop)</td></tr>
+<tr align="center"><td>127</td><td>Half Speed</td></tr>
+<tr align="center"><td>255</td><td>Full Speed</td></tr>
+</tbody></table>
+
+
+<br>
+
+
+<p>If we want to turn motor A up to maximum speed, this is all we need:</p>
+
+<pre data-language="language:c
+,c
+"><button class="btn btn-default btn-sm copy-code" data-clipboard-text="analogWrite(3, 255);  // Motor A at max speed
+">Copy Code</button><code class="rainbow"><span class="function call">analogWrite</span>(<span class="constant numeric">3</span>, <span class="constant numeric">255</span>);  <span class="comment">// Motor A at max speed</span>
+</code></pre>
+
+<p>After that line of code is executed, the <strong>motor will spin until stopped</strong>. To stop the motor, replace 255 with 0:</p>
+
+<pre data-language="language:c
+,c
+"><button class="btn btn-default btn-sm copy-code" data-clipboard-text="analogWrite(3, 0);  // Stop motor A
+">Copy Code</button><code class="rainbow"><span class="function call">analogWrite</span>(<span class="constant numeric">3</span>, <span class="constant numeric">0</span>);  <span class="comment">// Stop motor A</span>
+</code></pre>
+
+<p>Don’t forget to set your direction before spinning your motor!</p>      </div>
+          <div class="section tutorial-page">
+        <h2 id="resources--going-further">Resources and Going Further</h2>
+        <p>The Ardumoto has been designed primarily to be a motor 
+driver, but we’ve taken extra time to make sure the L298 IC can be fully
+ controlled, given the user understands the way it works.  The datasheet
+ contains a schematic diagram of the internal functions of the IC, which
+ is the first thing to look at and contemplate before trying to do wacky
+ things with your Ardumoto.</p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/L298_block_diagram.png"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/L298_block_diagram.png" alt="alt text"></a></p>
+
+<p style="text-align:center;"> <em>A block diagram of the L298 internals from the L298 datasheet</em></p>
+
+<p>As can be seen from the block diagram, the L298 is actually four 
+totem drives with two common grounds, intended for full-bridge 
+motor-driving applications.</p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/Ardumoto_Schematic_Snippit.png"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/Ardumoto_Schematic_Snippit.png" alt="alt text"></a></p>
+
+<p style="text-align:center;"> <em>A section of the Ardumoto Schematic</em></p>
+
+<p>To make the Ardumoto, we’ve connected the pairs with one of each 
+inverted, to allow a direction control.  The enable pin is then PWM’d 
+such that the output goes between drive enabled and high impedance.  
+This allows coasting of the motors when not driven.</p>
+
+<p>Another way the motors could have been hooked up is to PWM the input 
+pins and keep enable high.  This would provide motor resistance against 
+movement when not under power, and a PWM value of ½ would be “off.”</p>
+
+<h3>Advanced Pins and Connections</h3>
+
+<p>The other jumpers and pins are for flexible configuration.  They 
+allow the L298 to be completely isolated from the control lines so that 
+it may be connected in very specific ways, but it’s up to you to figure 
+out how to solve the engineering problems you’ll face.</p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/top_advanced.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/top_advanced.jpg" alt="alt text"></a></p>
+
+<p style="text-align:center;"> <em>The top side of the Ardumoto</em></p>
+
+<p style="text-align:center;"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/6/3/0/bottom_advanced.jpg"><img src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/bottom_advanced.jpg" alt="alt text"></a></p>
+
+<p style="text-align:center;"> <em>The bottom side of the Ardumoto and jumpers</em></p>
+
+<p>The A/B Isolate jumpers and the A/B inputs work together.  If the 
+‘ISOLATE’ jumpers are all opened, and the ‘SELECT’ pins are all opened, 
+the inputs to the L298 are not connected to anything but the six input 
+pins by the proto area.  They can then be used however the designer 
+wishes in conjuction with the proto area.</p>
+
+<p>The other curious feature is the pairs of pins labeled ‘SENSE’.  If 
+you look closely, you’ll notice each pair is shorted together, and 
+connected to ground.  It is possible to detect current through each 
+motor by cutting the jumper between these pins, supplying a low-ohm 
+resistor and measuring the voltage across it.  <em>Not for the faint of heart.</em></p>
+
+<p>Possible uses:</p>
+
+<ul>
+<li>Current sense — break the current sense link between through-holes 
+and insert a 0.05 or 0.1 ohm resistor.  Then, use an op-amp to amplify 
+the voltage across the resistor to measure current with an ADC.</li>
+<li>Four independent totem drive circuits using both timer one and timer two.</li>
+<li>Non-coasting drive configuration.</li>
+<li>Bridging output (and control lines) for 4A single drive — add a <a href="https://www.sparkfun.com/products/121">heatsink</a> with <a href="https://www.sparkfun.com/products/9771">thermal tape</a>!</li>
+</ul>
+
+
+<h3>Resources</h3>
+
+<ul>
+<li><a href="https://cdn.sparkfun.com/datasheets/Robotics/SparkFun_Ardumoto_v20.pdf">Ardumoto Shield Schematic</a> — A PDF of the shield’s schematic.</li>
+<li><a href="https://github.com/sparkfun/Ardumoto-Motor_Driver_Shield">Ardumoto Shield Github Repository</a> — The design files and examples.</li>
+<li><a href="http://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf">L298 Data Sheet</a> — Everything you could ever want to know about the L298 dual-motor driver.</li>
+<li><a href="https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM">Secrets of Arduino PWM</a> – Gives a good description of low-level timer usage.</li>
+<li><a href="https://raw.githubusercontent.com/sparkfun/Ardumoto-Motor_Driver_Shield/master/Firmware/hw20TimerOneExample/hw20TimerOneExample.ino">Example Using TimerOne</a> — This example included with the product repo shows using the motor driver with the TimerOne library.</li>
+</ul>
+
+
+<h3>Going Further</h3>
+
+<ul>
+<li><a href="https://learn.sparkfun.com/tutorials/building-the-hub-ee-buggy">HUB-ee Buggy Project</a> — Build your own buggy using an Ardumoto shield.</li>
+<li><a href="https://learn.sparkfun.com/tutorials/assembly-guide-for-redbot-with-shadow-chassis">Assembly Guide for RedBot</a> — If you’re looking for a complete, beginner-level robotics platform, check out the <a href="https://www.sparkfun.com/products/13166">RedBot Kit</a>. It’s Arduino-compatible, and the RedBot Mainboard has a motor driver built into it, so you don’t even need an Ardumoto Shield.</li>
+<li><a href="https://learn.sparkfun.com/tutorials/minimoto-drv8830-hookup-guide">Getting Started with the MiniMoto</a>
+ — The MiniMoto is a more advanced, digitally controlled, low-voltage DC
+ motor driver. Great if you need a smaller form-factor motor controller.</li>
+<li><a href="https://learn.sparkfun.com/tutorials/how-to-power-a-project">How to Power a Project</a>
+ — Batteries? Wall warts? Solar? If you’re not sure how to power your 
+Ardumoto Shield project, take a trip over to this tutorial.</li>
+</ul>
+
+
+
+<div class="tile-wrap">
+  <div class="tile tutorial-tile has_addl_actions  grid" data-id="36">
+
+  <a href="https://learn.sparkfun.com/tutorials/how-to-power-a-project">
+          <div class="thumb-wrap">
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/264-148/assets/learn_tutorials/3/6/Bench_Power_Supply.jpg)"></div>
+      </div>
+    
+    
+    <h3 class="title">How to Power a Project</h3>
+      </a>
+
+      <div class="description">
+      A tutorial to help figure out the power requirements of your project.    </div>
+  
+  
+  <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="36">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">25</span>
+</span>  </div>
+
+</div>
+<div class="tile tutorial-tile has_addl_actions  grid" data-id="100">
+
+  <a href="https://learn.sparkfun.com/tutorials/minimoto-drv8830-hookup-guide">
+          <div class="thumb-wrap">
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/264-148/assets/2/d/c/a/c/522f4e5d757b7f01048b456f.jpg)"></div>
+      </div>
+    
+    
+    <h3 class="title">MiniMoto DRV8830 Hookup Guide</h3>
+      </a>
+
+      <div class="description">
+      MiniMoto is an I2C-based low-voltage DC motor driver.    </div>
+  
+  
+  <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="100">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">1</span>
+</span>  </div>
+
+</div>
+<div class="tile tutorial-tile has_addl_actions  grid" data-id="337">
+
+  <a href="https://learn.sparkfun.com/tutorials/assembly-guide-for-redbot-with-shadow-chassis">
+          <div class="thumb-wrap">
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/264-148/assets/learn_tutorials/3/3/7/Redbot_Kit_Brian_Revisions-02.jpg)"></div>
+      </div>
+    
+    
+    <h3 class="title">Assembly Guide for RedBot with Shadow Chassis</h3>
+      </a>
+
+      <div class="description">
+      Assembly Guide for the RedBot Kit. This tutorial includes extra 
+parts to follow to go along with the RedBot Inventor's Kit tutorial.    
+ </div>
+  
+  
+  <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="337">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">9</span>
+</span>  </div>
+
+</div>
+</div>
+
+  <div class="clearfix"></div>
+
+      </div>
+    
+        <div class="share-link-inline">
+
+  <a class="share-link-toggle" href="#">
+    <span class="share-title">
+      <span class="sfe-icon-share"></span>
+      Share    </span>
+  </a>
+
+  <div class="share-link-inner dialog">
+    Use this URL to share:<br>
+    <input class="form-control input-sm" value="http://sfe.io/t630" onclick="$(this).select();" type="text">
+
+    <div class="share-social">
+
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','googleplus');" href="https://plus.google.com/share?url=http%3A%2F%2Fsfe.io%2Ft630" title="Share on Google+"><span class="sfe-icon-google-plus hidetext"><span>Share on Google+</span></span></a>
+
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','tumblr');" href="https://www.tumblr.com/share/link?url=http%3A%2F%2Fsfe.io%2Ft630&amp;name=Ardumoto+Kit+Hookup+Guide" title="Share on Tumblr"><span class="sfe-icon-tumblr hidetext"><span>Share on Tumblr</span></span></a>
+
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','reddit');" href="https://www.reddit.com/submit?url=http%3A%2F%2Fsfe.io%2Ft630" title="Submit to reddit"><span class="sfe-icon-reddit hidetext"><span>Submit to reddi</span></span></a>
+
+    </div>
+
+    </div>
+  
+  <div class="share-social">
+
+    <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','twitter');" href="https://twitter.com/intent/tweet?text=Ardumoto+Kit+Hookup+Guide&amp;url=http%3A%2F%2Fsfe.io%2Ft630&amp;via=sparkfun" title="Share on Twitter"><span class="sfe-icon-twitter hidetext"><span>Share on Twitter</span></span></a>
+
+    <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','facebook');" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fsfe.io%2Ft630&amp;t=Ardumoto+Kit+Hookup+Guide" title="Share on Facebook"><span class="sfe-icon-facebook-nobox hidetext"><span>Share on Facebook</span></span></a>
+
+          <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','pinterest');" href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fsfe.io%2Ft630&amp;media=https%3A%2F%2Fcdn.sparkfun.com%2F%2Fr%2F500-1000%2Fassets%2Flearn_tutorials%2F6%2F3%2F0%2FMarshall-06.jpg&amp;description=Ardumoto+Kit+Hookup+Guide" title="Pin It"><span class="sfe-icon-pinterest hidetext"><span>Pin It</span></span></a>
+    
+  </div>
+
+  
+</div>
+
+  </div>
+
+  <div class="col-sm-4 nav-menu" id="nav-pages">
+
+    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>
+
+    <div id="sidebar_affix" class="affix">
+
+      <div id="tutorial-pages" class="list-group">
+        <a class="list-group-item"><b>Sections</b></a>
+                          <a data-pagename="introduction" class="list-group-item" href="#introduction">
+            Introduction          </a>
+                  <a data-pagename="meet-the-l298" class="list-group-item active" href="#meet-the-l298">
+            Meet the L298          </a>
+                  <a data-pagename="ardumoto-overview" class="list-group-item" href="#ardumoto-overview">
+            Ardumoto Overview          </a>
+                  <a data-pagename="ardumoto-shield-assembly-tips" class="list-group-item" href="#ardumoto-shield-assembly-tips">
+            Ardumoto Shield Assembly Tips          </a>
+                  <a data-pagename="motor-and-wheel-assembly" class="list-group-item" href="#motor-and-wheel-assembly">
+            Motor and Wheel Assembly          </a>
+                  <a data-pagename="example-code" class="list-group-item" href="#example-code">
+            Example Code          </a>
+                  <a data-pagename="resources--going-further" class="list-group-item" href="#resources--going-further">
+            Resources and Going Further          </a>
+              </div>
+
+      <div class="list-group">
+        <a class="list-group-item" href="https://learn.sparkfun.com/tutorials/ardumoto-kit-hookup-guide/discuss">
+          Comments
+          <span class="badge">0</span>
+        </a>
+                  <a class="list-group-item" href="https://learn.sparkfun.com/tutorials/ardumoto-kit-hookup-guide/introduction">
+            View Paginated
+          </a>
+                <a class="list-group-item" href="#" onclick="window.print(); return false;">
+          Print
+        </a>
+      </div>
+
+      <ul class="list-group">
+        <li class="list-group-item"><b>Tags</b></li>
+        <li class="list-group-item"><ul class="tags-list">
+  <li>
+    <a class="tag" href="https://learn.sparkfun.com/tutorials/tags/hookup">Hookup</a>  </li>
+  <li>
+    <a class="tag" href="https://learn.sparkfun.com/tutorials/tags/motors">Motors</a>  </li>
+  <li>
+    <a class="tag" href="https://learn.sparkfun.com/tutorials/tags/shields">Shields</a>  </li>
+</ul>
+</li>
+      </ul>
+
+      <ul class="list-group">
+        <li class="list-group-item"><b>License</b></li>
+        <li class="list-group-item">
+          <span class="sfe-icon-cc">
+            <span class="visuallyhidden">Creative Commons</span>
+          </span>
+          <small>tutorials are <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="new">CC BY-SA 4.0</a></small>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+  require(['tutorial', 'jquery.imagesloaded'], function() {
+    $('#tutorial').tutorial();
+  });
+</script>
+
+      </div> <!-- /container -->
+    </div> <!-- /content -->
+
+    
+<footer>
+
+<div class="social">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="sharing-ingenuity">
+          <span class="sfe-icon-flame"></span>
+          <span class="text"><span class="text-top">Start<br></span>something.</span>
+        </div>
+        <ul class="spew">
+          <li><a href="https://www.github.com/sparkfun" target="_blank" class="sfe-icon-github"><span class="visuallyhidden">GitHub</span></a></li>
+          <li><a href="https://www.youtube.com/sparkfun" target="_blank" class="sfe-icon-youtube"><span class="visuallyhidden">YouTube</span></a></li>
+          <li><a href="https://www.vimeo.com/sparkfun" target="_blank" class="sfe-icon-vimeo"><span class="visuallyhidden">Vimeo</span></a></li>
+          <li><a href="https://www.facebook.com/SparkFun" target="_blank" class="sfe-icon-facebook"><span class="visuallyhidden">Facebook</span></a></li>
+          <li><a href="https://www.instagram.com/sparkfun/" target="_blank" class="sfe-icon-instagram"><span class="visuallyhidden">Instagram</span></a></li>
+          <li><a href="https://plus.google.com/106084846822083498483/" target="_blank" class="sfe-icon-google-plus"><span class="visuallyhidden">Google Plus</span></a></li>
+          <li><a href="https://www.flickr.com/photos/sparkfun/" target="_blank" class="sfe-icon-flickr"><span class="visuallyhidden">Flickr</span></a></li>
+          <li><a href="https://twitter.com/#!/sparkfun" target="_blank" class="sfe-icon-twitter"><span class="visuallyhidden">Twitter</span></a></li>
+          <li><a href="https://www.sparkfun.com/feeds" class="sfe-icon-feed"><span class="visuallyhidden">RSS</span></a></li>
+        </ul>
+        <div class="newsletter">
+          <!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="Ardumoto%20Kit%20Hookup%20Guide%20-%20learn.sparkfun.com_bestanden/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    css: '',
+    cssClass: 'hubspot-newsletter-subscribe',
+    portalId: '2224003',
+    formId: 'd2b17dd4-e1bb-406a-ba41-44c19dcd0376'
+  });
+</script><div class="hbspt-form" id="hbspt-form-1510138197768"><form novalidate="" accept-charset="UTF-8" action="https://forms.hubspot.com/uploads/form/v2/2224003/d2b17dd4-e1bb-406a-ba41-44c19dcd0376" enctype="multipart/form-data" id="hsForm_d2b17dd4-e1bb-406a-ba41-44c19dcd0376" method="POST" class="hubspot-newsletter-subscribe hs-form hs-form-private hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_5f40b086-2022-41a8-a911-6efab207058f" data-form-id="d2b17dd4-e1bb-406a-ba41-44c19dcd0376" data-portal-id="2224003" data-reactid=".hbspt-forms-0"><div class="hs_email field hs-form-field" data-reactid=".hbspt-forms-0.0:$0"><label class="" placeholder="Enter your " for="email-d2b17dd4-e1bb-406a-ba41-44c19dcd0376" data-reactid=".hbspt-forms-0.0:$0.0"><span data-reactid=".hbspt-forms-0.0:$0.0.0"></span></label><legend class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-0.0:$0.1"></legend><div class="input" data-reactid=".hbspt-forms-0.0:$0.$email"><input id="email-d2b17dd4-e1bb-406a-ba41-44c19dcd0376" class="hs-input" name="email" placeholder="" data-reactid=".hbspt-forms-0.0:$0.$email.0" type="email"></div></div><div class="hs_submit" data-reactid=".hbspt-forms-0.3"><div class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-0.3.0"></div><div class="actions" data-reactid=".hbspt-forms-0.3.1"><input value="SUBSCRIBE TO EDUCATOR NEWSLETTER" class="hs-button primary large" data-reactid=".hbspt-forms-0.3.1.0" type="submit"></div></div><input name="hs_context" value="{&quot;rumScriptExecuteTime&quot;:2231.33,&quot;rumServiceResponseTime&quot;:2546.33,&quot;rumFormRenderTime&quot;:206.69500000000016,&quot;rumTotalRequestTime&quot;:204.3449999999998,&quot;css&quot;:&quot;&quot;,&quot;pageUrl&quot;:&quot;https://learn.sparkfun.com/tutorials/ardumoto-kit-hookup-guide?_ga=2.198683311.1644845862.1510137438-1071677654.1510137438&quot;,&quot;pageTitle&quot;:&quot;Ardumoto Kit Hookup Guide - learn.sparkfun.com&quot;,&quot;source&quot;:&quot;FormsNext-static-1.644&quot;,&quot;isHostedOnHubspot&quot;:false,&quot;timestamp&quot;:1510138196816,&quot;userAgent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0&quot;,&quot;referrer&quot;:&quot;https://www.sparkfun.com/products/14129&quot;,&quot;hutk&quot;:&quot;fe6fac4dce0ff625ea5def270a6d757a&quot;,&quot;originalEmbedContext&quot;:{&quot;css&quot;:&quot;&quot;,&quot;cssClass&quot;:&quot;hubspot-newsletter-subscribe&quot;,&quot;portalId&quot;:&quot;2224003&quot;,&quot;formId&quot;:&quot;d2b17dd4-e1bb-406a-ba41-44c19dcd0376&quot;,&quot;target&quot;:&quot;#hbspt-form-1510138197768&quot;,&quot;redirectUrl&quot;:&quot;&quot;,&quot;inlineMessage&quot;:&quot;You've been successfully signed up!&quot;},&quot;recentFieldsCookie&quot;:{},&quot;boolCheckBoxFields&quot;:&quot;&quot;,&quot;dateFields&quot;:&quot;&quot;,&quot;redirectUrl&quot;:&quot;&quot;,&quot;smartFields&quot;:{},&quot;urlParams&quot;:{&quot;_ga&quot;:&quot;2.198683311.1644845862.1510137438-1071677654.1510137438&quot;},&quot;formValidity&quot;:{},&quot;correlationId&quot;:&quot;d938ba71-0a5c-4f4f-ab9e-f6c340b0cc61&quot;,&quot;disableCookieSubmission&quot;:false,&quot;usingInvisibleRecaptcha&quot;:false,&quot;isFallback&quot;:false}" data-reactid=".hbspt-forms-0.4" type="hidden"></form></div>
+        </div>
+      </div>
+    </div><!-- end .row -->
+  </div><!-- end .container -->
+</div><!-- end .social -->
+
+<div class="container">
+
+    <div class="row">
+
+    <div class="subfooter subfooter-about">
+      <p>
+        In 2003, CU student Nate Seidle blew a power supply in his dorm 
+room and, in lieu of a way to order easy replacements, decided to start 
+his own company. Since then, SparkFun has been committed to sustainably 
+helping our world achieve electronics literacy from our headquarters in 
+Boulder, Colorado.
+      </p>
+      <p>
+        No matter your vision, SparkFun's products and resources are 
+designed to make the world of electronics more accessible. In addition 
+to over 2,000 open source components and widgets, SparkFun offers 
+curriculum, training and online tutorials designed to help demystify the
+ wonderful world of embedded electronics. We're here to help you start 
+something.
+      </p>
+
+      <div class="row">
+
+        <div class="col-sm-6">
+          <ul>
+            <li><b>About Us</b>
+            </li><li><a href="https://www.sparkfun.com/about_sparkfun">About SparkFun</a></li>
+	    <li><a href="http://www.sparkfuneducation.com/?__hstc=108804957.fe6fac4dce0ff625ea5def270a6d757a.1510137442876.1510137442876.1510137442876.1&amp;__hssc=108804957.7.1510137442876&amp;__hsfp=3232039793" target="_blank">SparkFun Education <span class="glyphicon glyphicon-new-window"></span></a></li><a href="http://www.sparkfuneducation.com/?__hstc=108804957.fe6fac4dce0ff625ea5def270a6d757a.1510137442876.1510137442876.1510137442876.1&amp;__hssc=108804957.7.1510137442876&amp;__hsfp=3232039793" target="_blank">
+	    </a><li><a href="http://www.sparkfuneducation.com/?__hstc=108804957.fe6fac4dce0ff625ea5def270a6d757a.1510137442876.1510137442876.1510137442876.1&amp;__hssc=108804957.7.1510137442876&amp;__hsfp=3232039793" target="_blank"></a><a title="RSS Feeds" href="https://www.sparkfun.com/feeds">Feeds <span class="sfe-icon-feed"></span></a></li>
+            <li><a href="https://www.sparkfun.com/jobs">Jobs</a></li>
+            <li><a href="https://www.sparkfun.com/static/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6">
+          <ul>
+            <li><b>Help</b></li>
+            <li><a href="https://www.sparkfun.com/support">Customer Service</a></li>
+            <li><a href="https://www.sparkfun.com/support#ShippingPolicy">Shipping</a></li>
+            <li><a href="https://www.sparkfun.com/returns">Return Policy</a></li>
+            <li><a href="https://www.sparkfun.com/static/faq">FAQ</a></li>
+                      </ul>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-6">
+          <ul>
+            <li><b>Programs</b></li>
+	    <li><a href="https://www.sparkfun.com/sponsorships">Become a Community Partner</a>	      </li><li><ul><li><a href="https://www.sparkfun.com/cpp">Community Stories</a></li></ul></li>
+	    
+            <li><a href="https://www.sparkfun.com/project_calls">Tell Us About Your Project</a></li>
+            <li><a href="https://learn.sparkfun.com/tutorials/how-to-sell-your-widget-on-sparkfun">Sell Your Widget on SparkFun</a></li>
+            <li><a href="https://www.sparkfun.com/distributors/apply">Become a SparkFun Distributor</a></li>
+            <li><a href="https://www.sparkfun.com/volume">Large Volume Sales</a> </li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6">
+          <ul>
+            <li><b>Community</b></li>
+            <li><a href="https://forum.sparkfun.com/">Forum</a></li>
+            <li><a href="https://www.sparkfun.com/news/263">SparkFun IRC Channel</a></li>
+            <li><a href="https://www.sparkfun.com/quiz">Take the SparkFun Quiz</a></li>
+            <li><a href="https://www.kickstarter.com/pages/sparkfun">SparkFun Kickstarter Projects</a></li>
+            <li><a href="https://www.sparkfun.com/distributors">Distributors</a></li>
+          </ul>
+        </div>
+
+      </div><!-- end .row -->
+
+    </div>
+
+    <div id="feedback" class="subfooter subfooter-woym">
+      <form id="woym_form" class="feedback" action="https://learn.sparkfun.com/feedback/mind.json" onsubmit="$(this).sfeutil('mind_feedback'); return false;" method="POST">
+        <div class="error" id="error_feedback" style="display: none"></div>
+        <input name="sparkaptcha" id="sparkaptcha" value="0" type="hidden">
+
+        <div class="form-group">
+          <label for="feedback_textarea" class="control-label">What's on your mind?</label>
+          <div class="controls">
+            <textarea id="feedback_textarea" class="form-control" name="feedback_text" required=""></textarea>
+            <div class="error" id="error_feedback_text" style="display: none"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="feedback_dest" class="control-label">For which department?</label>
+          <select name="dest" class="form-control" id="feedback_dest">
+            <option value="general" selected="selected">General</option>
+            <option value="cust">Customer Service</option>
+            <option value="tech">Tech Support</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="feedback_email" class="control-label">
+            Please include your email address if you'd like us to respond to a specific question.
+          </label>
+
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+            <input class="form-control" id="feedback_email" name="email" placeholder="email address" type="text">
+          </div>
+          <div class="error" id="error_feedback_email" style="display: none"></div>
+
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+  </div><!-- end .row -->
+  
+  <ul class="copyleft">
+    <li>SparkFun Electronics <a href="https://www.sparkfun.com/news/300">®</a></li>
+    <li><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=6333+Dry+Creek+Parkway,+Niwot,+CO+80503">Niwot, Colorado</a></li>
+    <li><a href="https://www.sparkfun.com/support">Customer Service</a></li>
+    <li><a href="https://www.sparkfun.com/sitemap">Site Map</a></li>
+    <li><a href="https://www.sparkfun.com/terms">Terms of Service</a></li>
+    <li><a href="https://www.sparkfun.com/privacy">Privacy Policy</a></li>
+    <li class="desktop-toggle">
+              <a href="https://www.sparkfun.com/account/mobile_toggle?redirect=%2Flearn%2Ftutorials%2Fardumoto-kit-hookup-guide">Desktop Site</a>          </li>
+  </ul>
+
+</div><!-- end .container -->
+
+</footer>
+
+    <div class="nav-account">
+  <ul class="nav nav-tabs">
+    <li class="visible-xs">
+      <a class="nav-toggle-account back" href="#">Your Account</a>
+    </li>
+          <li class="">
+        <a href="https://www.sparkfun.com/account/login?redirect=%2Flearn%2Ftutorials%2Fardumoto-kit-hookup-guide" data-toggle="modal" data-target="#login_modal" data-remote="false">Log In</a>
+      </li>
+          <li class="">
+        <a href="https://www.sparkfun.com/account/make">Register</a>
+      </li>
+      </ul>
+</div>
+
+      </div><!-- end .wrapper-inner -->
+    </div><!-- end .wrapper -->
+
+    <!-- Login Modal -->
+<div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Log In</h4>
+        <p class="modal-header-msg"></p>
+      </div>
+      <div class="modal-body">
+        <form role="form" action="https://www.sparkfun.com/account/login" method="post">
+          <input name="redirect" value="/learn/tutorials/ardumoto-kit-hookup-guide" type="hidden">
+          <div class="form-group">
+            <label for="login-username">Email</label>
+            <input tabindex="1" name="user" id="login-username" class="form-control" type="email">
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input tabindex="2" name="passwd" id="login-password" class="form-control" type="password">
+          </div>
+          <div class="form-group">
+            <input value="Log In" tabindex="3" class="btn btn-action" type="submit">
+          </div>
+        </form>
+        <p>
+          <a href="https://www.sparkfun.com/account/forgot_password">Forgot your password?</a>          <br>
+          No account? <a id="btn_register_account" href="https://www.sparkfun.com/account/make">Register one!</a>        </p>
+      </div>
+    </div>
+  </div>
+</div>
+  
+          
+<!--  begin olark code -->
+  <script type="text/javascript" async=""> ;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");
+  /* custom configuration goes here (www.olark.com/documentation) */
+  olark.identify('4728-501-10-9212');</script>
+  <noscript><a href="https://www.olark.com/site/4728-501-10-9212/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+<!-- end olark code -->
+          <script type="text/javascript">
+      (function(d,s,i,r) {
+        if (d.getElementById(i)){return;}
+        var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+        n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2224003.js';
+        e.parentNode.insertBefore(n, e);
+      })(document,"script","hs-analytics",300000);
+    </script>
+        <script type="text/javascript">
+    setTimeout(function(){var a=document.createElement("script");
+    var b=document.getElementsByTagName("script")[0];
+    a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0046/4761.js?"+Math.floor(new Date().getTime()/3600000);
+    a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+  </script>
+      
+
+
+<iframe data-olark="true" title="olark chat box" style="width: 0px; height: 0px; position: absolute; left: 0px; bottom: 0px; border: medium none;"></iframe><ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div data-olark="true"><div id="olark-wrapper" class="olark-hidden" role="complementary" aria-label="olark-chat-box" data-reactid=".0"><style rel="stylesheet" type="text/css" data-reactid=".0.0">#olark-wrapper #olark-container .olark-button {
+  background-color: #f03528 !important;
+  color: #ffffff !important;
+}
+#olark-wrapper #olark-container .olark-button:hover {
+  background-color: #ee1f11 !important;
+}
+#olark-wrapper #olark-container .olark-theme-bg {
+  background-color: #f03528 !important;
+}
+#olark-wrapper #olark-container .olark-theme-text {
+  color: #ffffff !important;
+}
+#olark-wrapper .olark-launch-button {
+  background-color: #f03528 !important;
+}
+#olark-wrapper .olark-launch-button svg path {
+  fill: #ffffff !important;
+}
+#olark-wrapper .olark-launch-button .olark-button-text {
+  color: #ffffff !important;
+}
+#olark-wrapper .olark-top-bar {
+  background-color: #f03528 !important;
+  color: #ffffff !important;
+  border-color: #ee1f11 !important;
+}
+#olark-wrapper .olark-top-bar-text {
+  color: #ffffff !important;
+}
+#olark-wrapper .olark-top-bar-arrow {
+  fill: #ffffff !important;
+}
+#olark-wrapper .olark-end-chat-button {
+  color: #ffffff !important;
+  background-color: rgba(215, 28, 15, 0.5) !important;
+}
+#olark-wrapper .olark-end-chat-button:hover {
+  background-color: #d71c0f !important;
+}
+#olark-wrapper #olark-container .olark-visitor-message:not(.olark-message-trans-bg) {
+  background-color: rgba(240, 53, 40, 0.25) !important;
+}
+#olark-wrapper #olark-container .olark-form-send-button {
+  background-color: #f03528 !important;
+  color: #ffffff !important;
+}
+#olark-wrapper #olark-container .olark-feedback-form-button {
+  background-color: #f03528 !important;
+  color: #ffffff !important;
+}
+#olark-wrapper #olark-container .olark-restart-button {
+  background-color: #f03528 !important;
+  color: #ffffff !important;
+}
+#olark-wrapper #olark-container .olark-branding-panel .olark-branding-cancel-button {
+  background-color: #f03528 !important;
+  border: none !important;
+  color: #ffffff !important;
+}
+#olark-wrapper #olark-container .olark-branding-panel .olark-branding-go-button {
+  border: none !important;
+  background: rgba(240, 53, 40, 0.35) !important;
+}
+#olark-wrapper #olark-container .olark-send-transcript-container .olark-send-transcript-form.olark-inline-form-valid .olark-form-input-container {
+  border-color: #f03528 !important;
+}
+#olark-wrapper #olark-container .olark-send-transcript-container .olark-send-transcript-form.olark-inline-form-valid .olark-send-icon {
+  fill: #f03528 !important;
+}
+#olark-wrapper #olark-container .olark-visitor-message:not(.olark-message-has-border) {
+  border: none !important;
+}
+#olark-wrapper .olark-end-chat-flag {
+  fill: #f03528 !important;
+}
+#olark-wrapper #olark-container .olark-form-confirmation-icon .olark-launch-button-icon {
+  fill: #f03528 !important;
+}
+#olark-wrapper #olark-container .olark-form-input:focus {
+  border-color: #f03528 !important;
+}
+#olark-wrapper #olark-container .olark-form-message-input:focus {
+  border-color: #f03528 !important;
+}
+</style><button class="olark-launch-button olark-chat-tab olark-size-md" tabindex="0" aria-hidden="false" data-reactid=".0.2"><svg x="0px" y="0px" viewBox="0 0 27 21.9" aria-label="three small dots to indicate that an agent is available to chat" role="img" data-reactid=".0.2.0"><title data-reactid=".0.2.0.0">Chat Icon </title><desc data-reactid=".0.2.0.1">three small dots to indicate that an agent is available to chat</desc><path fill="#ffffff" d="M23.2,0L2.6,1.7C1,1.9,0,3.2,0,4.9v8c0,1.6,0.8,3,2.4,3.1l5.3,0.5c0,0,1,1.6,0.3,3.2C7.2,21.3,6,21.9,6,21.9 c4.2,0,6.6-3.1,7.8-4.9l9.4,0.7c1.8,0.2,3.8-1.3,3.8-3.1V3.1C27,1.3,25-0.1,23.2,0z M6.4,10.1c-0.9,0-1.7-0.7-1.7-1.7 c0-0.9,0.7-1.7,1.7-1.7C7.3,6.8,8,7.5,8,8.5C8,9.4,7.3,10.1,6.4,10.1z M13.2,10.1c-0.9,0-1.7-0.7-1.7-1.7c0-0.9,0.7-1.7,1.7-1.7 c0.9,0,1.7,0.7,1.7,1.7C14.8,9.4,14.1,10.1,13.2,10.1z M19.9,10.1c-0.9,0-1.7-0.7-1.7-1.7c0-0.9,0.7-1.7,1.7-1.7 c0.9,0,1.7,0.7,1.7,1.7C21.6,9.4,20.9,10.1,19.9,10.1z" data-reactid=".0.2.0.2"></path></svg><div class="olark-notification-badge olark-hidden" data-reactid=".0.2.1"><div class="olark-notification-badge-text" data-reactid=".0.2.1.0">0</div></div><p class="olark-button-text" data-reactid=".0.2.2">How can we help you?</p></button><div id="olark-container" class="olark-hidden olark-no-branding olark-size-md" data-reactid=".0.3"><div class="olark-top-bar" data-reactid=".0.3.0"><div class="olark-top-bar-text" data-reactid=".0.3.0.0">Now Chatting</div><div class="olark-top-bar-button" role="button" tabindex="-1" aria-hidden="true" aria-label="Minimize Chat" data-reactid=".0.3.0.1"><svg viewBox="0 0 15.1 8.9" fill="#ffffff" aria-label="a small down arrow to minimize chat box" role="img" data-reactid=".0.3.0.1.0"><title data-reactid=".0.3.0.1.0.0">Arrow Down</title><desc data-reactid=".0.3.0.1.0.1">a small down arrow to minimize chat box</desc><polygon class="olark-top-bar-arrow" points="0.2,1.4 7.6,8.9 15.1,1.4 13.7,0 7.6,6 1.6,0" data-reactid=".0.3.0.1.0.2"></polygon></svg></div></div><div class="olark-conversation-container" data-reactid=".0.3.1"><div class="olark-message-block-container olark-single-message" data-reactid=".0.3.1.0"><div class="olark-generated-message" data-reactid=".0.3.1.0.0">Please type your question in the box below and we'll be with you as soon as possible!</div></div></div><div class="olark-footer-form-container" data-reactid=".0.3.3"><form class="olark-send-chat-form" data-reactid=".0.3.3.0"><textarea class="olark-chat-input olark-message-clone" aria-label="Type here and hit &lt;enter&gt; to chat" aria-hidden="true" tabindex="-1" data-reactid=".0.3.3.0.0" style="overflow-wrap: break-word;"></textarea><textarea class="olark-chat-input" placeholder="Type here and hit &lt;enter&gt; to chat" title="Type here and hit &lt;enter&gt; to chat" aria-label="Type here and hit &lt;enter&gt; to chat" required="" aria-hidden="true" tabindex="-1" data-reactid=".0.3.3.0.1" style="height: 0px !important;"></textarea><button class="olark-chat-send-button" type="submit" tabindex="-1" aria-hidden="true" title="Type here and hit &lt;enter&gt; to chat" data-reactid=".0.3.3.0.2"><svg class="olark-send-icon" viewBox="0 0 18.9 15.2" fill="currentcolor" aria-label="a paper airplane to indicate sending a file" role="img" data-reactid=".0.3.3.0.2.0"><title data-reactid=".0.3.3.0.2.0.0">Paper Airplane Icon</title><desc data-reactid=".0.3.3.0.2.0.1">a paper airplane to indicate sending a file</desc><path d="M18.1,6.8L1.4,0.3C0.7,0.1,0,0.6,0,1.3V6l11.8,1.3L0,8.6v4.7c0,0.7,0.7,1.2,1.4,1l16.7-6.5 C18.6,7.6,18.6,7,18.1,6.8z" data-reactid=".0.3.3.0.2.0.2"></path></svg></button></form></div><noscript data-reactid=".0.3.4"></noscript></div></div></div></body></html>
