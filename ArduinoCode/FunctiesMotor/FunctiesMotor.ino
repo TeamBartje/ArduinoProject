@@ -65,6 +65,19 @@ void loop() {
     analogWrite(snelheidB,sB);
   }
 
+  void achteruit(int sA, int rA, int sB, int rB){
+    int tijd=0;
+    while(tijd<50){
+    Serial.println("Vooruit rijden");
+    digitalWrite(richtingA,!rA);
+    digitalWrite(richtingB,!rB);
+    analogWrite(snelheidA,sA);
+    analogWrite(snelheidB,sB);
+    tijd=tijd+5;
+   }
+   tijd=0;
+  }
+
 
   
 
