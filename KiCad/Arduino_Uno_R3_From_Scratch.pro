@@ -1,4 +1,4 @@
-update=08/11/2017 14:10:39
+update=14/11/2017 19:28:59
 version=1
 last_client=kicad
 [cvpcb]
@@ -43,8 +43,6 @@ LibName13=led
 LibName14=dip_sockets
 LibName15=pga_sockets
 LibName16=valves
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=
@@ -82,5 +80,7 @@ LibName30=valves
 LibName31=Arduino_Uno_R3_From_Scratch
 LibName32=MFN_Atmel
 LibName33=MFN_STMicro
-LibName34=l298
-LibName35=l298A
+LibName34=C:/Users/Tom/Documents/3e Bach/Digitaal ontwerp/SparkFun-DiscreteSemi
+LibName35=C:/Users/Tom/Documents/3e Bach/BacherlorProef/ArduinoProject/KiCad/l298
+[general]
+version=1
