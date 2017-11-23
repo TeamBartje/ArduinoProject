@@ -1,5 +1,5 @@
 #include <SoftwareSerial.h>
-SoftwareSerial BTSerial(0, 1); // TX | RX
+SoftwareSerial BTSerial(2, 3); // TX | RX
 void setup()
 {
 
@@ -13,7 +13,7 @@ void loop(){
   i++;
 delay(500);
 
-Serial.println(i); // het vreemde eraan is dat ik gewoon Serial.println gebruik en niet BTSerial.println :/
+BTSerial.println(i); // het vreemde eraan is dat ik gewoon Serial.println gebruik en niet BTSerial.println :/
 
 
 }

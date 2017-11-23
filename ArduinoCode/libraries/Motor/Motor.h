@@ -12,6 +12,7 @@ class Motor{
 		void rechtsScherp(int sA, int rA, int sB, int rB);
 		void linksScherp(int sA, int rA, int sB, int rB);
 		void linksGewoon(int sA, int rA, int sB, int rB);
+		
 		int sA;
 		int sB;
 		int rA;

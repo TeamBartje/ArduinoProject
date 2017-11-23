@@ -23,6 +23,7 @@ Motor::Motor(){
 }
 
 
+
 void Motor::vooruit(int sA, int rA, int sB, int rB){
 	Serial.println(sA);
 	Serial.println(sB);
