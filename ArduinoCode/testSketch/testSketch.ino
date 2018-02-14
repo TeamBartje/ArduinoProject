@@ -9,12 +9,9 @@ void setup() {
 }
 
 void loop() {
-  motor.vooruit(3,4,5,6);
-  motor.achteruit(3,4,5,6);
-  motor.linksGewoon(3,4,5,6);
-  motor.linksScherp(3,4,5,6);
-  motor.rechtsGewoon(3,4,5,6);
-  motor.rechtsScherp(3,4,5,6);
+  motor.vooruit(255,1,255,0);
+
+
   
 
 }

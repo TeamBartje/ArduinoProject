@@ -14,19 +14,42 @@ BTSerial.begin(9600); // HC-05 default speed in AT command more
 }
 void loop()
 {
-if(BTSerial.available()){
-  delay(50);
-  while(BTSerial.available()){
-    
-    zin=zin+((char)BTSerial.read());
-    
+  checkBluetooth();
   
-  }
-  blue.verwerkInkomendCommando(zin);
-  zin="";
  
 }
+
+
+
+void checkBluetooth(){
+  
+  if(BTSerial.available()){
+  while(BTSerial.available()){  
+    zin=zin+((char)BTSerial.read());
+  }
+  //blue.verwerkInkomendCommando(zin);
+  if((char)zin.charAt(0)=='$'){
+    verwerkCommando(zin);
+    }
+  else{
+    Serial.println(zin);  
+    }
+  
+  zin="";
+  
+  
+  
+  }
+
+
 }
 
 
+void verwerkCommando(String zin){
+      Serial.println("commando:" + zin);
+  
+  
+  
+  
+  }
 
