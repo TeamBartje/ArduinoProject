@@ -23,11 +23,12 @@ Motor::Motor(){
 }
 
 
+
 void Motor::vooruit(int sA, int rA, int sB, int rB){
-	Serial.println(sA);
-	Serial.println(sB);
-	Serial.println(rA);
-	Serial.println(rB);
+	digitalWrite(richtingA,!rA);
+	digitalWrite(richtingB,!rB);
+	analogWrite(snelheidA,sA);
+	analogWrite(snelheidB,sB);
 
 
 
@@ -38,7 +39,10 @@ void Motor::vooruit(int sA, int rA, int sB, int rB){
 
 void Motor::achteruit(int sA, int rA, int sB, int rB){
 
-		Serial.println("Achteruit rijden");
+	digitalWrite(richtingA,rA);
+	digitalWrite(richtingB,rB);
+	analogWrite(snelheidA,sA);
+	analogWrite(snelheidB,sB);
 
 
 
@@ -46,35 +50,20 @@ void Motor::achteruit(int sA, int rA, int sB, int rB){
 
 }
 
-void Motor::rechtsGewoon(int sA, int rA, int sB, int rB){
-		Serial.println("Corrigeren rechts gewoon");
-
-
-
-}
-
-
-void Motor::rechtsScherp(int sA, int rA, int sB, int rB){
-	Serial.println("Corrigeren rechts scherp");
-
-
-
-
-
+void Motor::rechts(int sA, int rA, int sB, int rB){
+	digitalWrite(richtingA,rA);
+	digitalWrite(richtingB,rB);
+	analogWrite(snelheidA,sA);
+	analogWrite(snelheidB,sB);
 
 }
 
-void Motor::linksGewoon(int sA, int rA, int sB, int rB){
-	Serial.println("Corrigeren links gewoon");
 
 
-
-}
-
-void Motor::linksScherp(int sA, int rA, int sB, int rB){
-	Serial.println("Corrigeren links links");
-
-
-
+void Motor::links(int sA, int rA, int sB, int rB){
+	digitalWrite(richtingA,rA);
+	digitalWrite(richtingB,rB);
+	analogWrite(snelheidA,sA);
+	analogWrite(snelheidB,sB);
 
 }
