@@ -5,7 +5,7 @@ int mode = 0;
 # define NO_LINE 2
 
 //const int power = 500;
-const int iniMotorPower = 255;
+const int iniMotorPower = 50;
 const int adj = 1;
 float adjTurn = 8;
 

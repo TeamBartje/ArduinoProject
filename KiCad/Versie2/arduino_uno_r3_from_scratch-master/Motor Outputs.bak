@@ -1,0 +1,243 @@
+EESchema Schematic File Version 2
+LIBS:Arduino_Uno_R3_From_Scratch-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Arduino_Uno_R3_From_Scratch
+LIBS:MFN_Atmel
+LIBS:MFN_STMicro
+LIBS:l298
+LIBS:l298A
+LIBS:Arduino_Uno_R3_From_Scratch-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 6200 4000 2    60   Output ~ 0
+OUT4
+Text GLabel 6200 3850 2    60   Output ~ 0
+OUT3
+Text GLabel 6200 3700 2    60   Output ~ 0
+OUT2
+Text GLabel 6200 3550 2    60   Output ~ 0
+OUT1
+$Comp
+L MBRA140 D9
+U 1 1 5A047FE0
+P 6000 4150
+F 0 "D9" H 6100 4169 50  0000 L BNN
+F 1 "MBRA140" H 6100 4059 50  0000 L BNN
+F 2 "SMA-DIODE" H 6030 4300 20  0001 C CNN
+F 3 "" H 6000 4150 60  0001 C CNN
+	1    6000 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MBRA140 D7
+U 1 1 5A0480F2
+P 5700 4150
+F 0 "D7" H 5800 4169 50  0000 L BNN
+F 1 "MBRA140" H 5800 4059 50  0000 L BNN
+F 2 "SMA-DIODE" H 5730 4300 20  0001 C CNN
+F 3 "" H 5700 4150 60  0001 C CNN
+	1    5700 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MBRA140 D5
+U 1 1 5A04816A
+P 5450 4150
+F 0 "D5" H 5550 4169 50  0000 L BNN
+F 1 "MBRA140" H 5550 4059 50  0000 L BNN
+F 2 "SMA-DIODE" H 5480 4300 20  0001 C CNN
+F 3 "" H 5450 4150 60  0001 C CNN
+	1    5450 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MBRA140 D3
+U 1 1 5A0481B3
+P 5100 4150
+F 0 "D3" H 5200 4169 50  0000 L BNN
+F 1 "MBRA140" H 5200 4059 50  0000 L BNN
+F 2 "SMA-DIODE" H 5130 4300 20  0001 C CNN
+F 3 "" H 5100 4150 60  0001 C CNN
+	1    5100 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MBRA140 D8
+U 1 1 5A04820B
+P 6000 3350
+F 0 "D8" H 6100 3369 50  0000 L BNN
+F 1 "MBRA140" H 6100 3259 50  0000 L BNN
+F 2 "SMA-DIODE" H 6030 3500 20  0001 C CNN
+F 3 "" H 6000 3350 60  0001 C CNN
+	1    6000 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MBRA140 D6
+U 1 1 5A0482B1
+P 5700 3350
+F 0 "D6" H 5800 3369 50  0000 L BNN
+F 1 "MBRA140" H 5800 3259 50  0000 L BNN
+F 2 "SMA-DIODE" H 5730 3500 20  0001 C CNN
+F 3 "" H 5700 3350 60  0001 C CNN
+	1    5700 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MBRA140 D4
+U 1 1 5A0482E5
+P 5450 3350
+F 0 "D4" H 5550 3369 50  0000 L BNN
+F 1 "MBRA140" H 5550 3259 50  0000 L BNN
+F 2 "SMA-DIODE" H 5480 3500 20  0001 C CNN
+F 3 "" H 5450 3350 60  0001 C CNN
+	1    5450 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MBRA140 D2
+U 1 1 5A048318
+P 5100 3350
+F 0 "D2" H 5200 3369 50  0000 L BNN
+F 1 "MBRA140" H 5200 3259 50  0000 L BNN
+F 2 "SMA-DIODE" H 5130 3500 20  0001 C CNN
+F 3 "" H 5100 3350 60  0001 C CNN
+	1    5100 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR028
+U 1 1 5A0B3F5C
+P 5100 4700
+F 0 "#PWR028" H 5100 4450 50  0001 C CNN
+F 1 "GND" H 5100 4550 50  0000 C CNN
+F 2 "" H 5100 4700 50  0001 C CNN
+F 3 "" H 5100 4700 50  0001 C CNN
+	1    5100 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR029
+U 1 1 5A0B3F8E
+P 5450 4700
+F 0 "#PWR029" H 5450 4450 50  0001 C CNN
+F 1 "GND" H 5450 4550 50  0000 C CNN
+F 2 "" H 5450 4700 50  0001 C CNN
+F 3 "" H 5450 4700 50  0001 C CNN
+	1    5450 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR030
+U 1 1 5A0B3FB1
+P 5700 4700
+F 0 "#PWR030" H 5700 4450 50  0001 C CNN
+F 1 "GND" H 5700 4550 50  0000 C CNN
+F 2 "" H 5700 4700 50  0001 C CNN
+F 3 "" H 5700 4700 50  0001 C CNN
+	1    5700 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR031
+U 1 1 5A0B43FA
+P 6000 4700
+F 0 "#PWR031" H 6000 4450 50  0001 C CNN
+F 1 "GND" H 6000 4550 50  0000 C CNN
+F 2 "" H 6000 4700 50  0001 C CNN
+F 3 "" H 6000 4700 50  0001 C CNN
+	1    6000 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 4000 6200 4000
+Wire Wire Line
+	4650 3850 6200 3850
+Wire Wire Line
+	4650 3700 6200 3700
+Wire Wire Line
+	4650 3550 6200 3550
+Wire Wire Line
+	5100 4250 5100 4700
+Wire Wire Line
+	6000 4250 6000 4700
+Wire Wire Line
+	5450 4700 5450 4250
+Wire Wire Line
+	5700 4250 5700 4700
+Wire Wire Line
+	5100 3450 5100 4050
+Connection ~ 5100 3550
+Wire Wire Line
+	5450 3450 5450 4050
+Connection ~ 5450 3700
+Wire Wire Line
+	5700 3450 5700 4050
+Connection ~ 5700 3850
+Wire Wire Line
+	6000 3450 6000 4050
+Connection ~ 6000 4000
+Wire Wire Line
+	5100 3250 5100 2800
+Wire Wire Line
+	5100 2800 7000 2800
+Wire Wire Line
+	5450 3250 5450 2800
+Connection ~ 5450 2800
+Wire Wire Line
+	5700 3250 5700 2800
+Connection ~ 5700 2800
+Wire Wire Line
+	6000 3250 6000 2800
+Connection ~ 6000 2800
+Text GLabel 7000 2800 2    60   Input ~ 0
+VIN
+Text GLabel 4650 3550 0    60   Input ~ 0
+ARD_DIG3
+Text GLabel 4650 3700 0    60   Input ~ 0
+ARD_DIG11/SPI_MOSI
+Text GLabel 4650 3850 0    60   Input ~ 0
+ARD_DIG12/SPI_MISO
+Text GLabel 4650 4000 0    60   Input ~ 0
+ARD_DIG13/SPI_SCK
+$EndSCHEMATC
