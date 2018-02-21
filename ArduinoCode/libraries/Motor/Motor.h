@@ -10,7 +10,7 @@ class Motor{
 		void achteruit(int sA, int rA, int sB, int rB);
 		void rechts(int sA, int rA, int sB, int rB);
 		void links(int sA, int rA, int sB, int rB);
-
+		void bepaalPID();
 		int sA;
 		int sB;
 		int rA;

@@ -12,6 +12,7 @@ void setup() {
 
 void loop() {
   motor.vooruit(255,1,255,0);
+  motor.bepaalPID();
 
 
   
