@@ -1,0 +1,7 @@
+sensorrechts: 7
+sensorlinksdaarvan: 6
+sensorlinkslinksdaarvn:5
+sensorlinks:4
+
+
+3 11 12 13 motor

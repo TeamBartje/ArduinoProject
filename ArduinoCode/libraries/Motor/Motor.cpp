@@ -33,53 +33,31 @@ Motor::Motor(){
 
 
 
-void Motor::vooruit(int sA, int rA, int sB, int rB){
-	digitalWrite(richtingA,!rA);
-	digitalWrite(richtingB,!rB);
-	analogWrite(snelheidA,sA);
-	analogWrite(snelheidB,sB);
+void Motor::rij(int correctie){
+	if (correctie>20){
+		correctie=20;
+	}
+
+	snelheid=60+correctie;
+
+	digitalWrite(richtingA,0);
+	digitalWrite(richtingB,1);
+	analogWrite(snelheidA,snelheid);
+	analogWrite(snelheidB,60-correctie);
+	Serial.println("snelheid linkerwiel  "+ String(snelheid));
+	Serial.println("snelheid rechterwiel "+ String(60-correctie));
+	//Serial.println("snelheid rechterwiel "+ String(60));
 
 
 
 
 }
 
-
-
-void Motor::achteruit(int sA, int rA, int sB, int rB){
-
-	digitalWrite(richtingA,rA);
-	digitalWrite(richtingB,rB);
-	analogWrite(snelheidA,sA);
-	analogWrite(snelheidB,sB);
-
-
-
-
-
-}
-
-void Motor::rechts(int sA, int rA, int sB, int rB){
-	digitalWrite(richtingA,rA);
-	digitalWrite(richtingB,rB);
-	analogWrite(snelheidA,sA);
-	analogWrite(snelheidB,sB);
-
-}
-
-
-
-void Motor::links(int sA, int rA, int sB, int rB){
-	digitalWrite(richtingA,rA);
-	digitalWrite(richtingB,rB);
-	analogWrite(snelheidA,sA);
-	analogWrite(snelheidB,sB);
-
-}
 
 
 
 void Motor::bepaalPID(){
+
 	LFS[0]=digitalRead(lfs4);
 	LFS[1]=digitalRead(lfs3);
 	LFS[2]=digitalRead(lfs2);
@@ -93,8 +71,34 @@ void Motor::bepaalPID(){
   else if((LFS[0]== 1 )&&(LFS[1]== 0 )&&(LFS[2]== 0 )&&(LFS[3]== 0 ))  { error = -2;} //car must turn to the right (Middle sensor is on the dotted line)
 
 
+	/*Serial.print(LFS[0]);
+	Serial.print(LFS[1]);
+	Serial.print(LFS[2]);
+	Serial.println(LFS[3]);
+
+	Serial.println(error);*/
+	corrigeer();
 
 
+}
+
+
+
+void Motor::corrigeer(){
+	Kp=1;
+	Ki=1;
+	Kd=1;
+
+	P = error;
+  I = I + error;
+  D = error-previousError;
+  PIDvalue = (Kp*P) + (Ki*I) + (Kd*D);
+  previousError = error;
+	//snelheid=snelheid-PIDvalue;
+	//Serial.println("Snelheid: " + String(snelheid));
+	//Serial.println("corectiefactor: " + String(PIDvalue));
+
+	rij(PIDvalue);
 
 
 }
