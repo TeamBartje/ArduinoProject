@@ -1,7 +1,7 @@
-
-
+#include <Speed.h>
 #include <Motor.h>
 Motor motor;
+Speed speed;
 
 
 void setup() {
@@ -11,8 +11,11 @@ void setup() {
 }
 
 void loop() {
-  motor.vooruit(255,1,255,0);
+  //Serial.println("halo");
+  //motor.vooruit(255,1,255,0);
   motor.bepaalPID();
+  //speed.getSpeed();
+  
 
 
   

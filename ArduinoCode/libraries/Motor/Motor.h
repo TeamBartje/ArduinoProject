@@ -6,15 +6,25 @@
 class Motor{
 	public:
 		Motor();
-		void vooruit(int sA, int rA, int sB, int rB);
-		void achteruit(int sA, int rA, int sB, int rB);
-		void rechts(int sA, int rA, int sB, int rB);
-		void links(int sA, int rA, int sB, int rB);
+		void rij(int correctie);
 		void bepaalPID();
+		void corrigeer();
 		int sA;
 		int sB;
 		int rA;
 		int rB;
+		int correctie;
+		int P;
+		int I;
+		int D;
+		int previousError;
+		int PIDvalue;
+		int Kp;
+		int Ki;
+		int Kd;
+		int snelheid;
+		String arrayString;
+		boolean limitReached=false;
 
 
 	private:
