@@ -100,9 +100,7 @@ $EndComp
 Wire Wire Line
 	7800 4200 8000 4200
 Wire Wire Line
-	8000 4000 8000 4200
-Wire Wire Line
-	8000 4200 8000 4450
+	8000 4000 8000 4450
 Wire Wire Line
 	8000 4750 8000 5325
 Connection ~ 8000 4200
@@ -185,11 +183,7 @@ F 6 "~" H 8000 5325 60  0001 C CNN "Notes"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5400 4200 5650 4200
-Wire Wire Line
-	5650 4200 5900 4200
-Wire Wire Line
-	5900 4200 6200 4200
+	5400 4200 6200 4200
 Text GLabel 8000 4000 0    60   Input ~ 0
 3V3_LDO
 Text GLabel 5400 3700 0    60   Input ~ 0

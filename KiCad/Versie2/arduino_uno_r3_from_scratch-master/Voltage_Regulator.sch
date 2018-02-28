@@ -172,10 +172,10 @@ F 12 "~" H 7800 3625 60  0001 C CNN "Notes"
 	-1   0    0    1   
 $EndComp
 $Comp
-L LED-RESCUE-Arduino_Uno_R3_From_Scratch D2
+L LED-RESCUE-Arduino_Uno_R3_From_Scratch D10
 U 1 1 55D1FC7B
 P 7800 4125
-F 0 "D2" H 7800 4225 50  0000 C CNN
+F 0 "D10" H 7800 4225 50  0000 C CNN
 F 1 "LED" H 7800 4025 50  0000 C CNN
 F 2 "~" H 7800 4125 60  0000 C CNN
 F 3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" H 7800 4125 60  0001 C CNN

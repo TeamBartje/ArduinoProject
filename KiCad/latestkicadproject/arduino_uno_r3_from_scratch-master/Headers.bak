@@ -315,4 +315,6 @@ F 6 "~" H 5700 4975 60  0001 C CNN "Notes"
 	1    5700 4975
 	1    0    0    -1  
 $EndComp
+Text HLabel 5700 1875 2    60   Input ~ 0
+5V_LDO
 $EndSCHEMATC

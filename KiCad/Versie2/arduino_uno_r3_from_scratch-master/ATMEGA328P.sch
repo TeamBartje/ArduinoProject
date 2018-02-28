@@ -202,10 +202,10 @@ F 12 "~" H 3800 850 60  0001 C CNN "Notes"
 	1    0    0    -1  
 $EndComp
 $Comp
-L D D7
+L D D11
 U 1 1 55E8CABC
 P 5300 1200
-F 0 "D7" H 5300 1300 40  0000 C CNN
+F 0 "D11" H 5300 1300 40  0000 C CNN
 F 1 "1N4148W-7-F" H 5300 1100 40  0000 C CNN
 F 2 "~" H 5300 1200 60  0000 C CNN
 F 3 "http://www.diodes.com/_files/datasheets/ds30086.pdf" H 5300 1200 60  0001 C CNN
