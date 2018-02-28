@@ -13,8 +13,8 @@ void setup() {
 void loop() {
   //Serial.println("halo");
   //motor.vooruit(255,1,255,0);
-  //motor.bepaalPID();
-  speed.getSpeed();
+  motor.bepaalPID();
+  //speed.getSpeed();
   
 
 

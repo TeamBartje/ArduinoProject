@@ -1,7 +1,22 @@
-sensorrechts: 7
+
+rechterbeen
+
+sensorrechts: 8
 sensorlinksdaarvan: 6
-sensorlinkslinksdaarvn:5
+sensorlinkslink:5
+
+
+
+linkerbeen
 sensorlinks:4
+sensor rechtsdaarvan: A0
+sensor rechts: A1
+
+
+
+linkerbeen
+
+
 
 
 3 11 12 13 motor

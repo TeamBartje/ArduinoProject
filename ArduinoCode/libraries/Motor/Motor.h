@@ -24,6 +24,7 @@ class Motor{
 		int Kd;
 		int snelheid;
 		String arrayString;
+		boolean limitReached=false;
 
 
 	private:
