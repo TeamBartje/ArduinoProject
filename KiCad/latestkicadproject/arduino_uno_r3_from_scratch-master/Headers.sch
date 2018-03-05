@@ -55,7 +55,7 @@ U 1 1 55E94736
 P 6250 2375
 F 0 "P1" H 6400 2500 60  0000 L CNN
 F 1 "Power Header" H 6400 2375 60  0000 L CNN
-F 2 "" H 6250 2375 60  0000 C CNN
+F 2 "" H 6250 2375 60  0001 C CNN
 F 3 "http://sullinscorp.com/catalogs/101_PAGE114-115_.100_FEMALE_HDR.pdf" H 6250 2375 60  0001 C CNN
 F 4 "Connector Header 8 Position 0.100\" (2.54mm) Gold Surface Mount" H 6250 2375 60  0001 C CNN "Characteristics"
 F 5 "Shield Header 8POS - PWR" H 6250 2375 60  0001 C CNN "Description"
@@ -75,7 +75,7 @@ U 1 1 55E9474B
 P 6250 4375
 F 0 "P3" H 6450 4250 60  0000 C CNN
 F 1 "Digital Header 02" H 6400 4375 60  0000 L CNN
-F 2 "" H 6250 4375 60  0000 C CNN
+F 2 "" H 6250 4375 60  0001 C CNN
 F 3 "http://sullinscorp.com/catalogs/101_PAGE114-115_.100_FEMALE_HDR.pdf" H 6250 4375 60  0001 C CNN
 F 4 "Connector Header 10 Position 0.100\" (2.54mm) Gold Surface Mount" H 6250 4375 60  0001 C CNN "Characteristics"
 F 5 "Shield Header 10POS - DIG02" H 6250 4375 60  0001 C CNN "Description"
@@ -95,7 +95,7 @@ U 1 1 55E94764
 P 6250 3325
 F 0 "P2" H 6400 3200 60  0000 L CNN
 F 1 "Analog Header" H 6400 3325 60  0000 L CNN
-F 2 "" H 6250 3325 60  0000 C CNN
+F 2 "" H 6250 3325 60  0001 C CNN
 F 3 "http://sullinscorp.com/catalogs/101_PAGE114-115_.100_FEMALE_HDR.pdf" H 6250 3325 60  0001 C CNN
 F 4 "Connector Header 6 Position 0.100\" (2.54mm) Gold Surface Mount" H 6250 3325 60  0001 C CNN "Characteristics"
 F 5 "Shield Header 6POS - ANLG" H 6250 3325 60  0001 C CNN "Description"
@@ -287,7 +287,7 @@ U 1 1 5615BF57
 P 6250 5525
 F 0 "P4" H 6400 5650 60  0000 L CNN
 F 1 "Digital Header 01" H 6400 5525 60  0000 L CNN
-F 2 "" H 6250 5525 60  0000 C CNN
+F 2 "" H 6250 5525 60  0001 C CNN
 F 3 "http://sullinscorp.com/catalogs/101_PAGE114-115_.100_FEMALE_HDR.pdf" H 6250 5525 60  0001 C CNN
 F 4 "Connector Header 8 Position 0.100\" (2.54mm) Gold Surface Mount" H 6250 5525 60  0001 C CNN "Characteristics"
 F 5 "Shield Header 8POS - DIG01" H 6250 5525 60  0001 C CNN "Description"
