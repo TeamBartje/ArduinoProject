@@ -1,4 +1,4 @@
-update=14/02/2018 14:52:06
+update=07/03/2018 14:15:41
 version=1
 last_client=kicad
 [cvpcb]
@@ -87,3 +87,8 @@ LibName35=C:/Users/Eigenaar/Google Drive/Project RobotBartje/Arduino/l298A
 LibName36=C:/Users/Eigenaar/Google Drive/Project RobotBartje/Arduino/Arduino_Uno_R3_From_Scratch
 LibName37=C:/Users/Eigenaar/Google Drive/Project RobotBartje/Arduino/Arduino_Uno_R3_From_Scratch-cache
 LibName38=C:/Users/Eigenaar/Google Drive/Project RobotBartje/Arduino/Arduino_Uno_R3_From_Scratch-rescue
+LibName39=battery
+LibName40=Arduino_Uno_R3_From_Scratch-cache
+LibName41=MC33269ST/MC33269ST
+LibName42=LP2985-33DBVR/LP2985-33DBVR
+LibName43=Degson/degson/degson
