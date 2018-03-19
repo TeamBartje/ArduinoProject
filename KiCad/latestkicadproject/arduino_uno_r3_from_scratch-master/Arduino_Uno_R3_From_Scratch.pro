@@ -1,4 +1,4 @@
-update=07/03/2018 14:15:41
+update=14/03/2018 11:53:21
 version=1
 last_client=kicad
 [cvpcb]
@@ -92,3 +92,4 @@ LibName40=Arduino_Uno_R3_From_Scratch-cache
 LibName41=MC33269ST/MC33269ST
 LibName42=LP2985-33DBVR/LP2985-33DBVR
 LibName43=Degson/degson/degson
+LibName44=PHT6NQ10T,135/KiCad/PHT6NQ10T_135
