@@ -1,0 +1,459 @@
+EESchema Schematic File Version 2
+LIBS:Arduino_Uno_R3_From_Scratch-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Arduino_Uno_R3_From_Scratch
+LIBS:MFN_Atmel
+LIBS:MFN_STMicro
+LIBS:l298
+LIBS:l298A
+LIBS:Arduino_Uno_R3_From_Scratch-cache
+LIBS:battery
+LIBS:MC33269ST
+LIBS:LP2985-33DBVR
+LIBS:degson
+LIBS:PHT6NQ10T_135
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 6
+Title "Arduino UNO R3 Clone"
+Date "8 oct 2015"
+Rev "0"
+Comp "Rheingold Heavy"
+Comment1 "Based on the Arduino UNO R3 From arduino.cc"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 4950 2975 0    40   Input ~ 0
+AREF
+Wire Wire Line
+	4950 2975 6000 2975
+Wire Wire Line
+	5250 2975 5250 3225
+Connection ~ 5250 2975
+Wire Wire Line
+	5250 3525 5250 3775
+$Comp
+L CONN_02X03 ICSP2
+U 1 1 55E8CAAE
+P 3800 850
+F 0 "ICSP2" H 3800 1100 50  0000 C CNN
+F 1 "M20-9980346" H 3800 650 40  0000 C CNN
+F 2 "M20-9980346:HDRV6W64P254_2X3_762X508X868P" H 3800 850 60  0001 C CNN
+F 3 "http://cdn.harwin.com/pdfs/M20-998.pdf" H 3800 850 60  0001 C CNN
+F 4 "6 CONTACT(S), MALE, STRAIGHT TWO PART BOARD CONNECTOR" H 3800 850 60  0001 C CNN "Characteristics"
+F 5 "ATMEGA328P ICSP Header" H 3800 850 60  0001 C CNN "Description"
+F 6 "Harwin" H 3800 850 60  0001 C CNN "MFN"
+F 7 "M20-9980346" H 3800 850 60  0001 C CNN "MFP"
+F 8 "PTH" H 3800 850 60  0001 C CNN "Package ID"
+F 9 "ANY" H 3800 850 60  0001 C CNN "Source"
+F 10 "N" H 3800 850 60  0001 C CNN "Critical"
+F 11 "328P_Sub" H 3800 850 60  0001 C CNN "Subsystem"
+F 12 "~" H 3800 850 60  0001 C CNN "Notes"
+	1    3800 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 950  4350 1100
+Wire Wire Line
+	4050 950  4350 950 
+Wire Wire Line
+	3200 950  3550 950 
+Wire Wire Line
+	3200 850  3550 850 
+Wire Wire Line
+	3200 750  3550 750 
+Wire Wire Line
+	4050 850  4300 850 
+Connection ~ 3200 1500
+$Comp
+L RESET_SWITCH SW1
+U 1 1 55E8D514
+P 2750 1975
+F 0 "SW1" V 2600 2275 60  0000 C CNN
+F 1 "RESET_SWITCH" V 2900 2525 60  0000 C CNN
+F 2 "RESET_SWITCH:FSM4JSMATR" H 2750 1975 60  0001 C CNN
+F 3 "http://industrial.panasonic.com/www-data/pdf/ATK0000/ATK0000CE28.pdf" H 2750 1975 60  0001 C CNN
+F 4 "SWITCH TACTILE SPST-NO 0.02A 15V" H 2750 1975 60  0001 C CNN "Characteristics"
+F 5 "Reset Pushbutton" H 2750 1975 60  0001 C CNN "Description"
+F 6 "Panasonic" H 2750 1975 60  0001 C CNN "MFN"
+F 7 "EVQ-Q2U02W" H 2750 1975 60  0001 C CNN "MFP"
+F 8 "SMD" H 2750 1975 60  0001 C CNN "Package ID"
+F 9 "ANY" H 2750 1975 60  0001 C CNN "Source"
+F 10 "N" H 2750 1975 60  0001 C CNN "Critical"
+F 11 "328P_Sub" H 2750 1975 60  0001 C CNN "Subsystem"
+F 12 "Prefer below 3mm in accuator height off PCB" H 2750 1975 60  0001 C CNN "Notes"
+	1    2750 1975
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2750 1500 2750 1650
+Connection ~ 2750 1500
+Wire Wire Line
+	2750 2275 2750 2425
+Connection ~ 2750 1650
+Connection ~ 2750 2275
+Wire Wire Line
+	3200 950  3200 1625
+Wire Wire Line
+	9900 3350 10850 3350
+Wire Wire Line
+	10450 3000 10450 3350
+Wire Wire Line
+	10450 2350 10450 2700
+Wire Wire Line
+	9900 2350 10825 2350
+$Comp
+L C C4
+U 1 1 56159BB8
+P 5250 3375
+F 0 "C4" H 5300 3475 40  0000 L CNN
+F 1 "0.1 uF" H 5300 3275 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5288 3225 30  0000 C CNN
+F 3 "http://images.ihscontent.net/vipimages/VipMasterIC/IC/KEME/KEMES10043/KEMES10043-1.pdf" H 5250 3375 60  0001 C CNN
+F 4 "CAPACITOR, CERAMIC, MULTILAYER, 100 V, X7R, 0.1 uF, SURFACE MOUNT, 0805, CHIP, ROHS COMPLIANT" H 5250 3375 60  0001 C CNN "Characteristics"
+F 5 "ATMEGA328P AREF Bypass Cap" H 5250 3375 60  0001 C CNN "Description"
+F 6 "Kemet" H 5250 3375 60  0001 C CNN "MFN"
+F 7 "C0805C104K1RACAUTO" H 5250 3375 60  0001 C CNN "MFP"
+F 8 "SMD_0805" H 5250 3375 60  0001 C CNN "Package ID"
+F 9 "ANY" H 5250 3375 60  0001 C CNN "Source"
+F 10 "N" H 5250 3375 60  0001 C CNN "Critical"
+F 11 "328P_Sub" H 5250 3375 60  0001 C CNN "Subsystem"
+F 12 "~" H 5250 3375 60  0001 C CNN "Notes"
+	1    5250 3375
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C6
+U 1 1 56159BD3
+P 4450 4525
+F 0 "C6" H 4500 4625 40  0000 L CNN
+F 1 "0.1 uF" H 4500 4425 40  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4488 4375 30  0000 C CNN
+F 3 "http://images.ihscontent.net/vipimages/VipMasterIC/IC/KEME/KEMES10043/KEMES10043-1.pdf" H 4450 4525 60  0001 C CNN
+F 4 "CAPACITOR, CERAMIC, MULTILAYER, 100 V, X7R, 0.1 uF, SURFACE MOUNT, 0805, CHIP, ROHS COMPLIANT" H 4450 4525 60  0001 C CNN "Characteristics"
+F 5 "ATMEGA328P VCC and AVCC Bypass Cap" H 4450 4525 60  0001 C CNN "Description"
+F 6 "Kemet" H 4450 4525 60  0001 C CNN "MFN"
+F 7 "C0805C104K1RACAUTO" H 4450 4525 60  0001 C CNN "MFP"
+F 8 "SMD_0805" H 4450 4525 60  0001 C CNN "Package ID"
+F 9 "ANY" H 4450 4525 60  0001 C CNN "Source"
+F 10 "N" H 4450 4525 60  0001 C CNN "Critical"
+F 11 "328P_Sub" H 4450 4525 60  0001 C CNN "Subsystem"
+F 12 "~" H 4450 4525 60  0001 C CNN "Notes"
+	1    4450 4525
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 56159EEE
+P 8400 3650
+F 0 "R1" V 8480 3650 40  0000 C CNN
+F 1 "10K" V 8407 3651 40  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8330 3650 30  0000 C CNN
+F 3 "http://images.ihscontent.net/vipimages/VipMasterIC/IC/VISH/VISHS75859/VISHS75859-1.pdf" H 8400 3650 30  0001 C CNN
+F 4 "RESISTOR, METAL GLAZE/THICK FILM, 0.125W, 5%, 200ppm, 10000ohm, SURFACE MOUNT, 0805" H 8400 3650 60  0001 C CNN "Characteristics"
+F 5 "ATMEGA328P 10K ICSP Pull Up" H 8400 3650 60  0001 C CNN "Description"
+F 6 "Vishay" H 8400 3650 60  0001 C CNN "MFN"
+F 7 "CRCW080510K0JNEA" H 8400 3650 60  0001 C CNN "MFP"
+F 8 "SMD_0805" H 8400 3650 60  0001 C CNN "Package ID"
+F 9 "ANY" H 8400 3650 60  0001 C CNN "Source"
+F 10 "N" H 8400 3650 60  0001 C CNN "Critical"
+F 11 "328P_Sub" H 8400 3650 60  0001 C CNN "Subsystem"
+F 12 "~" H 8400 3650 60  0001 C CNN "Notes"
+	1    8400 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2850 1650 2850 1775
+Wire Wire Line
+	2650 1650 2850 1650
+Wire Wire Line
+	2650 1775 2650 1650
+Wire Wire Line
+	2850 2275 2850 2175
+Wire Wire Line
+	2650 2275 2850 2275
+Wire Wire Line
+	2650 2275 2650 2175
+$Comp
+L GND-RESCUE-Arduino_Uno_R3_From_Scratch #PWR026
+U 1 1 562077A6
+P 5250 3775
+F 0 "#PWR026" H 5250 3775 30  0001 C CNN
+F 1 "GND" H 5250 3705 30  0001 C CNN
+F 2 "~" H 5250 3775 60  0000 C CNN
+F 3 "~" H 5250 3775 60  0000 C CNN
+F 4 "ANY" H 5250 3775 60  0001 C CNN "Source"
+F 5 "N" H 5250 3775 60  0001 C CNN "Critical"
+F 6 "~" H 5250 3775 60  0001 C CNN "Notes"
+	1    5250 3775
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-Arduino_Uno_R3_From_Scratch #PWR027
+U 1 1 562079B8
+P 2750 2425
+F 0 "#PWR027" H 2750 2425 30  0001 C CNN
+F 1 "GND" H 2750 2355 30  0001 C CNN
+F 2 "~" H 2750 2425 60  0000 C CNN
+F 3 "~" H 2750 2425 60  0000 C CNN
+F 4 "ANY" H 2750 2425 60  0001 C CNN "Source"
+F 5 "N" H 2750 2425 60  0001 C CNN "Critical"
+F 6 "~" H 2750 2425 60  0001 C CNN "Notes"
+	1    2750 2425
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND-RESCUE-Arduino_Uno_R3_From_Scratch #PWR028
+U 1 1 56208C49
+P 4350 1100
+F 0 "#PWR028" H 4350 1100 30  0001 C CNN
+F 1 "GND" H 4350 1030 30  0001 C CNN
+F 2 "~" H 4350 1100 60  0000 C CNN
+F 3 "~" H 4350 1100 60  0000 C CNN
+F 4 "ANY" H 4350 1100 60  0001 C CNN "Source"
+F 5 "N" H 4350 1100 60  0001 C CNN "Critical"
+F 6 "~" H 4350 1100 60  0001 C CNN "Notes"
+	1    4350 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L ATMEGA328P-MU IC5
+U 1 1 5AA0EFE0
+P 6900 3475
+F 0 "IC5" H 6150 4725 50  0000 L BNN
+F 1 "ATMEGA328P-MU" H 7300 2075 50  0000 L BNN
+F 2 "ATMEGA328P-AU:QFP80P900X900X120-32N" H 6900 3475 50  0001 C CIN
+F 3 "" H 6900 3475 50  0001 C CNN
+	1    6900 3475
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6000 3825
+NoConn ~ 6000 3725
+Wire Wire Line
+	9900 2350 9900 2975
+Wire Wire Line
+	7900 3075 9900 3075
+Wire Wire Line
+	9900 3075 9900 3350
+Wire Wire Line
+	9900 2975 7900 2975
+Text HLabel 3200 750  0    60   Input ~ 0
+DIRA
+Text HLabel 3200 850  0    60   Input ~ 0
+DIRB
+Text HLabel 4300 850  2    60   Input ~ 0
+PWMB
+Text HLabel 7900 2375 2    60   Input ~ 0
+IO8
+Text HLabel 7900 2475 2    60   Input ~ 0
+IO9
+Text HLabel 7900 2575 2    60   Input ~ 0
+SS
+Text HLabel 7900 2675 2    60   Input ~ 0
+PWMB
+Text HLabel 7900 2775 2    60   Input ~ 0
+DIRA
+Text HLabel 7900 2875 2    60   Input ~ 0
+DIRB
+Text HLabel 8750 3825 2    60   Input ~ 0
+RESET
+Text HLabel 7900 3725 2    60   Input ~ 0
+AD5
+Text HLabel 7900 3625 2    60   Input ~ 0
+AD4
+Text HLabel 7900 3525 2    60   Input ~ 0
+AD3
+Text HLabel 7900 3425 2    60   Input ~ 0
+AD2
+Text HLabel 7900 3325 2    60   Input ~ 0
+AD1
+Text HLabel 7900 3225 2    60   Input ~ 0
+AD0
+Text HLabel 7900 3975 2    60   Input ~ 0
+IO0
+Text HLabel 7900 4075 2    60   Input ~ 0
+IO1
+Text HLabel 7900 4175 2    60   Input ~ 0
+IO2
+Text HLabel 7900 4275 2    60   Input ~ 0
+PWMA
+Text HLabel 7900 4375 2    60   Input ~ 0
+IO4
+Text HLabel 7900 4475 2    60   Input ~ 0
+IO5
+Text HLabel 7900 4575 2    60   Input ~ 0
+IO6
+Text HLabel 7900 4675 2    60   Input ~ 0
+IO7
+Wire Wire Line
+	7900 3825 8750 3825
+Connection ~ 8400 3825
+$Comp
+L +5V #PWR029
+U 1 1 5AA163DD
+P 8400 3500
+F 0 "#PWR029" H 8400 3350 50  0001 C CNN
+F 1 "+5V" H 8400 3640 50  0000 C CNN
+F 2 "" H 8400 3500 50  0001 C CNN
+F 3 "" H 8400 3500 50  0001 C CNN
+	1    8400 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 3800 8400 3825
+Wire Wire Line
+	3200 1500 2750 1500
+Text HLabel 3200 1625 3    60   Input ~ 0
+RESET
+Wire Wire Line
+	4050 750  4350 750 
+Wire Wire Line
+	4350 750  4350 725 
+$Comp
+L +5V #PWR030
+U 1 1 5AA16A11
+P 4350 725
+F 0 "#PWR030" H 4350 575 50  0001 C CNN
+F 1 "+5V" H 4350 865 50  0000 C CNN
+F 2 "" H 4350 725 50  0001 C CNN
+F 3 "" H 4350 725 50  0001 C CNN
+	1    4350 725 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 4475 6000 4675
+Wire Wire Line
+	6000 4675 4325 4675
+Wire Wire Line
+	4325 4675 4325 4750
+Connection ~ 4450 4675
+$Comp
+L GND #PWR031
+U 1 1 5AA16DB8
+P 4325 4750
+F 0 "#PWR031" H 4325 4500 50  0001 C CNN
+F 1 "GND" H 4325 4600 50  0000 C CNN
+F 2 "" H 4325 4750 50  0001 C CNN
+F 3 "" H 4325 4750 50  0001 C CNN
+	1    4325 4750
+	1    0    0    -1  
+$EndComp
+Connection ~ 6000 4575
+Wire Wire Line
+	6000 2375 6000 2675
+Wire Wire Line
+	6000 2375 4450 2375
+Wire Wire Line
+	4450 2375 4450 4375
+Wire Wire Line
+	4450 4225 4200 4225
+Wire Wire Line
+	4200 4225 4200 4150
+Connection ~ 4450 4225
+$Comp
+L +5V #PWR032
+U 1 1 5AA170DA
+P 4200 4150
+F 0 "#PWR032" H 4200 4000 50  0001 C CNN
+F 1 "+5V" H 4200 4290 50  0000 C CNN
+F 2 "" H 4200 4150 50  0001 C CNN
+F 3 "" H 4200 4150 50  0001 C CNN
+	1    4200 4150
+	1    0    0    -1  
+$EndComp
+Connection ~ 6000 2475
+Text HLabel 4350 950  2    60   Input ~ 0
+GND
+$Comp
+L Crystal Y2
+U 1 1 5AA8FD3A
+P 10450 2850
+F 0 "Y2" H 10450 3000 50  0000 C CNN
+F 1 "Crystal" H 10450 2700 50  0000 C CNN
+F 2 "MCRSD16000F183000RR:HC%2f49US-(AT49)_1" H 10450 2850 50  0001 C CNN
+F 3 "" H 10450 2850 50  0001 C CNN
+	1    10450 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10825 2350 10825 2450
+Connection ~ 10450 2350
+Wire Wire Line
+	10850 3350 10850 3250
+Connection ~ 10450 3350
+$Comp
+L C C5
+U 1 1 5AA90017
+P 10825 2600
+F 0 "C5" H 10850 2700 50  0000 L CNN
+F 1 "22P" H 10850 2500 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 10863 2450 50  0001 C CNN
+F 3 "" H 10825 2600 50  0001 C CNN
+	1    10825 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C9
+U 1 1 5AA90084
+P 10850 3100
+F 0 "C9" H 10875 3200 50  0000 L CNN
+F 1 "22P" H 10875 3000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 10888 2950 50  0001 C CNN
+F 3 "" H 10850 3100 50  0001 C CNN
+	1    10850 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR033
+U 1 1 5AA900E3
+P 10825 2750
+F 0 "#PWR033" H 10825 2500 50  0001 C CNN
+F 1 "GND" H 10825 2600 50  0000 C CNN
+F 2 "" H 10825 2750 50  0001 C CNN
+F 3 "" H 10825 2750 50  0001 C CNN
+	1    10825 2750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR034
+U 1 1 5AA90124
+P 10850 2950
+F 0 "#PWR034" H 10850 2700 50  0001 C CNN
+F 1 "GND" H 10850 2800 50  0000 C CNN
+F 2 "" H 10850 2950 50  0001 C CNN
+F 3 "" H 10850 2950 50  0001 C CNN
+	1    10850 2950
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC

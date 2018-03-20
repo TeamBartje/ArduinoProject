@@ -1,0 +1,284 @@
+EESchema Schematic File Version 2
+LIBS:Arduino_Uno_R3_From_Scratch-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Arduino_Uno_R3_From_Scratch
+LIBS:MFN_Atmel
+LIBS:MFN_STMicro
+LIBS:l298
+LIBS:l298A
+LIBS:Arduino_Uno_R3_From_Scratch-cache
+LIBS:battery
+LIBS:MC33269ST
+LIBS:LP2985-33DBVR
+LIBS:degson
+LIBS:PHT6NQ10T_135
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L GND #PWR011
+U 1 1 5A0B3F5C
+P 5100 4700
+F 0 "#PWR011" H 5100 4450 50  0001 C CNN
+F 1 "GND" H 5100 4550 50  0000 C CNN
+F 2 "" H 5100 4700 50  0001 C CNN
+F 3 "" H 5100 4700 50  0001 C CNN
+	1    5100 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR012
+U 1 1 5A0B3F8E
+P 5450 4700
+F 0 "#PWR012" H 5450 4450 50  0001 C CNN
+F 1 "GND" H 5450 4550 50  0000 C CNN
+F 2 "" H 5450 4700 50  0001 C CNN
+F 3 "" H 5450 4700 50  0001 C CNN
+	1    5450 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR013
+U 1 1 5A0B3FB1
+P 5700 4700
+F 0 "#PWR013" H 5700 4450 50  0001 C CNN
+F 1 "GND" H 5700 4550 50  0000 C CNN
+F 2 "" H 5700 4700 50  0001 C CNN
+F 3 "" H 5700 4700 50  0001 C CNN
+	1    5700 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR014
+U 1 1 5A0B43FA
+P 6000 4700
+F 0 "#PWR014" H 6000 4450 50  0001 C CNN
+F 1 "GND" H 6000 4550 50  0000 C CNN
+F 2 "" H 6000 4700 50  0001 C CNN
+F 3 "" H 6000 4700 50  0001 C CNN
+	1    6000 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 4000 6200 4000
+Wire Wire Line
+	4650 3850 6200 3850
+Wire Wire Line
+	4650 3700 6200 3700
+Wire Wire Line
+	4650 3550 6200 3550
+Wire Wire Line
+	5100 3450 5100 4050
+Connection ~ 5100 3550
+Wire Wire Line
+	5450 3450 5450 4050
+Connection ~ 5450 3700
+Wire Wire Line
+	5700 3450 5700 4050
+Connection ~ 5700 3850
+Wire Wire Line
+	6000 3450 6000 4050
+Connection ~ 6000 4000
+Wire Wire Line
+	5100 2800 7000 2800
+Connection ~ 5450 2800
+Connection ~ 5700 2800
+Connection ~ 6000 2800
+Text HLabel 7000 2800 2    60   Input ~ 0
+PWRIN
+Text HLabel 6200 3550 2    60   Input ~ 0
+OUT1
+Text HLabel 6200 3700 2    60   Input ~ 0
+OUT2
+Text HLabel 6200 3850 2    60   Input ~ 0
+OUT3
+Text HLabel 6200 4000 2    60   Input ~ 0
+OUT4
+$Comp
+L DG3XX-04-3.5 X1
+U 1 1 5AA3CE64
+P 4550 3550
+F 0 "X1" H 4670 3515 45  0000 L BNN
+F 1 "DG3XX-04-3.5" H 4550 3550 45  0001 L BNN
+F 2 "degson:degson-DG350-3.5-04P" H 4580 3700 20  0001 C CNN
+F 3 "" H 4550 3550 60  0001 C CNN
+	1    4550 3550
+	-1   0    0    1   
+$EndComp
+$Comp
+L DG3XX-04-3.5 X1
+U 2 1 5AA3CEDB
+P 4550 3700
+F 0 "X1" H 4670 3665 45  0000 L BNN
+F 1 "DG3XX-04-3.5" H 4550 3700 45  0001 L BNN
+F 2 "degson:degson-DG350-3.5-04P" H 4580 3850 20  0001 C CNN
+F 3 "" H 4550 3700 60  0001 C CNN
+	2    4550 3700
+	-1   0    0    1   
+$EndComp
+$Comp
+L DG3XX-04-3.5 X1
+U 3 1 5AA3CF1C
+P 4550 3850
+F 0 "X1" H 4670 3815 45  0000 L BNN
+F 1 "DG3XX-04-3.5" H 4550 3850 45  0001 L BNN
+F 2 "degson:degson-DG350-3.5-04P" H 4580 4000 20  0001 C CNN
+F 3 "" H 4550 3850 60  0001 C CNN
+	3    4550 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L DG3XX-04-3.5 X1
+U 4 1 5AA3CF7F
+P 4550 4000
+F 0 "X1" H 4670 3965 45  0000 L BNN
+F 1 "DG3XX-04-3.5" H 4550 4000 45  0001 L BNN
+F 2 "degson:degson-DG350-3.5-04P" H 4580 4150 20  0001 C CNN
+F 3 "" H 4550 4000 60  0001 C CNN
+	4    4550 4000
+	-1   0    0    1   
+$EndComp
+$Comp
+L D D2
+U 1 1 5AA7D6C2
+P 5100 3300
+F 0 "D2" H 5100 3400 50  0000 C CNN
+F 1 "D" H 5100 3200 50  0000 C CNN
+F 2 "Diodes_SMD:D_MicroMELF_Hadsoldering" H 5100 3300 50  0001 C CNN
+F 3 "" H 5100 3300 50  0001 C CNN
+	1    5100 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L D D4
+U 1 1 5AA7D743
+P 5450 3300
+F 0 "D4" H 5450 3400 50  0000 C CNN
+F 1 "D" H 5450 3200 50  0000 C CNN
+F 2 "Diodes_SMD:D_MicroMELF_Hadsoldering" H 5450 3300 50  0001 C CNN
+F 3 "" H 5450 3300 50  0001 C CNN
+	1    5450 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L D D6
+U 1 1 5AA7D774
+P 5700 3300
+F 0 "D6" H 5700 3400 50  0000 C CNN
+F 1 "D" H 5700 3200 50  0000 C CNN
+F 2 "Diodes_SMD:D_MicroMELF_Hadsoldering" H 5700 3300 50  0001 C CNN
+F 3 "" H 5700 3300 50  0001 C CNN
+	1    5700 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L D D8
+U 1 1 5AA7D7A7
+P 6000 3300
+F 0 "D8" H 6000 3400 50  0000 C CNN
+F 1 "D" H 6000 3200 50  0000 C CNN
+F 2 "Diodes_SMD:D_MicroMELF_Hadsoldering" H 6000 3300 50  0001 C CNN
+F 3 "" H 6000 3300 50  0001 C CNN
+	1    6000 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5100 3150 5100 2800
+Wire Wire Line
+	5450 3150 5450 2800
+Wire Wire Line
+	5700 3150 5700 2800
+Wire Wire Line
+	6000 3150 6000 2800
+$Comp
+L D D9
+U 1 1 5AA7F90A
+P 6000 4200
+F 0 "D9" H 6000 4300 50  0000 C CNN
+F 1 "D" H 6000 4100 50  0000 C CNN
+F 2 "Diodes_SMD:D_MicroMELF_Hadsoldering" H 6000 4200 50  0001 C CNN
+F 3 "" H 6000 4200 50  0001 C CNN
+	1    6000 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L D D7
+U 1 1 5AA7F96F
+P 5700 4200
+F 0 "D7" H 5700 4300 50  0000 C CNN
+F 1 "D" H 5700 4100 50  0000 C CNN
+F 2 "Diodes_SMD:D_MicroMELF_Hadsoldering" H 5700 4200 50  0001 C CNN
+F 3 "" H 5700 4200 50  0001 C CNN
+	1    5700 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L D D5
+U 1 1 5AA7F99A
+P 5450 4200
+F 0 "D5" H 5450 4300 50  0000 C CNN
+F 1 "D" H 5450 4100 50  0000 C CNN
+F 2 "Diodes_SMD:D_MicroMELF_Hadsoldering" H 5450 4200 50  0001 C CNN
+F 3 "" H 5450 4200 50  0001 C CNN
+	1    5450 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L D D3
+U 1 1 5AA7FA31
+P 5100 4200
+F 0 "D3" H 5100 4300 50  0000 C CNN
+F 1 "D" H 5100 4100 50  0000 C CNN
+F 2 "Diodes_SMD:D_MicroMELF_Hadsoldering" H 5100 4200 50  0001 C CNN
+F 3 "" H 5100 4200 50  0001 C CNN
+	1    5100 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5100 4350 5100 4700
+Wire Wire Line
+	5450 4350 5450 4700
+Wire Wire Line
+	5700 4350 5700 4700
+Wire Wire Line
+	6000 4700 6000 4350
+$EndSCHEMATC
