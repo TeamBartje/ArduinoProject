@@ -1,4 +1,4 @@
-update=14/03/2018 11:53:21
+update=21/03/2018 13:42:01
 version=1
 last_client=kicad
 [cvpcb]
@@ -93,3 +93,4 @@ LibName41=MC33269ST/MC33269ST
 LibName42=LP2985-33DBVR/LP2985-33DBVR
 LibName43=Degson/degson/degson
 LibName44=PHT6NQ10T,135/KiCad/PHT6NQ10T_135
+LibName45=LIB_L298P/L298P/KiCad/L298P
