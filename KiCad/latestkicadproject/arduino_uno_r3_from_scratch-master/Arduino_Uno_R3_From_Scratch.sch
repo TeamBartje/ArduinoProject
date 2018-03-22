@@ -63,6 +63,7 @@ F1 "Voltage_Regulator.sch" 50
 F2 "PWRIN" I L 1400 3475 60 
 F3 "VIN" I R 2900 2400 60 
 F4 "+3V3" I R 2900 2250 60 
+F5 "GND" I R 2900 2675 60 
 $EndSheet
 $Sheet
 S 7550 2400 1500 4000
@@ -313,4 +314,13 @@ Wire Wire Line
 	3450 2400 2900 2400
 Wire Wire Line
 	7050 5400 7550 5400
+Wire Wire Line
+	2900 2675 5050 2675
+Wire Wire Line
+	5050 2675 5050 1075
+Wire Wire Line
+	5050 1075 7475 1075
+Wire Wire Line
+	7475 1075 7475 5400
+Connection ~ 7475 5400
 $EndSCHEMATC
