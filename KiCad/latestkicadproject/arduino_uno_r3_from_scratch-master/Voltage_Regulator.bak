@@ -115,20 +115,6 @@ F 12 "ESR must fall between 0.33Ω and 22Ω" H 6350 4000 60  0001 C CNN "Notes"
 	1    6350 4000
 	1    0    0    -1  
 $EndComp
-$Comp
-L GND-RESCUE-Arduino_Uno_R3_From_Scratch #PWR01
-U 1 1 561FEA9F
-P 5725 4400
-F 0 "#PWR01" H 5725 4150 50  0001 C CNN
-F 1 "GND" H 5725 4250 50  0001 C CNN
-F 2 "" H 5725 4400 60  0000 C CNN
-F 3 "" H 5725 4400 60  0000 C CNN
-F 4 "ANY" H 5725 4400 60  0001 C CNN "Source"
-F 5 "N" H 5725 4400 60  0001 C CNN "Critical"
-F 6 "~" H 5725 4400 60  0001 C CNN "Notes"
-	1    5725 4400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4150 4250 4050 4250
 Wire Wire Line
@@ -187,17 +173,6 @@ Wire Wire Line
 Wire Wire Line
 	6750 3525 6750 3850
 $Comp
-L GND #PWR02
-U 1 1 5AA01DB9
-P 7700 4400
-F 0 "#PWR02" H 7700 4150 50  0001 C CNN
-F 1 "GND" H 7700 4250 50  0000 C CNN
-F 2 "" H 7700 4400 50  0001 C CNN
-F 3 "" H 7700 4400 50  0001 C CNN
-	1    7700 4400
-	1    0    0    -1  
-$EndComp
-$Comp
 L C C3
 U 1 1 5AA02A53
 P 8850 3925
@@ -215,17 +190,6 @@ F 10 "N" H 8850 3925 60  0001 C CNN "Critical"
 F 11 "Voltage_Reg" H 8850 3925 60  0001 C CNN "Subsystem"
 F 12 "~" H 8850 3925 60  0001 C CNN "Notes"
 	1    8850 3925
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR03
-U 1 1 5AA02AAE
-P 8850 4400
-F 0 "#PWR03" H 8850 4150 50  0001 C CNN
-F 1 "GND" H 8850 4250 50  0000 C CNN
-F 2 "" H 8850 4400 50  0001 C CNN
-F 3 "" H 8850 4400 50  0001 C CNN
-	1    8850 4400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -299,5 +263,11 @@ GND
 Text HLabel 6350 4400 0    60   Input ~ 0
 GND
 Text HLabel 5025 4400 0    60   Input ~ 0
+GND
+Text HLabel 5725 4400 0    60   Input ~ 0
+GND
+Text HLabel 7700 4400 0    60   Input ~ 0
+GND
+Text HLabel 8850 4400 0    60   Input ~ 0
 GND
 $EndSCHEMATC
