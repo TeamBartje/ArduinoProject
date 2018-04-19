@@ -60,8 +60,10 @@
 \def\opleiding#1{\gdef\@opleiding{#1}}
 \def\afdeling#1{\gdef\@afdeling{#1}}
 \def\academicyear#1{\gdef\@academicyear{#1}}
-\def\forename#1{\gdef\@forename{#1}}
-\def\surname#1{\gdef\@surname{#1}}
+\def\forenameA#1{\gdef\@forenameA{#1}}
+\def\surnameA#1{\gdef\@surnameA{#1}}
+\def\forenameB#1{\gdef\@forenameB{#1}}
+\def\surnameB#1{\gdef\@surnameB{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	Secondly we declare and fill in the newly created variables %
@@ -70,8 +72,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\@title{Titel Masterproef}
 \def\@subtitle{Ondertitel (factultatief)}
-\def\@forename{Voornaam}
-\def\@surname{Achternaam}
+\def\@forenameA{Voornaam}
+\def\@surnameA{Achternaam}
+\def\@forenameB{Voornaam}
+\def\@surnameB{Achternaam}
 \def\@opleiding{naam van de opleiding}
 \def\@afdeling{afstudeerrichting}
 \def\@promotorAname{} 
@@ -122,7 +126,8 @@
 	{\LARGE\textsf{\@subtitle}}
 	\vfill
 	\begin{flushright}
-		\textsf{\LARGE\textbf{\@forename~\MakeUppercase{\@surname}}}
+		\textsf{\LARGE\textbf{\@forenameA~\MakeUppercase{\@surnameA}}}\\
+		\textsf{\LARGE\textbf{\@forenameB~\MakeUppercase{\@surnameB}}}
 	\end{flushright}
 	\vspace{10em}
 	\begin{Parallel}{0.48\textwidth}{0.52\textwidth}
@@ -145,8 +150,8 @@
 		}
 		\ParallelRText{\noindent \vspace{1em}
 			\large\begin{flushright}
-				Masterproef ingediend tot het behalen van \\
-				de graad van master of Science in de\\
+				Bachelorproef ingediend tot het behalen van \\
+				de graad van Bachelor of Science in de\\
 				industri\"ele wetenschappen: \@opleiding\ \@afdeling
 			\end{flushright}
 		}
