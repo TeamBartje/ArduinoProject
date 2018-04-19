@@ -1,0 +1,13 @@
+Zijn de RFID tags allemaal gelijk/verschillend
+
+Die 50 euro is dat het geld dat het school er max aan besteedt en mogen wijzelf er nog extra geld in steken voor extra materiaal?
+
+Wat is de manier om de verstrekte informatie up te loaden naar de databank?
+
+Met behulp van welke software is het mogelijk om 3D te printen
+
+TCRT5000 bestaat reeds in een module vorm, is het een mogelijkheid dat wij gewoon deze modules monteren op ons wagentje? afzonderlijk van de printplaat van de arduino + motorshield?
+
+Mogen wij gebruik maken van TCRT5000 modules? of moeten die TCRT5000 sensoren zelf gesoldeerd worden?
+
+Wordt er verwacht een verslag te schrijven van het hele project?

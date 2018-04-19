@@ -1,0 +1,219 @@
+ARDUINO----------------------------------------------------------------------------------------------------
+
+
+om in AT command mode te geraken, upload volgende code, vergeet niet om de TX en RX los te koppelen alvorens up te loaden. Zorg dat Key op 3.3V staat en VCC op 5v, indien het niet goed werkt, doe AT+ORGL
+#include <SoftwareSerial.h>
+SoftwareSerial BTSerial(0, 1); // TX | RX
+void setup()
+{
+pinMode(9, OUTPUT); // this pin will pull the HC-05 pin 34 (key pin) HIGH to switch module to AT mode
+digitalWrite(9, HIGH);
+Serial.begin(38400); 
+Serial.println("Enter AT commands:");
+BTSerial.begin(38400); // HC-05 default speed in AT command more
+}
+void loop()
+{
+// Keep reading from HC-05 and send to Arduino Serial Monitor
+if (BTSerial.available()){
+//Take the string returned by the module and print it
+Serial.println(BTSerial.readString());}
+// Keep reading from Arduino Serial Monitor and send to HC-05
+if (Serial.available()){
+BTSerial.println(Serial.readString());}
+}
+
+Van zodra upgeload koppel de GND van de bluetoothmodule los en koppel er terug aan en dan werkt het normaal gezien
+
+Tussen elke upload van firmware koppel je de ground van de bluetooth module eens los en koppel je die terug aan om het effect te zien.
+
+Master mode
+Tijdens mastermode is uw mac address niet zichtbaar als je zoekt met een ander apparaat
+
+
+Slave Mode
+Tijdens Slave mode kan uw MAC address gevonden worden door een ander apparaat.
+
+
+Wij gaan opteren voor een Arduino die slave is, en een Raspberry pi die Master is.
+
+
+In het geval van de CZ-HC-05 gomcu is het:
+MAC address= 98d3:35:9a:86
+Name= H-C-2010-06-01
+Baudrate=38400,0,0
+en is momenteel ingesteld als Slave Device
+
+
+
+RASPBERRY PI ----------------------------------------------------------------------------------------------------
+
+Eerst heb ik mijn systeem up to date gebracht
+sudo su -
+apt-get update
+
+restart device: init 6
+
+show BD address of the pi: 
+hciconfig 
+het BD address van mijn pi is:
+B8:27:EB:82:6D:23
+
+
+
+
+vervolgens heb ik een bluetooth interface geinstalleerd op de RPI met behulp van volgend commando
+sudo su-
+apt-get install pi-bluetooth
+
+Nu kan je via preferences uw bluetoothapparaten beheren
+
+
+ik kan vervolgens pairen met behulp van Add device als je op het bluetoothicoontje klikt dat voortdurend verandert van kleur.
+
+Je bent nu verbonden met de bluetoothmodule van arduino
+
+
+je kan dit ook met behulp van de command line:
+
+sudo bluetoothctl
+agent on
+default-agent
+scan on
+pair 98:d3:35:9a:86 (Bluetoothaddress module) het dubbelpunt tussen 98 en d3 daar ben ik nei tzeker over
+info 98:d3:35:9a:86 (Bluetoothaddress module) het dubbelpunt tussen 98 en d3 daar ben ik nei tzeker over
+
+
+
+
+
+
+
+http://www.raspberry-projects.com/pi/pi-operating-systems/raspbian/bluetooth/serial-over-bluetooth
+http://www.uugear.com/portfolio/bluetooth-communication-between-raspberry-pi-and-arduino/
+create a serial connection to a bluetooth device at startup
+
+sudo nano /etc/bluetooth/rfcomm.conf
+
+add the connection details:
+
+
+rfcomm1 {
+    # Automatically bind the device at startup
+    bind yes;
+
+   # Bluetooth address of the device
+    device xx:xx:xx:xx:xx:xx;
+
+    # RFCOMM channel for the connection
+    channel 1;
+
+    # Description of the connection
+    comment "My Bluetooth Connection";
+}
+
+
+
+send serial from the RPI command line:
+echo "Hello" > /dev/rfcomm0
+
+
+Dit lukte, maar af en toe kreeg ik een foute karakter door. Dit heb ik kunnen fixen door de Baudrate aan te passen in de firmware van de HC-05 en in de Arduino code, nu lukte het mij om telkens de juiste karakters door te sturen zonder fouten.
+
+Er zit ook een delay(50); in omdat er anders reeds geprint wordt alvorens alle data is toegekomen op de bluetoothmodule
+
+
+
+
+
+
+
+
+Stuur bytes door vanaf RPI naar Arduino vanuit een .py project
+
+#! /usr/bin/python
+ 
+import serial
+
+bluetoothSerial = serial.Serial( "/dev/rfcomm1", baudrate=9600 )
+    
+bluetoothSerial.write("hello")
+
+
+
+
+
+Ontvang bytes op de RPI die verzonden zijn vanaf Arduino
+
+#! /usr/bin/python
+ 
+import serial
+
+bluetoothSerial = serial.Serial( "/dev/rfcomm1", baudrate=9600 )
+
+    
+bluetoothSerial.write("hello")
+
+
+
+
+Ik kwam op nog een probleem terecht. Wanneer ik met mijn oorspronkelijke code va nde arduino  bytes wilde ontvangen, waren mijn getallen of karakters vaak vervormd. Dit kwam omdat ik de hardware Serial zowel als input als als output gebruikte. ik heb dit opgelost door Software Serial toe te passen op poorten 2 en 3 en dan blijf ik poorten 1 en 0 gebruiken voor de hardware serial te schrijven naar de monitor. nu wordt alle tekst mooi uitgeprint.
+
+
+------------------------------------Arduino code voor ontvangen van bytes van RPI--------------
+
+#include <SoftwareSerial.h>
+SoftwareSerial BTSerial(2, 3); // TX | RX
+String zin="";
+void setup()
+{
+pinMode(9, OUTPUT); // this pin will pull the HC-05 pin 34 (key pin) HIGH to switch module to AT mode
+digitalWrite(9, HIGH);
+Serial.begin(9600); 
+Serial.println("Enter AT commands:");
+BTSerial.begin(9600); // HC-05 default speed in AT command more
+}
+void loop()
+{
+if(BTSerial.available()){
+  delay(50);
+  while(BTSerial.available()){
+    
+    zin=zin+((char)BTSerial.read());
+  //Serial.printl((char)BTSerial.read());
+  
+  }
+  Serial.println(zin);
+  Serial.println();
+  zin="";
+}
+}
+
+
+---------------------------------------Arduino code voor verzetten van bytes naar RPI-----------------------------
+
+
+#include <SoftwareSerial.h>
+SoftwareSerial BTSerial(2, 3); // TX | RX
+void setup()
+{
+
+BTSerial.begin(9600);
+Serial.begin(9600); 
+BTSerial.begin(9600); // Alle communicatie gebeurt op 9600 Baudrate
+}
+
+int i=0;
+void loop(){
+  i++;
+delay(500);
+
+BTSerial.println(i); // het vreemde eraan is dat ik gewoon Serial.println gebruik en niet BTSerial.println :/
+
+
+}
+
+
+
+
+Nog een bijkomend probleem wanneer je tracht je python programma uit te voeren heb je steds een lijn die er als volgt uitziet: /dev/rfcomm1 dat getal 1 moet je telkens aanpassen naar het getal dat je ziet wanneer je Serial port selecteert bij het bllauwe bluetooth icoontje

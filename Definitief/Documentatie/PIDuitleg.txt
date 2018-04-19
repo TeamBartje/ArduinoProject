@@ -1,0 +1,5 @@
+Verklaring namen afkortingen pid-formule:
+Kp = de constante die zorgt dat de aanpassing proportioneel is met de error die gecreëerd werd.
+PDI = Proportional, Derivative, Integral
+http://www.instructables.com/id/Line-Follower-Robot-PID-Control-Android-Setup/
+Puntje 8 geeft uitleg over PID 
