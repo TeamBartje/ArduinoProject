@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:/Users/Tom/Documents/3e Bach/BacherlorProef/ArduinoProject/KiCad/latestkicadproject/arduino_uno_r3_from_scratch-master/Arduino_Uno_R3_From_Scratch.sch")
-    (date "23/03/2018 14:04:32")
+    (date "03/04/2018 12:02:41")
     (tool "Eeschema 4.0.7")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -122,7 +122,7 @@
       (tstamp 55CE80D3))
     (comp (ref D1)
       (value D)
-      (footprint Diodes_SMD:D_MicroMELF_Hadsoldering)
+      (footprint Diodes_SMD:D_MiniMELF_Handsoldering)
       (libsource (lib device) (part D))
       (sheetpath (names "/Voltage Regulator/") (tstamps /55CCFEA2/))
       (tstamp 5A9FF517))
@@ -277,7 +277,7 @@
       (sheetpath (names /Driver/) (tstamps /5A845975/))
       (tstamp 5A0B58F7))
     (comp (ref C1)
-      (value 1uF)
+      (value 0.11uF)
       (footprint Capacitors_SMD:C_0805)
       (libsource (lib device) (part C))
       (sheetpath (names /Driver/) (tstamps /5A845975/))
@@ -322,7 +322,7 @@
       (tstamp 55E8CAAE))
     (comp (ref SW1)
       (value RESET_SWITCH)
-      (footprint RESET_SWITCH:FSM4JSMATR)
+      (footprint 4-1437565-1:FSM-SWITCH)
       (datasheet http://industrial.panasonic.com/www-data/pdf/ATK0000/ATK0000CE28.pdf)
       (fields
         (field (name Characteristics) "SWITCH TACTILE SPST-NO 0.02A 15V")
