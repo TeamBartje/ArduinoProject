@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.4)  23 APR 2018 22:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.4)  24 APR 2018 16:22
 entering extended mode
 **"C:/Users/Tom/Documents/3e Bach/BacherlorProef/ArduinoProject/Definitief/Vers
 lag/thesis.tex"
@@ -751,49 +751,42 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 18.66588pt on input line 2.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 3.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
-LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 3.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 3.
+(Font)              scaled to size 12.9599pt on input line 5.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 9.85492pt on input line 3.
+(Font)              scaled to size 12.9599pt on input line 5.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 5.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 5.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 6.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 9.85492pt on input line 6.
 
-LaTeX Warning: Reference `verwijzing' on page 1 undefined on input line 3.
+LaTeX Warning: Reference `fig:ArduMoto' on page 1 undefined on input line 6.
 
+<ArduMoto.png, id=53, 538.01pt x 427.5975pt>
+File: ArduMoto.png Graphic file (type png)
+<use ArduMoto.png>
+Package pdftex.def Info: ArduMoto.png  used on input line 9.
+(pdftex.def)             Requested size: 320.0935pt x 254.40083pt.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 10.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 10.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 10.
 
-LaTeX Warning: Reference `verwijzing' on page 1 undefined on input line 3.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 4.
+(babel)             in language  on input line 12.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 4.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 4.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 4.
-[1
-
-
-]
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 9.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 9.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 9.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 9.
- [2])
+(babel)             in language  on input line 12.
+)
 ("C:/Users/Tom/Documents/3e Bach/BacherlorProef/ArduinoProject/Definitief/Versl
 ag\taakverdeling.tex"
 Package babel Info: Redefining dutch shorthand "|
@@ -804,7 +797,20 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 2.
- [3]
+ [1
+
+
+]
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 2.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 2.
+ [2 <C:/Users/Tom/Documents/3e Bach/BacherlorProef/ArduinoProject/Definitief/Ve
+rslag/ArduMoto.png>]
 Hoofdstuk 2.
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 2.
@@ -821,7 +827,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 2.
- [4
+ [3
 
 ]
 Hoofdstuk 3.
@@ -829,37 +835,38 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 2.
+
+LaTeX Warning: Reference `chap:Opdrachtbeschrijving' on page 4 undefined on inp
+ut line 3.
+
+
+LaTeX Warning: Reference `table:Onkosten' on page 4 undefined on input line 3.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
 )
 ("C:/Users/Tom/Documents/3e Bach/BacherlorProef/ArduinoProject/Definitief/Versl
 ag\vormgevingRobot.tex"
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 7.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 7.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 7.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 7.
- [5
-
-]
 Hoofdstuk 4.
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 7.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 7.
-LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 15.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 15.
-LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 15.
-LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 12.9599pt on input line 37.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 37.
-LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 37.
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \vspace
+            {2.0in}
+? q
+OK, entering \batchmode...
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 37.
 Package babel Info: Redefining dutch shorthand "~
@@ -867,17 +874,6 @@ Package babel Info: Redefining dutch shorthand "~
 )
 ("C:/Users/Tom/Documents/3e Bach/BacherlorProef/ArduinoProject/Definitief/Versl
 ag\hardware.tex"
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 2.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 2.
- [6
-
-]
 Hoofdstuk 5.
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 2.
@@ -887,40 +883,192 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 5.
+<tussenstukPCB.PNG, id=74, 323.40825pt x 416.757pt>
+File: tussenstukPCB.PNG Graphic file (type png)
+<use tussenstukPCB.PNG>
+Package pdftex.def Info: tussenstukPCB.PNG  used on input line 9.
+(pdftex.def)             Requested size: 320.0935pt x 412.48259pt.
 
-LaTeX Warning: File `tussenstukjePCB.PNG' not found on input line 9.
+LaTeX Warning: Reference `fig:HC05' on page 4 undefined on input line 12.
 
+<HC05.jpg, id=75, 586.19pt x 625.33624pt>
+File: HC05.jpg Graphic file (type jpg)
+<use HC05.jpg>
+Package pdftex.def Info: HC05.jpg  used on input line 15.
+(pdftex.def)             Requested size: 320.0935pt x 341.46466pt.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 19.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 19.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 20.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 20.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 20.
 
-! Package pdftex.def Error: File `tussenstukjePCB.PNG' not found: using draft s
-etting.
+LaTeX Warning: Reference `fig:MRFC522' on page 4 undefined on input line 21.
 
-See the pdftex.def package documentation for explanation.
+<MRFC522.png, id=76, 983.675pt x 542.025pt>
+File: MRFC522.png Graphic file (type png)
+<use MRFC522.png>
+Package pdftex.def Info: MRFC522.png  used on input line 24.
+(pdftex.def)             Requested size: 320.0935pt x 176.37933pt.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 28.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 28.
+)
+("C:/Users/Tom/Documents/3e Bach/BacherlorProef/ArduinoProject/Definitief/Versl
+ag\software.tex"
+Hoofdstuk 6.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 2.
+)
+("C:/Users/Tom/Documents/3e Bach/BacherlorProef/ArduinoProject/Definitief/Versl
+ag\moeilijkheden.tex"
+Hoofdstuk 7.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 2.
+)
+("C:/Users/Tom/Documents/3e Bach/BacherlorProef/ArduinoProject/Definitief/Versl
+ag\coach.tex"
+Hoofdstuk 8.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 2.
+)
+("C:/Users/Tom/Documents/3e Bach/BacherlorProef/ArduinoProject/Definitief/Versl
+ag\besluit.tex"
+Hoofdstuk 9.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 2.
+)
+B"ylage A.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 106.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 106.
+B"ylage B.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 111.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 111.
+<back_fiiw_gent.pdf, id=77, 597.432pt x 845.07718pt>
+File: back_fiiw_gent.pdf Graphic file (type pdf)
+<use back_fiiw_gent.pdf>
+Package pdftex.def Info: back_fiiw_gent.pdf  used on input line 114.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+File: back_fiiw_gent.pdf Graphic file (type pdf)
+<use back_fiiw_gent.pdf>
+Package pdftex.def Info: back_fiiw_gent.pdf  used on input line 114.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+<back_fiiw_gent.pdf, id=80, page=1, 597.432pt x 845.07718pt>
+File: back_fiiw_gent.pdf Graphic file (type pdf)
+<use back_fiiw_gent.pdf, page 1>
+Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 114.
+(pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
+File: back_fiiw_gent.pdf Graphic file (type pdf)
+<use back_fiiw_gent.pdf, page 1>
+Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 114.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: back_fiiw_gent.pdf Graphic file (type pdf)
+<use back_fiiw_gent.pdf, page 1>
+Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 114.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+File: back_fiiw_gent.pdf Graphic file (type pdf)
+<use back_fiiw_gent.pdf, page 1>
+Package pdftex.def Info: back_fiiw_gent.pdf , page1 used on input line 114.
+(pdftex.def)             Requested size: 597.45789pt x 845.1138pt.
+
+! LaTeX Error: \begin{table} on input line 4 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 ...[width=0.75\textwidth]{tussenstukjePCB.PNG}
+l.117 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 117.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 117.
+ (thesis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 117.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 117.
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  0A5AD39D27ED7E837502B31D9C9F3261;215.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 117.
+! You can't use `\end' in internal vertical mode.
+\enddocument ...es \z@ \Call@AtVeryVeryEnd \@@end 
                                                   
-? h
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-? x
+l.117 \end{document}
+                    
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: \begin{table} on input line 4 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.117 \end{document}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+)
+! Emergency stop.
+<*> ...duinoProject/Definitief/Verslag/thesis.tex"
+                                                  
+*** (job aborted, no legal \end found)
+
  
 Here is how much of TeX's memory you used:
- 10696 strings out of 493303
- 163067 string characters out of 3130655
- 269151 words of memory out of 3000000
- 14046 multiletter control sequences out of 15000+200000
- 52118 words of font info for 95 fonts, out of 3000000 for 9000
+ 10732 strings out of 493303
+ 164289 string characters out of 3130655
+ 281151 words of memory out of 3000000
+ 14069 multiletter control sequences out of 15000+200000
+ 45306 words of font info for 85 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,11n,45p,730b,365s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:
-/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
-y10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helveti
-c/uhvb8a.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/he
-lvetic/uhvr8a.pfb>
-Output written on thesis.pdf (12 pages, 54310 bytes).
-PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 37i,11n,45p,1658b,507s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
