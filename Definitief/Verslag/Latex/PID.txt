@@ -1,0 +1,17 @@
+Kp=12;
+Ki=0;
+Kd=4;
+P = error;
+
+stoptijd=millis();
+if((stoptijd-starttijd)>500){
+	if((error-previousError)>0){
+		//I = I + error;
+		D = error-previousError;
+		previousError = error;
+		starttijd=millis();
+	}
+}
+PIDvalue = (Kp*P) + (Ki*I) + (Kd*D);
+
+rij(PIDvalue);

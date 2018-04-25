@@ -1,0 +1,30 @@
+%Het eerste hoofdstuk van je thesis.
+\chapter{Opdrachtbeschrijving}
+\label{chap:Opdrachtbeschrijving}
+De opdracht bestaat erin om een line-following robot te maken. Deze robot wijkt enigszins af van de klassieke line-follower aangezien de parcours die wij moeten kunnen afleggen, bestaan uit 2 volle buitenlijnen en een gestreepte middellijn, waardoor we niet zo maar de middellijn kunnen volgen. De onderbrekingen maken een algoritme tot het volgen ervan zeer ingewikkeld en onvoorspelbaar. We kregen op voorhand 3 verschillende circuits die de robot autonoom zou moeten afleggen terwijl hij simultaan andere taken uitvoert zoals snelheden registreren en doorsturen of RFID-tags uitlezen en doorsturen. De breedte van de baan is ongeveer twee keer de breedte van de auto. We kregen een basispakket vanwaar we konden vertrekken dewelke bestond uit het chassis van de robot, 2 motoren, een batterij, een Sparkfun motor shield en 2 Arduino Uno's. We hadden ook steeds een 3D-printer ter beschikking om 3D-onderdelen de printen die we nodig hadden om sensoren te bevestigen en dergelijke. Verder kregen we ook nog een budget van 50 euro van de school om ons te voorzien van de nodige componenten. De opdracht bestaat zowel uit het bedenken en ontwerpen van de nodige hardware als het schrijven van de nodige software zodat de robot de 3 verschillende circuits autonoom zou kunnen afleggen.
+\section{Hardware}
+Voor het ontwikkelen van de Software konden we beroep doen op een Arduino Uno en een Motorshield van Sparkfun, zoals te zien in Figuur ~\ref{fig:ArduMoto}, maar voor de uiteindelijke opdracht moesten we natuurlijk gebruik maken van printplaten de we zelf vervaardigd hadden. Aan de hand van een schema van de Arduino Uno, dat we konden downloaden van het internet, konden we onze eigen PCB ontwerpen waarbij we alle niet-noodzakelijke componenten weglieten en de L298 Chip toevoegden voor de aansturing van de motoren. Voor de sensoren, Bluetooth-module en RFID-reader waren we vrij om te kiezen welke we kochten of deze zelf maakten.
+
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{ArduMoto.png}
+\caption{Motorshield gecombineerd met een Arduino. \label{fig:ArduMoto}}
+\end{figure}
+
+\section{Software}
+Het tweede onderdeel van de opdracht bestaat erin om de Arduino (en dus later ook onze eigen PCB) dusdanig te programmeren dat hij autonoom verschillende circuits kan afleggen in een zo kort mogelijke tijd. Er werd ons aangeraden te werken met een PID-regeling om een zo stabiel mogelijke robot te verkrijgen. Tijdens het afleggen van het circuit, moet de robot in staat zijn om zijn snelheid te meten, RFID-tags uit te lezen en van beide, de data , via Bluetooth, door te sturen naar een Raspberry Pi.
+%In dit hoofdstuk\index{hoofdstuk} gaan we een voorbeeld geven van een voetnoot\footnote{Dit is dus een voetnoot}. Een referentie naar hoofdstuk ~\ref{verwijzing}, dat zich op pagina \pageref{verwijzing} bevindt, is dus ook een koud kunstje. Zorg er wel voor dat je de namen van de labels een beetje verstandig kiest. Hoofdstukken label je het best als hfdstk:naam, plaatjes als img:naam en tabellen\index{tabellen} als tabel:naam. Zo verlies je zelf de bomen in het bos niet.
+%\newpage
+%SDffjfhd fsffh hsf
+%fh fhf
+%shf klfh
+%ffffsdfklfhklfhklfhhfklfhkldhffhsdfhfhfhfhfh
+%\newpage
+%dhfhffh hf fh fh fhfh fhfh hfh fhffhsdfhfhfhfhfhfhsdfh hfh fh
+ 
+
+
+

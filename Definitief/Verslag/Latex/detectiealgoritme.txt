@@ -1,0 +1,8 @@
+if((LFS[3]== 1 )||(LFS[4]== 1 )||(LFS[5]== 1 )){
+	rechtersensoractief=true;
+	if((LFS[3]== 1 )&&(LFS[4]== 0 )&&(LFS[5]== 0 ))  { error = 4.6;limitReached=true;} 
+	else if((LFS[3]== 1 )&&(LFS[4]== 1 )&&(LFS[5]== 0 ))  { error = 3.2; limitReached=false;} 
+	else if((LFS[3]== 1 )&&(LFS[4]== 1 )&&(LFS[5]== 1 ))  { error = 2.8; limitReached=false;}
+	else if((LFS[3]== 0 )&&(LFS[4]== 1 )&&(LFS[5]== 1 ))  { error = 2.3; limitReached=false;}
+	else if((LFS[3]== 0 )&&(LFS[4]== 0 )&&(LFS[5]== 1 ))  { error = 1.1; limitReached=false;} 
+}

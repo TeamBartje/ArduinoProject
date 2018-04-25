@@ -1,0 +1,11 @@
+void loop() {
+	previoustijd=nutijd;
+     	utijd=millis();
+    	duration=nutijd-previoustijd;
+
+   	if(i==50){
+      		Serial.println(duration);
+         	 }
+   	 i++;
+  	motor.bepaalPID();
+}

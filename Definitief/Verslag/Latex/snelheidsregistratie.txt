@@ -1,0 +1,30 @@
+void Bluetooth::stuurSnelheid(){
+  	snelheidswaarde=speed.getSpeed();
+  	if(millis()%1000==0){
+   		 BTSerial.println(snelheidswaarde);
+	}
+}
+
+double Speed::getSpeed(){
+	registreerPuls();
+	return v;
+}
+
+void Speed::registreerPuls(){
+	if(digitalRead(sensor)==1){
+		if(!actief){
+			getDuration();
+			actief=true;
+		}
+	}
+	else {
+		actief=false;
+	}
+}
+
+void Speed::getDuration(){
+	huidigeTijd=millis();
+	tijdsduur=huidigeTijd-vorigeTijd;
+	vorigeTijd=huidigeTijd;
+	v=0.235/(tijdsduur/1000);
+}
