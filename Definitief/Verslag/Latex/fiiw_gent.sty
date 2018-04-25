@@ -117,6 +117,7 @@
 	\begin{picture}(0,0)(0,26)
 	\hspace{-10em}\includegraphics[width=\paperwidth]{cover_fiiw_gent.pdf}
 	\end{picture}
+	
 	\vskip1in
 	\vfill
 	\begingroup
@@ -125,11 +126,17 @@
 	\endgroup
 	{\LARGE\textsf{\@subtitle}}
 	\vfill
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{upperview.jpg}
+	\label{tussenstukPCB}
+	\end{figure}
 	\begin{flushright}
 		\textsf{\LARGE\textbf{\@forenameA~\MakeUppercase{\@surnameA}}}\\
 		\textsf{\LARGE\textbf{\@forenameB~\MakeUppercase{\@surnameB}}}
 	\end{flushright}
-	\vspace{10em}
+	\vspace{3em}
 	\begin{Parallel}{0.48\textwidth}{0.52\textwidth}
 		\ParallelLText{\noindent
  			\begin{list}{label}{\setlength{\leftmargin}{7em}\setlength{\labelsep}{0.5em}\setlength{\labelwidth}{8em}\setlength{\itemsep}{-.5ex}}
@@ -190,9 +197,9 @@
 	\pagenumbering{roman}
 	\titlep        
 
-	\ifacknowledgementspage 
-		\chapter*{Dankwoord} \@acknowledgementsfile
-	\fi
+%	\ifacknowledgementspage 
+%		\chapter*{Dankwoord} \@acknowledgementsfile
+%	\fi
 
 	\ifabstractpage 
 		\chapter*{Abstract} \@abstractfile

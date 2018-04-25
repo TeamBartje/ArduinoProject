@@ -14,7 +14,11 @@
 \usepackage[latin1]{inputenc}           % om niet ascii karakters rechtstreeks te kunnen inputten
 %\usepackage[utf8]{inputenc}            % commentarieer deze regel uit als je utf8 encoded files gebruikt in plaats van latin1
 \usepackage{natbib}
-\usepackage{listings}             		% voor het weergeven van broncode
+\usepackage{listings}
+
+
+
+   		% voor het weergeven van broncode
 \usepackage{verbatim}					% weergeven van code, commando's, ...
 \usepackage{hyperref}					% maak PDF van de thesis navigeerbaar
 \usepackage{url}						% URL's invoegen in tekst met behulp van \url{http://}
@@ -24,7 +28,7 @@
 
 \usepackage{sectsty}					% aanpassen van de fonts van sections en chapters
 \allsectionsfont{\sffamily}
-\chapterfont{\raggedleft\sffamily}
+\chapterfont{\sffamily}				%als je hoofsdtuktitels rechts wilt hebben voeg voor \sffamily dit toe: \raggedleft
 
 \usepackage{float}                      % De optie H voor de plaatsing van figuren op de plaats waar je ze invoegt. bvb. \begin{figure}[H]
 %\usepackage{longtable}					% tabellen die over meerdere pagina's gespreid worden
@@ -58,8 +62,8 @@
 
 %informatie over het eindwerk, de promotor, ...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\opleiding{Industriële Wetenschappen: Elektronica-ICT}
-\afdeling{Elektronica}
+\opleiding{}
+\afdeling{Elektronica-ICT}
 
 \title{Line-following Robot}
 \subtitle{ }
