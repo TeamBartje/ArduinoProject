@@ -1,20 +1,20 @@
 %second chapter of your thesis
 \chapter{Hardware}
-Onze robot werkt met behulp van 3 zelfgemaakte PCB's. Twee ervan zijn de combinatie van de Motorshield en de Arduino/Atmega en de andere is een printplaat om de bekabeling te reduceren.
+Onze robot werkt met behulp van 3 zelfgemaakte PCB's. Twee ervan zijn de combinatie van de Motorshield en de Arduino/Atmega328 en de andere is een printplaat om de bekabeling te reduceren.
 
 
 
 
 
 \section{Tussenstuk}
-Het tussenstuk is een PCB waarop alle lijnen van de infra rood sensoren toekomen en worden doorgegeven aan de AtMega. Het voordeel van deze printplaat is dat we nu slechts 1 GND en 1 VCC lijn moeten voorzien tussen het printplaatje en de Arduino. We hebben op dit printplaatje ook de mogelijkheid voorzien om de Bluetooth-module en de RFID-reader aan te sluiten. Nadien hebben we ontdekt dat de RFID-reader niet kon worden aangesloten op onze hoofd Arduino waardoor we de RFID-reader ook niet verbonden met dit tussenstuk maar wel rechtstreeks aan de hulp-Arduino. Verbinden met het tussenstuk zou de vereenvoudiging van de bekabeling teniet doen. Het probleem omtrent de RFID-reader leggen we later nog uitgebreider uit. 
+Het tussenstuk is een PCB waarop alle lijnen van de infrarood sensoren toekomen en worden doorgegeven aan de Atmega328. Het voordeel van deze printplaat is dat we nu slechts \'e\'en GND en \'e\'en VCC lijn moeten voorzien tussen het printplaatje en de Arduino. We hebben op deze PCB ook de mogelijkheid voorzien om de Bluetooth-module en de RFID-reader aan te sluiten. Nadien hebben we ontdekt dat de RFID-reader niet kon worden aangesloten op onze hoofd Arduino waardoor we de RFID-reader ook niet verbonden met dit tussenstuk maar wel rechtstreeks aan de hulp-Arduino. Verbinden met het tussenstuk zou de vereenvoudiging van de bekabeling teniet doen. Het probleem omtrent de RFID-reader leggen we later nog uitgebreider uit. 
 
 
 
 
 
 
-We hebben dus 10 5V-aansluitingen voorzien, 10 GND-aansluitingen, 6 aansluitingen voor de outputsignalen van de sensoren en de pinnen die nodig zijn voor de Bluetooth-module (Key, Vcc, GND, TXD, RXD en State). Niet alle zes de uitgangen van de Bluetooth-module moeten worden doorgestuurd naar onze Atmega, deze vereenvoudiging vindt ook plaats op deze PCB. Enkel de signalen Vcc, GND, TXD en RXD worden van een uitgang voorzien. Deze uitgangen worden dus doorverbonden met de Atmega. De Vcc en de GND aan deze uitgang zorgen dus ook voor de voeding van de volledige PCB. We maken gebruik van de HC-05 Bluetooth-module, een foto van de module wordt weergegeven in afbeelding~\ref{fig:HC05}.
+We hebben dus tien 5V-aansluitingen voorzien, tien GND-aansluitingen, zes aansluitingen voor de outputsignalen van de sensoren en de pinnen die nodig zijn voor de Bluetooth-module (Key, Vcc, GND, TXD, RXD en State). Niet alle zes de uitgangen van de Bluetooth-module moeten worden doorgestuurd naar onze Atmega328, deze vereenvoudiging vindt ook plaats op deze PCB. Enkel de signalen VCC, GND, TXD en RXD worden van een uitgang voorzien. Deze uitgangen worden dus doorverbonden met de Atmega328. De Vcc en de GND aan deze uitgang zorgen voor de voeding van de volledige PCB. We maken gebruik van de HC-05 Bluetooth-module, een foto van de module wordt weergegeven in afbeelding~\ref{fig:HC05}.
 \newpage
 \begin{figure}[h]
 \centering
