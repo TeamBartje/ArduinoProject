@@ -59,7 +59,28 @@ De tweede printplaat die we ontworpen hebben, is een combinatie van de Atmega328
 
 \subsection{Hoofd Arduino}
 Deze PCB is verantwoordelijk voor de aansturing van de motoren en ook voor het doorsturen van de signalen naar de Raspberry Pi via de HC-05. Deze PCB is identiek aan de hulp Arduino en kan u opnieuw zien op Figuur \ref{fig:voorzijde} en op Figuur \ref{fig:achterzijde}. Na het finaliseren van de PCB bleken er nog enkele fouten te zijn geslopen in onze versie. Enkele footprints waren aan de kleine kant waardoor sommige componenten slechts heel nipt op de koper-eilandjes pasten. Na ons prototype hadden we deze fout aangepast maar bleek onze correctie nog onvoldoende te zijn om comfortabel te kunnen solderen. Ook een condensator bleek bij het testen niet goed gesoldeerd te zijn waardoor we slecht contact kregen wat we opgelost hebben met een externe verbinding. Maar de grootste fout waarop we gestoten zijn, was dat een ingang van de L298 (de IC verantwoordelijk voor de motoraansturing) niet verbonden was met het PWRIN signaal waardoor er geen vermogen naar de motoren gestuurd werd. Dit kwam omdat er een hi\"erarchical label ontbrak in ons schema op de betreffende locatie aan de L298. We hebben dit probleem kunnen oplossen door een extra kabel te solderen van het PWRIN signaal naar de betreffende pin van de L298. \\
-Als vertrekpunt hadden we het schema van een een Arduino Uno ter beschikking op het internet. Als eerste konden we de USB interface voor de aansluiting van een USB-kabel weglaten aangezien we dit in ons finaal ontwerp niet nodig hadden. Voor het uploaden van een programma maken we dan gebruik van de ICSP-pinnen die we nauwkeurig verbinden met een andere Arduino die de code doorstuurt.  Alle LED's die normaal gezien aanwezig zijn op de Arduino Uno hebben we  weggelaten omdat we dit niet echt nodig hebben en dit onze Arduino groter zou maken dan nodig. Om het het ons eenvoudiger te maken, pasten we in het schema ook de namen van de labels aan naar meer betekenisvollere namen zodat we de namen van de lijnen zo eenvoudiger konden interpreteren. Zo veranderden we bijvoorbeeld MISO door DIR A aangezien deze lijn verantwoordelijk was voor de richting van Motor A. R8 hebben we ook weggelaten aangezien dit een weerstandswaarde van 0 $\Omega$ heeft. Deze weerstand wordt voornamelijk gebruikt als brug om er banen onder te kunnen trekken. Pinnen 27 en 28 hebben we niet nodig, dus mogen we de condensator verwijderen. De jumper hebben we weggelaten omdat we die niet nodig achtten. Eenmaal het schema kaar was, konden we starten met het routen van de printbanen. De afmetingen van de PCB bedragen (52,324mm x 61.468mm). De uiteindelijke grootte van de printplaat bedraagt 53.34mm x 73.152mm, zodat de bevestigingsgaten van de PCB overeenkomen met de vijzen van het chassis.  De breedte van de printbanen van onze oorspronkelijke routing bedoeg 10 mills(= 0.254mm). Aangezien dit zeer smal was en de kans groot was dat er een baan wegge\"etst zou worden, hebben we zoveel mogelijk de baantjes verbreed tot maximaal 30 mills. De breedte van de printbanen en de diameters van de drills, worden weergegeven in tabel~\ref{table:afmetingen}.\\
+Als vertrekpunt hadden we het schema van een een Arduino Uno ter beschikking op het internet. Als eerste konden we de USB interface voor de aansluiting van een USB-kabel weglaten aangezien we dit in ons finaal ontwerp niet nodig hadden. Deze USB-interface wordt weergegeven in figuur~\ref{fig:USB-interface}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth]{USB_Interface.png}
+\caption{USB interface die we weg hebben gelaten}
+\label{fig:USB}
+\end{figure}
+Voor het uploaden van een programma maken we dan gebruik van de ICSP-pinnen die we nauwkeurig verbinden met een andere Arduino die de code doorstuurt.  Alle LED's die normaal gezien aanwezig zijn op de Arduino Uno hebben we  weggelaten omdat we dit niet echt nodig hebben en dit onze Arduino groter zou maken dan nodig. Een voorbeeld van een LED die we weggelaten hebben wordt weergegeven in figuur~\ref{fig:regulator}. Om het het ons eenvoudiger te maken, pasten we in het schema ook de namen van de labels aan naar meer betekenisvollere namen zodat we de namen van de lijnen zo eenvoudiger konden interpreteren. Zo veranderden we bijvoorbeeld MISO door DIR A aangezien deze lijn verantwoordelijk was voor de richting van Motor A. R8 hebben we ook weggelaten aangezien dit een weerstandswaarde van 0 $\Omega$ heeft. Deze weerstand wordt voornamelijk gebruikt als brug om er banen onder te kunnen trekken. Pinnen 27 en 28 hebben we niet nodig, dus mogen we de condensator verwijderen. De jumper hebben we weggelaten omdat we die niet nodig achtten. Dit alles wordt weergegeven in figuur~\ref{fig:atmega}. Eenmaal het schema klaar was, konden we starten met het routen van de printbanen. De afmetingen van de PCB bedragen (52,324mm x 61.468mm). De uiteindelijke grootte van de printplaat bedraagt 53.34mm x 73.152mm, zodat de bevestigingsgaten van de PCB overeenkomen met de vijzen van het chassis.  De breedte van de printbanen van onze oorspronkelijke routing bedoeg 10 mills(= 0.254mm). Aangezien dit zeer smal was en de kans groot was dat er een baan wegge\"etst zou worden, hebben we zoveel mogelijk de baantjes verbreed tot maximaal 30 mills. De breedte van de printbanen en de diameters van de drills, worden weergegeven in tabel~\ref{table:afmetingen}.\\
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{Voltage_Regulator.png}
+\caption{Voorbeeld van indicatie LED die we weggelaten hebben}
+\label{fig:regulator}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth]{Atmega.png}
+\caption{Voorbeeld van weerstand die we weggelaten hebben rond de Atmega328}
+\label{fig:atmega}
+\end{figure}
+
 \begin {table}[H]
 \caption {Tabel met mogelijkheden afmetingen koperbanen.} \label{table:afmetingen}
 	\begin{center}
@@ -74,6 +95,32 @@ Als vertrekpunt hadden we het schema van een een Arduino Uno ter beschikking op 
 	\end{tabular}
 	\end{center}
 \end{table}
- Enkele banen hebben een breedte van maximaal 15 mills, aangezien de printplaat zodanig compact gemaakt was dat nog meer verbreden geen optie was. \'E\'en van onze uitdagingen was om de printplaat te voorzien van zo weinig mogelijk via's wat we konden minimaliseren tot 20 op de hele PCB. Bij de  eerste pogingen om de printplaat te etsen, stootten we op het probleem dat de fijnste banen oplosten waardoor er niet langer verbinding was. We kregen de tip om gebruik te maken van de optie om de vrije plaatsen op te vullen met koper zodat de PCB minder lang in het zuurbad moest liggen bij het etsen. Achteraf gezien konden we beide vlakken gebruiken als bijvoorbeeld een GND-vlak, wat in ons ontwerp niet is toegepast. Eens de PCB volledig bestukt was, wilden we deze eerst testen met een standaardprogramma voor de Atmega nl. Blink-Led. Dit programma werkte onmiddellijk waardoor we verkeerdelijk veronderstelden dat de hele PCB correct was. We bespreken dit uitgebreid in het hoofdstuk~\ref{Moeilijkheden}. 
+ Enkele banen hebben een breedte van maximaal 15 mills, aangezien de printplaat zodanig compact gemaakt was dat nog meer verbreden geen optie was. \'E\'en van onze uitdagingen was om de printplaat te voorzien van zo weinig mogelijk via's wat we konden minimaliseren tot 20 op de hele PCB. Bij de  eerste pogingen om de printplaat te etsen, stootten we op het probleem dat de fijnste banen oplosten waardoor er niet langer verbinding was. We kregen de tip om gebruik te maken van de optie om de vrije plaatsen op te vullen met koper zodat de PCB minder lang in het zuurbad moest liggen bij het etsen. Achteraf gezien konden we beide vlakken gebruiken als bijvoorbeeld een GND-vlak, wat in ons ontwerp niet is toegepast. De routing van voor- en achterkant wordt weergegeven in figuren~\ref{fig:back} en~\ref{fig:front}. Er moet wel bij verteld worden dat we per ongeluk de zijden omgewisseld hebben, de Back-zijde op KiCad is voor ons de voorkant en vice versa. Achteraf gezien gaf dit toch enkele problemen omdat we altijd in spiegelbeeld moesten redeneren. Dit zullen we in het vervolg dus proberen te vermijden. Eens de PCB volledig bestukt was, wilden we deze eerst testen met een standaardprogramma voor de Atmega nl. Blink-Led. Dit programma werkte onmiddellijk waardoor we verkeerdelijk veronderstelden dat de hele PCB correct was. We bespreken dit uitgebreid in het hoofdstuk~\ref{Moeilijkheden}. De volledige praktische PCB wordt weergegeven in figuren~\ref{fig:voorkantPCB} en~\ref{fig:achterkantPCB}. 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{Front.png}
+\caption{Front banen ArduMoto (= onderkant voor ons)}
+\label{fig:front}
+\end{figure}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{Back.png}
+\caption{Back banen ArduMoto (= bovenkant voor ons)}
+\label{fig:back}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth]{AchterkantPCB.jpg}
+\caption{Eindresultaat achterkant PCB}
+\label{fig:achterkantPCB}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth]{VoorkantPCB.jpg}
+\caption{Eindresultaat voorkant PCB}
+\label{fig:voorkantPCB}
+\end{figure}
 %In het vorig hoofdstuk hebben we naar deze tekst verwezen\label{verwijzing}.

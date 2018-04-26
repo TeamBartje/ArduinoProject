@@ -14,13 +14,30 @@ Op het moment dat onze printplaat, Arduino gecombineerd met een motor shield, kl
 Wanneer we data via Bluetooth verzonden van de Raspberry Pi naar de Arduino en omgekeerd stootten we op het probleem dat er regelmatig karakters fout waren ontvangen en de communicatie dus niet optimaal was. We hebben vervolgens trachten te achterhalen wat het probleem exact was. We merkten op dat de RX- en TX-pinnen, waaraan wij de Bluetooth module hadden aangesloten, ook rechtstreeks verbonden zijn met de USB-poort. Wanneer we dus met behulp van Serial.println(), data wilden wegschrijven naar de seri"ele monitor, gebeurde dat als het ware op dezelfde datalijn als de data die we ontvingen via de Bluetooth module. We konden dit probleem oplossen door niet langer gebruik te maken van Hardware Serial maar wel door Software Serial waarbij we de pinnen A2 en 2 gebruikten als respectievelijk RX en TX.
 
 \section{Hardware}
-We waren er ons van bewust dat het vrijwel onmogelijk was dat onze PCB geen kinderziekten zou vertonen bij ons eerste ontwerp. De problemen kwamen vrijwel onmiddellijk tot uiting bij de L298. Het ground-vlak viel wat groter uit dan door de footprint voorzien was waardoor dit vlak contact maakte met een baan waarover +5V stond en dus eigenlijk kortsluiting vormde. We hebben dit probleem kunnen oplossen door plakband tussen het ground-vlak en het baantje te kleven om zo het contact te verbreken. Hoewel de oplossing niet ideaal was, waren we hiermee wel geholpen. We hebben dan onmiddellijk de footprint gewijzigd zodat onze finale PCB dit probleem niet zou vertonen. We hadden ook problemen met de reset-knop waarbij de afmetingen van de gebruikte footprint niet klopten. We hebben dit opgelost door gebruik te maken van een drukknop met slechts twee pinnen die verbonden worden met elkaar bij het indrukken van de knop. 
-
-Bij het testen van de PCB merkten we vrijwel onmiddellijk op dat een paar componenten warm werden. Dit was een directe indicatie van het feit dat de printplaat nog niet op punt stond. We hebben na lang zoeken en met hulp van onze coach, 3 problemen ontdekt. We hebben deze problemen ook aangeduid op figuur??%~\ref{fig:PCBProblemen}
+We waren er ons van bewust dat het vrijwel onmogelijk was dat onze PCB geen kinderziekten zou vertonen bij ons eerste ontwerp. De problemen kwamen vrijwel onmiddellijk tot uiting bij de L298. Het ground-vlak viel wat groter uit dan door de footprint voorzien was waardoor dit vlak contact maakte met een baan waarover +5V stond en dus eigenlijk kortsluiting vormde. We hebben dit probleem kunnen oplossen door plakband tussen het ground-vlak en het baantje te kleven om zo het contact te verbreken. Hoewel de oplossing niet ideaal was, waren we hiermee wel geholpen. We hebben dan onmiddellijk de footprint gewijzigd zodat onze finale PCB dit probleem niet zou vertonen. We hadden ook problemen met de reset-knop waarbij de afmetingen van de gebruikte footprint niet klopten. De reset-knop die we oorspronkelijk wilden gebruiken wordt weergegeven in figuur~\ref{fig:reset}. We hebben dit opgelost door gebruik te maken van een drukknop met slechts twee pinnen die verbonden worden met elkaar bij het indrukken van de knop. 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth]{reset.jpg}
+\caption{Reset button die we wilden gebruiken}
+\label{fig:reset}
+\end{figure}
+Bij het testen van de PCB merkten we vrijwel onmiddellijk op dat een paar componenten warm werden. Dit was een directe indicatie van het feit dat de printplaat nog niet op punt stond. We hebben na lang zoeken en met hulp van onze coach, 3 problemen ontdekt. We hebben deze problemen ook aangeduid op figuren~\ref{fig:prob1} en~\ref{fig:prob3}.
 Probleem 1 was een Schottky-diode die niet goed verbonden was met zijn baantje. De diode maakte soms wel contact en soms niet. Daar de footprint van de diode nog steeds te klein uitviel hebben we het probleem opgelost door een draadje te solderen aan de contactzijde om zo veen verbinding te maken met de baan.
 Probleem 2 was simpelweg een Via die we over het hoofd gezien hadden waardoor een pin van de L298 niet verbonden was. 
 Probleem 3 was het de grootste boosdoener. We waren in het schema \'e\'en label vergeten te plaatsen waardoor de L298, die in staat voor de motorsturing, niet gevoed werd met PWRIN. Hierdoor werden de signalen niet goed verwerkt door de L298 en kregen de motoren dus ook niet de juiste signalen. We hebben dit nogmaals opgelost door een verbinding te solderen tussen de IC en de PWRIN. De PWRIN is het signaal dat rechtstreeks via de kroonsteentjes binnenkomt van de batterij.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth]{PCBProblemenVoorkant.png}
+\caption{Eerste twee problemen bij PCB ontwerp}
+\label{fig:prob1}
+\end{figure}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth]{PCBProblemenAchterkant.png}
+\caption{Derde probleem bij PCB ontwerp}
+\label{fig:prob3}
+\end{figure}
 
 
 
