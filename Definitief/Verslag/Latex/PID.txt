@@ -2,7 +2,6 @@ Kp=12;
 Ki=0;
 Kd=4;
 P = error;
-
 stoptijd=millis();
 if((stoptijd-starttijd)>500){
 	if((error-previousError)>0){

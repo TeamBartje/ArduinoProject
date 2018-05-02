@@ -1,0 +1,18 @@
+void Motor::verstuurTag(){
+	huidigetijd=millis();
+       	if (Serial.available() > 0) {
+       		rfidavailable=true;
+               	incomingByte = incomingByte + String(Serial.read());
+               	vorigetijd=huidigetijd;
+       	}
+       	if((Serial.available()==0) && rfidavailable==true && (huidigetijd-vorigetijd>20)){
+		bluetooth.stuurRFID(incomingByte);
+       		rfidavailable=false;
+       		incomingByte="";
+       	}
+}
+
+void Bluetooth::stuurRFID(String Rfidwaarde){
+  	teVersturenRfid=Rfidwaarde;
+  	BTSerial.println(teVersturenRfid);
+}
