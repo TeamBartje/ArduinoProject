@@ -1,9 +1,0 @@
-Bluetooth communicatie tussen raspberry pi en arduino
-https://github.com/Josh-Weston/ArduinoRPi
-
-
-
-
-Voorbeelden van goede linefollowers
-https://www.youtube.com/watch?v=7omDkur_fk8
-https://www.facebook.com/miniroboticautch/videos/1320491538078841/

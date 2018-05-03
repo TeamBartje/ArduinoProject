@@ -1,9 +1,0 @@
-Opdracht
-
-
-Deadline: :eerste try-out: eerste woensdag na de paasvakantie
-RFID-tag: checkpoint en finish -> overrijden-> doorsturen naar server
-Gebruik volle lijnen of stippellijnen om te rijdne
-Bluetoothlink van raspberry pi en arduino, raspberry pi is verbonden met internet
-Verslag en presentatie maken
-Buitenste lijnen zijn 1.8 cm dik
